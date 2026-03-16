@@ -1,0 +1,40 @@
+{
+  "week": 3,
+  "publishDate": "2026-03-15",
+  "intro": "Cardinal Gibbons holds the top spot for the third straight week after steamrolling Broughton.",
+  "rankings": [
+    {
+      "rank": 1,
+      "team": "Cardinal Gibbons",
+      "classification": "7A",
+      "conference": "WLC-4",
+      "city": "Raleigh",
+      "record": "6-0",
+      "lastWeek": 1,
+      "streak": "W6"
+    },
+    {
+      "rank": 2,
+      "team": "Athens Drive",
+      "classification": "8A",
+      "conference": "WLC-3",
+      "city": "Raleigh",
+      "record": "6-0",
+      "lastWeek": 5,
+      "streak": "W6"
+    },
+    {
+      "rank": 3,
+      "team": "Myers Park",
+      "classification": "8A",
+      "conference": "LC-19",
+      "city": "Charlotte",
+      "record": "5-1",
+      "lastWeek": 4,
+      "streak": "W4"
+    }
+  ],
+  "droppedOut": [
+    { "team": "Marvin Ridge", "previousRank": 10, "record": "3-3" }
+  ]
+}

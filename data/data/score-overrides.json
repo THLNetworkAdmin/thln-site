@@ -1,0 +1,21 @@
+{
+  "lastUpdated": "2026-03-15",
+  "overrides": [
+    {
+      "id": "2026-03-14-cg-br",
+      "homeTeam": "Broughton",
+      "awayTeam": "Cardinal Gibbons",
+      "homeScore": 6,
+      "awayScore": 14,
+      "status": "final",
+      "verified": true,
+      "quarters": [
+        { "away": 4, "home": 1 },
+        { "away": 5, "home": 2 },
+        { "away": 3, "home": 1 },
+        { "away": 2, "home": 2 }
+      ],
+      "note": "Watched in person. MaxPreps had this 13-6, corrected to 14-6."
+    }
+  ]
+}
