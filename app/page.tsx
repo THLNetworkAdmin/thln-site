@@ -5,8 +5,46 @@ import { useState, useEffect } from "react";
 import scoresData from "../data/scores.json";
 import "./home.css";
 
+function getRecentGameDates() {
+  const today = new Date();
+  const dayOfWeek = today.getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+  const dates: string[] = [];
+
+  if (dayOfWeek === 0) {
+    // Sunday: show Friday + Saturday games
+    const fri = new Date(today);
+    fri.setDate(today.getDate() - 2);
+    const sat = new Date(today);
+    sat.setDate(today.getDate() - 1);
+    dates.push(fri.toISOString().split("T")[0]);
+    dates.push(sat.toISOString().split("T")[0]);
+  } else if (dayOfWeek === 1) {
+    // Monday: show Friday + Saturday + Sunday games (full weekend)
+    for (let i = 3; i >= 1; i--) {
+      const d = new Date(today);
+      d.setDate(today.getDate() - i);
+      dates.push(d.toISOString().split("T")[0]);
+    }
+  } else {
+    // Tue-Sat: show yesterday's games
+    const yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+    dates.push(yesterday.toISOString().split("T")[0]);
+  }
+
+  return dates;
+}
+
 function ScoresTicker() {
-  const finishedGames = scoresData.games.filter((g) => g.status === "final");
+  const recentDates = getRecentGameDates();
+  const recentGames = scoresData.games.filter(
+    (g) => g.status === "final" && recentDates.includes(g.date)
+  );
+  // Fallback: if no games match today's logic, show most recent finished games
+  const finishedGames = recentGames.length > 0
+    ? recentGames
+    : scoresData.games.filter((g) => g.status === "final");
+
   const [offset, setOffset] = useState(0);
   const visibleCount = 4;
 
@@ -146,12 +184,17 @@ export default function Home() {
           <div className="sidebar-block">
             <div className="sb-header">
               <span>Recent Scores</span>
-              <span className="source">Mar 14</span>
+              <span className="source">Latest</span>
             </div>
-            {scoresData.games
-              .filter((g) => g.status === "final")
-              .slice(0, 5)
-              .map((game, i) => {
+            {(() => {
+              const recentDates = getRecentGameDates();
+              const sidebarGames = scoresData.games.filter(
+                (g) => g.status === "final" && recentDates.includes(g.date)
+              );
+              const gamesToShow = sidebarGames.length > 0
+                ? sidebarGames.slice(0, 5)
+                : scoresData.games.filter((g) => g.status === "final").slice(0, 5);
+              return gamesToShow.map((game, i) => {
                 const homeWon = game.winner === game.homeTeam;
                 const awayWon = game.winner === game.awayTeam;
                 return (
@@ -166,7 +209,8 @@ export default function Home() {
                     </div>
                   </div>
                 );
-              })}
+              });
+            })()}
           </div>
 
           <div className="sidebar-block">
