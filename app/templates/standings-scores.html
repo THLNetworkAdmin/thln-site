@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standings & Scores — Tar Heel Lax Network</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1D3A;
+    --navy-mid: #152C54;
+    --navy-light: #1E3A6E;
+    --carolina: #7BAFD4;
+    --carolina-light: #A8CCE4;
+    --carolina-pale: #D6E8F3;
+    --carolina-wash: #EDF4F9;
+    --white: #FAFAF8;
+    --off-white: #F5F3EE;
+    --text-dark: #1A1A1A;
+    --text-mid: #4A4A4A;
+    --text-light: #7A7A7A;
+    --turf: #2D8A4E;
+    --turf-dark: #1B5E33;
+    --red-accent: #B83232;
+    --border: #E5E2DA;
+    --win-green: #2D8A4E;
+    --loss-red: #B83232;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text-dark);
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    background: var(--navy);
+    border-bottom: 3px solid var(--carolina);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+  }
+
+  .nav-logo-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--carolina);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--navy);
+  }
+
+  .nav-logo-text .name {
+    font-family: 'Jost', 'Futura', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .nav-logo-text .tagline {
+    font-size: 10px;
+    color: var(--carolina);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 22px 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: var(--carolina);
+    border-bottom-color: var(--carolina);
+  }
+
+  /* ===== PAGE HERO ===== */
+  .page-hero {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 70%, var(--navy-light) 100%);
+    padding: 48px 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 500px;
+    height: 500px;
+    border: 1.5px solid rgba(123, 175, 212, 0.05);
+    border-radius: 50%;
+  }
+
+  .hero-field-lines {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.03;
+    background: repeating-linear-gradient(90deg, transparent, transparent 140px, rgba(255,255,255,0.5) 140px, rgba(255,255,255,0.5) 141px);
+  }
+
+  .page-hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .page-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  .page-hero h1 .hl { color: var(--carolina); }
+
+  .page-hero .page-desc {
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 28px;
+  }
+
+  /* Tabs */
+  .page-tabs {
+    display: flex;
+    gap: 0;
+  }
+
+  .page-tab {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    padding: 12px 24px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .page-tab:hover { color: rgba(255,255,255,0.7); }
+  .page-tab.active {
+    color: var(--carolina);
+    border-bottom-color: var(--carolina);
+  }
+
+  /* ===== SCORES SECTION ===== */
+  .content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 36px 40px 60px;
+  }
+
+  /* Date Filter Bar */
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--navy);
+  }
+
+  .filter-bar .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--navy);
+  }
+
+  .filter-pills {
+    display: flex;
+    gap: 6px;
+  }
+
+  .filter-pill {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border: 1px solid var(--border);
+    background: none;
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .filter-pill:hover {
+    border-color: var(--navy);
+    color: var(--navy);
+  }
+
+  .filter-pill.active {
+    background: var(--navy);
+    color: var(--carolina);
+    border-color: var(--navy);
+  }
+
+  /* Score Cards Grid */
+  .scores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .score-card {
+    border: 1px solid var(--border);
+    background: #fff;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .score-card:hover {
+    box-shadow: 0 4px 20px rgba(11, 29, 58, 0.08);
+  }
+
+  .sc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: var(--off-white);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sc-header .sc-conf {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+
+  .sc-header .sc-status {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .sc-status.final { color: var(--text-light); }
+  .sc-status.live { color: var(--red-accent); }
+  .sc-status.upcoming { color: var(--carolina); }
+
+  .sc-body {
+    padding: 16px;
+  }
+
+  .sc-team-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+  }
+
+  .sc-team-row + .sc-team-row {
+    border-top: 1px solid #f0ede5;
+    padding-top: 8px;
+    margin-top: 2px;
+  }
+
+  .sc-team-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sc-team-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .sc-team-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+
+  .sc-team-record {
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  .sc-team-score {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--navy);
+    min-width: 32px;
+    text-align: right;
+  }
+
+  .sc-team-row.loser .sc-team-score {
+    color: var(--text-light);
+  }
+
+  .sc-team-row.loser .sc-team-name {
+    color: var(--text-mid);
+  }
+
+  .sc-footer {
+    padding: 8px 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sc-footer .sc-date {
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  .sc-footer .sc-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--carolina);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .sc-footer .sc-link:hover {
+    color: var(--navy);
+  }
+
+  .sc-override-badge {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: var(--carolina-wash);
+    color: var(--navy-light);
+    padding: 2px 6px;
+    margin-left: 6px;
+    font-weight: 600;
+  }
+
+  /* ===== STANDINGS SECTION ===== */
+  .standings-section {
+    margin-bottom: 48px;
+  }
+
+  .conf-block {
+    margin-bottom: 36px;
+  }
+
+  .conf-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--navy);
+    padding: 12px 20px;
+    margin-bottom: 0;
+  }
+
+  .conf-header h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .conf-header .conf-source {
+    font-family: 'Oswald', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--carolina);
+  }
+
+  .standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: none;
+  }
+
+  .standings-table thead th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: 12px 14px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--off-white);
+  }
+
+  .standings-table thead th:first-child {
+    text-align: left;
+    padding-left: 20px;
+    width: 40px;
+  }
+
+  .standings-table thead th:nth-child(2) {
+    text-align: left;
+  }
+
+  .standings-table tbody td {
+    padding: 12px 14px;
+    text-align: center;
+    border-bottom: 1px solid #f0ede5;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-mid);
+  }
+
+  .standings-table tbody td:first-child {
+    text-align: left;
+    padding-left: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--navy);
+    width: 40px;
+  }
+
+  .standings-table tbody td:nth-child(2) {
+    text-align: left;
+  }
+
+  .standings-table tbody tr:hover {
+    background: var(--carolina-wash);
+  }
+
+  .standings-table .team-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .standings-table .st-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .standings-table .st-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--navy);
+  }
+
+  .streak-w {
+    color: var(--win-green);
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .streak-l {
+    color: var(--loss-red);
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .pct-col {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: var(--navy) !important;
+  }
+
+  /* Last 5 mini results */
+  .last5 {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+  }
+
+  .last5 .l5-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  .l5-dot.w { background: var(--win-green); }
+  .l5-dot.l { background: var(--loss-red); }
+
+  /* ===== CLASSIFICATION TABS ===== */
+  .class-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 28px;
+  }
+
+  .class-tab {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border: 1px solid var(--border);
+    background: none;
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  .class-tab:hover {
+    border-color: var(--navy);
+    color: var(--navy);
+  }
+
+  .class-tab.active {
+    background: var(--navy);
+    color: var(--carolina);
+    border-color: var(--navy);
+  }
+
+  /* ===== ADMIN OVERRIDE NOTE ===== */
+  .admin-note {
+    background: var(--carolina-wash);
+    border: 1px solid var(--carolina-pale);
+    padding: 14px 20px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--navy-mid);
+  }
+
+  .admin-note-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--carolina);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    flex-shrink: 0;
+  }
+
+  .admin-note strong {
+    font-weight: 600;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    padding: 40px;
+    text-align: center;
+  }
+
+  footer .footer-logo {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  footer .footer-tag {
+    font-size: 10px;
+    color: var(--carolina);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  footer .copyright {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+  }
+
+  /* Badge colors for teams */
+  .bg-cg { background: #8B0000; }
+  .bg-gh { background: #006B3F; }
+  .bg-af { background: #1C3F6E; }
+  .bg-lr { background: #5C2D91; }
+  .bg-mc { background: #CC5500; }
+  .bg-br { background: #4B0082; }
+  .bg-en { background: #B8860B; }
+  .bg-mk { background: #333; }
+  .bg-cc { background: #0055A4; }
+  .bg-pd { background: #8B4513; }
+  .bg-ak { background: #2E5090; }
+  .bg-mp { background: #006400; }
+  .bg-mr { background: #8B0000; }
+  .bg-ln { background: #003366; }
+  .bg-sm { background: #CC0000; }
+  .bg-hp { background: #228B22; }
+
+  /* Classification pills */
+  .class-pill {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  .c8a { background: #0B1D3A; color: #7BAFD4; }
+  .c7a { background: #1B5E33; color: #C0DD97; }
+  .c6a { background: #5C2D91; color: #D6C4ED; }
+  .c5a { background: #854F0B; color: #FAC775; }
+  .c4a { background: #185FA5; color: #B5D4F4; }
+  .c3a { background: #8B0000; color: #F7C1C1; }
+  .c2a { background: #333; color: #ccc; }
+  .c1a { background: #555; color: #ddd; }
+
+  /* Conference mix label in header */
+  .conf-mix {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--carolina);
+    opacity: 0.7;
+    margin-left: 8px;
+  }
+
+  /* Inter-classification badge on score cards */
+  .sc-interclass {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #FFF3CD;
+    color: #856404;
+    padding: 2px 6px;
+    font-weight: 600;
+    margin-left: 4px;
+  }
+
+  /* Classification tag next to team name on score cards */
+  .sc-class-tag {
+    font-family: 'Oswald', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-left: 4px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-logo">
+    <svg class="nav-logo-svg" width="44" height="44" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="98" fill="#0B1D3A" stroke="#7BAFD4" stroke-width="4"/><g transform="translate(100,100) rotate(-35) translate(-100,-100)"><rect x="92" y="45" width="16" height="130" rx="3" fill="#7BAFD4"/><path d="M76 52 L76 18 Q76 2 92 2 L108 2 Q124 2 124 18 L124 52 Z" fill="#7BAFD4"/><path d="M82 48 L82 20 Q82 8 92 8 L108 8 Q118 8 118 20 L118 48 Z" fill="#0B1D3A"/><path d="M88 12 L88 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M94 10 L94 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M100 8 L100 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M106 10 L106 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M112 12 L112 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M82 18 L118 18" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 28 L118 28" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 38 L118 38" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/></g><g transform="translate(100,100) rotate(35) translate(-100,-100)"><rect x="92" y="45" width="16" height="130" rx="3" fill="#7BAFD4"/><path d="M76 52 L76 18 Q76 2 92 2 L108 2 Q124 2 124 18 L124 52 Z" fill="#7BAFD4"/><path d="M82 48 L82 20 Q82 8 92 8 L108 8 Q118 8 118 20 L118 48 Z" fill="#0B1D3A"/><path d="M88 12 L88 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M94 10 L94 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M100 8 L100 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M106 10 L106 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M112 12 L112 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M82 18 L118 18" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 28 L118 28" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 38 L118 38" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/></g><circle cx="100" cy="82" r="12" fill="#7BAFD4"/><circle cx="100" cy="82" r="10" fill="#0B1D3A"/><circle cx="100" cy="82" r="8" fill="none" stroke="#7BAFD4" stroke-width="1.5"/><line x1="92" y1="82" x2="108" y2="82" stroke="#7BAFD4" stroke-width="0.8" opacity="0.5"/><line x1="100" y1="74" x2="100" y2="90" stroke="#7BAFD4" stroke-width="0.8" opacity="0.5"/></svg>
+    <div class="nav-logo-text">
+      <span class="name">Tar Heel Lax Network</span>
+      <span class="tagline">NC High School Lacrosse</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Game Reviews</a></li>
+    <li><a href="#" class="active">Standings</a></li>
+    <li><a href="#">Scores</a></li>
+    <li><a href="#">Rankings</a></li>
+    <li><a href="#">Blog</a></li>
+  </ul>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="hero-field-lines"></div>
+  <div class="page-hero-inner">
+    <h1>Standings <span class="hl">&</span> Scores</h1>
+    <p class="page-desc">Conference standings and recent scores across all NC high school boys lacrosse classifications.</p>
+    <div class="page-tabs">
+      <button class="page-tab active" onclick="showSection('scores')">Recent Scores</button>
+      <button class="page-tab" onclick="showSection('standings')">Standings</button>
+    </div>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="content-area">
+
+  <!-- ==================== SCORES SECTION ==================== -->
+  <div id="scores-section">
+
+    <div class="admin-note">
+      <div class="admin-note-icon">i</div>
+      <div>Scores are pulled from MaxPreps and may be updated manually by THL staff for accuracy. Scores marked with <strong>THL Verified</strong> have been confirmed.</div>
+    </div>
+
+    <div class="filter-bar">
+      <div class="section-title">Recent Scores</div>
+      <div class="filter-pills">
+        <button class="filter-pill active">This Week</button>
+        <button class="filter-pill">Last Week</button>
+        <button class="filter-pill">All March</button>
+      </div>
+    </div>
+
+    <!-- Scores Grid -->
+    <div class="scores-grid">
+
+      <!-- Score Card 1 — Same conference game -->
+      <div class="score-card">
+        <div class="sc-header">
+          <span class="sc-conf">WLC-4 Conference</span>
+          <span class="sc-status final">Final<span class="sc-override-badge">THL Verified</span></span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-team-row">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-cg">CG</div>
+              <div>
+                <div class="sc-team-name">Cardinal Gibbons <span class="sc-class-tag">7A</span></div>
+                <div class="sc-team-record">6-0</div>
+              </div>
+            </div>
+            <div class="sc-team-score">14</div>
+          </div>
+          <div class="sc-team-row loser">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-br">BR</div>
+              <div>
+                <div class="sc-team-name">Broughton <span class="sc-class-tag">8A</span></div>
+                <div class="sc-team-record">3-3</div>
+              </div>
+            </div>
+            <div class="sc-team-score">6</div>
+          </div>
+        </div>
+        <div class="sc-footer">
+          <span class="sc-date">Mar 14</span>
+          <a href="#" class="sc-link">Game Review →</a>
+        </div>
+      </div>
+
+      <!-- Score Card 2 — Non-conference, inter-classification -->
+      <div class="score-card">
+        <div class="sc-header">
+          <span class="sc-conf">Non-Conference<span class="sc-interclass">Inter-Class</span></span>
+          <span class="sc-status final">Final — OT<span class="sc-override-badge">THL Verified</span></span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-team-row">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-cc">CC</div>
+              <div>
+                <div class="sc-team-name">Charlotte Catholic <span class="sc-class-tag">6A</span></div>
+                <div class="sc-team-record">5-1</div>
+              </div>
+            </div>
+            <div class="sc-team-score">11</div>
+          </div>
+          <div class="sc-team-row loser">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-pd">PD</div>
+              <div>
+                <div class="sc-team-name">Providence Day <span class="sc-class-tag">3A</span></div>
+                <div class="sc-team-record">4-2</div>
+              </div>
+            </div>
+            <div class="sc-team-score">9</div>
+          </div>
+        </div>
+        <div class="sc-footer">
+          <span class="sc-date">Mar 13</span>
+          <a href="#" class="sc-link">Game Review →</a>
+        </div>
+      </div>
+
+      <!-- Score Card 3 -->
+      <div class="score-card">
+        <div class="sc-header">
+          <span class="sc-conf">Non-Conference</span>
+          <span class="sc-status final">Final</span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-team-row">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-mp">MP</div>
+              <div>
+                <div class="sc-team-name">Myers Park <span class="sc-class-tag">8A</span></div>
+                <div class="sc-team-record">5-1</div>
+              </div>
+            </div>
+            <div class="sc-team-score">10</div>
+          </div>
+          <div class="sc-team-row loser">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-ak">AK</div>
+              <div>
+                <div class="sc-team-name">Ardrey Kell <span class="sc-class-tag">8A</span></div>
+                <div class="sc-team-record">3-3</div>
+              </div>
+            </div>
+            <div class="sc-team-score">7</div>
+          </div>
+        </div>
+        <div class="sc-footer">
+          <span class="sc-date">Mar 13</span>
+          <a href="#" class="sc-link">Box Score →</a>
+        </div>
+      </div>
+
+      <!-- Score Card 4 -->
+      <div class="score-card">
+        <div class="sc-header">
+          <span class="sc-conf">WLC-3 Conference</span>
+          <span class="sc-status final">Final</span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-team-row">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-gh">AD</div>
+              <div>
+                <div class="sc-team-name">Athens Drive <span class="sc-class-tag">8A</span></div>
+                <div class="sc-team-record">6-0</div>
+              </div>
+            </div>
+            <div class="sc-team-score">9</div>
+          </div>
+          <div class="sc-team-row loser">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-en">EN</div>
+              <div>
+                <div class="sc-team-name">Enloe <span class="sc-class-tag">8A</span></div>
+                <div class="sc-team-record">2-4</div>
+              </div>
+            </div>
+            <div class="sc-team-score">4</div>
+          </div>
+        </div>
+        <div class="sc-footer">
+          <span class="sc-date">Mar 12</span>
+          <a href="#" class="sc-link">Box Score →</a>
+        </div>
+      </div>
+
+      <!-- Score Card 5 — Inter-classification non-conference -->
+      <div class="score-card">
+        <div class="sc-header">
+          <span class="sc-conf">Non-Conference<span class="sc-interclass">Inter-Class</span></span>
+          <span class="sc-status final">Final</span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-team-row">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-ln">LN</div>
+              <div>
+                <div class="sc-team-name">Lake Norman <span class="sc-class-tag">8A</span></div>
+                <div class="sc-team-record">4-2</div>
+              </div>
+            </div>
+            <div class="sc-team-score">8</div>
+          </div>
+          <div class="sc-team-row loser">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-mr">MR</div>
+              <div>
+                <div class="sc-team-name">Marvin Ridge <span class="sc-class-tag">6A</span></div>
+                <div class="sc-team-record">3-3</div>
+              </div>
+            </div>
+            <div class="sc-team-score">5</div>
+          </div>
+        </div>
+        <div class="sc-footer">
+          <span class="sc-date">Mar 12</span>
+          <a href="#" class="sc-link">Box Score →</a>
+        </div>
+      </div>
+
+      <!-- Score Card 6 — Upcoming, inter-classification -->
+      <div class="score-card">
+        <div class="sc-header">
+          <span class="sc-conf">Non-Conference<span class="sc-interclass">Inter-Class</span></span>
+          <span class="sc-status upcoming">Upcoming</span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-team-row">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-gh">GH</div>
+              <div>
+                <div class="sc-team-name">Green Hope <span class="sc-class-tag">7A</span></div>
+                <div class="sc-team-record">5-1</div>
+              </div>
+            </div>
+            <div class="sc-team-score" style="font-size:16px;color:var(--text-light);">—</div>
+          </div>
+          <div class="sc-team-row">
+            <div class="sc-team-left">
+              <div class="sc-team-badge bg-af">AF</div>
+              <div>
+                <div class="sc-team-name">Apex Friendship <span class="sc-class-tag">8A</span></div>
+                <div class="sc-team-record">4-1</div>
+              </div>
+            </div>
+            <div class="sc-team-score" style="font-size:16px;color:var(--text-light);">—</div>
+          </div>
+        </div>
+        <div class="sc-footer">
+          <span class="sc-date">Tue, Mar 17 · 7:00 PM</span>
+          <a href="#" class="sc-link">Preview →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== STANDINGS SECTION ==================== -->
+  <div id="standings-section" style="display:none;">
+
+    <div class="admin-note">
+      <div class="admin-note-icon">i</div>
+      <div>Standings data sourced from MaxPreps. Conference records are tracked separately where available. Last updated <strong>March 15, 2026</strong>.</div>
+    </div>
+
+    <div class="class-tabs">
+      <button class="class-tab active">8A</button>
+      <button class="class-tab">7A</button>
+      <button class="class-tab">6A</button>
+      <button class="class-tab">5A</button>
+      <button class="class-tab">4A</button>
+      <button class="class-tab">3A</button>
+      <button class="class-tab">1A/2A</button>
+    </div>
+
+    <!-- WLC-3 -->
+    <div class="conf-block">
+      <div class="conf-header">
+        <h3>WLC-3 <span class="conf-mix">8A / 7A mix</span></h3>
+        <span class="conf-source">via MaxPreps</span>
+      </div>
+      <table class="standings-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Team</th>
+            <th>Class</th>
+            <th>W</th>
+            <th>L</th>
+            <th>Pct</th>
+            <th>Conf</th>
+            <th>Strk</th>
+            <th>Last 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><div class="team-cell"><div class="st-badge bg-br">BR</div><span class="st-name">Athens Drive</span></div></td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td>6</td>
+            <td>0</td>
+            <td class="pct-col">1.000</td>
+            <td>2-0</td>
+            <td><span class="streak-w">W6</span></td>
+            <td><div class="last5"><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span></div></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><div class="team-cell"><div class="st-badge bg-br">BR</div><span class="st-name">Broughton</span></div></td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td>4</td>
+            <td>2</td>
+            <td class="pct-col">.667</td>
+            <td>1-1</td>
+            <td><span class="streak-l">L1</span></td>
+            <td><div class="last5"><span class="l5-dot l">L</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span></div></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><div class="team-cell"><div class="st-badge bg-en">EN</div><span class="st-name">Enloe</span></div></td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td>3</td>
+            <td>2</td>
+            <td class="pct-col">.600</td>
+            <td>1-1</td>
+            <td><span class="streak-w">W1</span></td>
+            <td><div class="last5"><span class="l5-dot w">W</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span></div></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><div class="team-cell"><div class="st-badge bg-lr">LR</div><span class="st-name">Leesville Road</span></div></td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td>3</td>
+            <td>3</td>
+            <td class="pct-col">.500</td>
+            <td>1-1</td>
+            <td><span class="streak-l">L2</span></td>
+            <td><div class="last5"><span class="l5-dot l">L</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span></div></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><div class="team-cell"><div class="st-badge bg-mk">CH</div><span class="st-name">Corinth Holders</span></div></td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td>2</td>
+            <td>3</td>
+            <td class="pct-col">.400</td>
+            <td>0-1</td>
+            <td><span class="streak-l">L1</span></td>
+            <td><div class="last5"><span class="l5-dot l">L</span><span class="l5-dot w">W</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span><span class="l5-dot l">L</span></div></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><div class="team-cell"><div class="st-badge bg-mk">MK</div><span class="st-name">Millbrook</span></div></td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td>2</td>
+            <td>4</td>
+            <td class="pct-col">.333</td>
+            <td>0-2</td>
+            <td><span class="streak-l">L3</span></td>
+            <td><div class="last5"><span class="l5-dot l">L</span><span class="l5-dot l">L</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span></div></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><div class="team-cell"><div class="st-badge bg-mk">RL</div><span class="st-name">Rolesville</span></div></td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td>1</td>
+            <td>4</td>
+            <td class="pct-col">.200</td>
+            <td>0-2</td>
+            <td><span class="streak-l">L3</span></td>
+            <td><div class="last5"><span class="l5-dot l">L</span><span class="l5-dot l">L</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span><span class="l5-dot l">L</span></div></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td><div class="team-cell"><div class="st-badge bg-mk">WK</div><span class="st-name">Wakefield</span></div></td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td>1</td>
+            <td>5</td>
+            <td class="pct-col">.167</td>
+            <td>0-2</td>
+            <td><span class="streak-l">L4</span></td>
+            <td><div class="last5"><span class="l5-dot l">L</span><span class="l5-dot l">L</span><span class="l5-dot l">L</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- WLC-4 -->
+    <div class="conf-block">
+      <div class="conf-header">
+        <h3>WLC-4 <span class="conf-mix">7A / 6A mix</span></h3>
+        <span class="conf-source">via MaxPreps</span>
+      </div>
+      <table class="standings-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Team</th>
+            <th>Class</th>
+            <th>W</th>
+            <th>L</th>
+            <th>Pct</th>
+            <th>Conf</th>
+            <th>Strk</th>
+            <th>Last 5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><div class="team-cell"><div class="st-badge bg-cg">CG</div><span class="st-name">Cardinal Gibbons</span></div></td>
+            <td><span class="class-pill c7a">7A</span></td>
+            <td>6</td>
+            <td>0</td>
+            <td class="pct-col">1.000</td>
+            <td>1-0</td>
+            <td><span class="streak-w">W6</span></td>
+            <td><div class="last5"><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span></div></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><div class="team-cell"><div class="st-badge bg-af">SD</div><span class="st-name">Sanderson</span></div></td>
+            <td><span class="class-pill c7a">7A</span></td>
+            <td>5</td>
+            <td>1</td>
+            <td class="pct-col">.833</td>
+            <td>1-0</td>
+            <td><span class="streak-w">W3</span></td>
+            <td><div class="last5"><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span></div></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><div class="team-cell"><div class="st-badge bg-mc">MC</div><span class="st-name">Middle Creek</span></div></td>
+            <td><span class="class-pill c6a">6A</span></td>
+            <td>4</td>
+            <td>2</td>
+            <td class="pct-col">.667</td>
+            <td>1-1</td>
+            <td><span class="streak-w">W1</span></td>
+            <td><div class="last5"><span class="l5-dot w">W</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot l">L</span></div></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><div class="team-cell"><div class="st-badge bg-af">CY</div><span class="st-name">Cary</span></div></td>
+            <td><span class="class-pill c7a">7A</span></td>
+            <td>3</td>
+            <td>2</td>
+            <td class="pct-col">.600</td>
+            <td>0-1</td>
+            <td><span class="streak-l">L1</span></td>
+            <td><div class="last5"><span class="l5-dot l">L</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span></div></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><div class="team-cell"><div class="st-badge bg-gh">HS</div><span class="st-name">Holly Springs</span></div></td>
+            <td><span class="class-pill c7a">7A</span></td>
+            <td>2</td>
+            <td>3</td>
+            <td class="pct-col">.400</td>
+            <td>0-1</td>
+            <td><span class="streak-l">L2</span></td>
+            <td><div class="last5"><span class="l5-dot l">L</span><span class="l5-dot l">L</span><span class="l5-dot w">W</span><span class="l5-dot w">W</span><span class="l5-dot l">L</span></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">Tar Heel Lax Network</div>
+  <div class="footer-tag">NC High School Boys Lacrosse</div>
+  <div class="copyright">© 2026 Tar Heel Lax Network. Not affiliated with the NCHSAA or MaxPreps.</div>
+</footer>
+
+<script>
+  function showSection(section) {
+    document.getElementById('scores-section').style.display = section === 'scores' ? 'block' : 'none';
+    document.getElementById('standings-section').style.display = section === 'standings' ? 'block' : 'none';
+    document.querySelectorAll('.page-tab').forEach(t => t.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+
+  // Wire up classification tabs
+  document.querySelectorAll('.class-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.class-tab').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Wire up filter pills
+  document.querySelectorAll('.filter-pill').forEach(pill => {
+    pill.addEventListener('click', function() {
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

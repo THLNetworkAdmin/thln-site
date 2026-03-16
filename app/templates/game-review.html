@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardinal Gibbons 14, Broughton 6 — Tar Heel Lax Network</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1D3A;
+    --navy-mid: #152C54;
+    --navy-light: #1E3A6E;
+    --carolina: #7BAFD4;
+    --carolina-light: #A8CCE4;
+    --carolina-pale: #D6E8F3;
+    --carolina-wash: #EDF4F9;
+    --chalk: #F0EDE5;
+    --white: #FAFAF8;
+    --off-white: #F5F3EE;
+    --text-dark: #1A1A1A;
+    --text-mid: #4A4A4A;
+    --text-light: #7A7A7A;
+    --turf: #2D8A4E;
+    --turf-dark: #1B5E33;
+    --red-accent: #B83232;
+    --border: #E5E2DA;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text-dark);
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    background: var(--navy);
+    border-bottom: 3px solid var(--carolina);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+  }
+
+  .nav-logo-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--carolina);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--navy);
+  }
+
+  .nav-logo-text .name {
+    font-family: 'Jost', 'Futura', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .nav-logo-text .tagline {
+    font-size: 10px;
+    color: var(--carolina);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 22px 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: var(--carolina);
+    border-bottom-color: var(--carolina);
+  }
+
+  /* ===== ARTICLE HERO ===== */
+  .article-hero {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 60%, var(--navy-light) 100%);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .article-hero::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    border: 1.5px solid rgba(123, 175, 212, 0.06);
+    border-radius: 50%;
+  }
+
+  .hero-field-lines {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.03;
+    background: repeating-linear-gradient(90deg, transparent, transparent 140px, rgba(255,255,255,0.5) 140px, rgba(255,255,255,0.5) 141px);
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 40px 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .breadcrumb a {
+    color: var(--carolina);
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  .breadcrumb a:hover { opacity: 1; }
+
+  .breadcrumb .sep { margin: 0 8px; opacity: 0.3; }
+
+  .article-tag {
+    display: inline-block;
+    background: var(--carolina);
+    color: var(--navy);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    margin-bottom: 16px;
+  }
+
+  .article-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 46px;
+    color: #fff;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    max-width: 800px;
+    margin-bottom: 14px;
+  }
+
+  .article-hero h1 .hl { color: var(--carolina); }
+
+  .article-subtitle {
+    font-family: 'Source Serif 4', serif;
+    font-size: 18px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+    max-width: 640px;
+    margin-bottom: 20px;
+  }
+
+  .article-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 32px;
+  }
+
+  .article-meta-row .author {
+    color: var(--carolina);
+    font-weight: 600;
+  }
+
+  /* ===== SCOREBOX ===== */
+  .scorebox-wrapper {
+    background: var(--navy-mid);
+    border-top: 1px solid rgba(123, 175, 212, 0.15);
+  }
+
+  .scorebox {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .scorebox-team {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .scorebox-team.away { justify-content: flex-end; text-align: right; }
+
+  .team-logo-placeholder {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .team-cg { background: #8B0000; color: #fff; }
+  .team-br { background: #4B0082; color: #fff; }
+
+  .team-info .team-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  .team-info .team-record {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .scorebox-center {
+    text-align: center;
+    padding: 20px 40px;
+  }
+
+  .scorebox-scores {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .scorebox-score {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .scorebox-score.loser { color: rgba(255,255,255,0.35); }
+
+  .scorebox-vs {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.25);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .scorebox-final {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--carolina);
+    margin-top: 4px;
+  }
+
+  /* ===== QUARTER-BY-QUARTER ===== */
+  .qbq-bar {
+    background: rgba(123, 175, 212, 0.06);
+    border-top: 1px solid rgba(123, 175, 212, 0.1);
+    border-bottom: 1px solid rgba(123, 175, 212, 0.1);
+  }
+
+  .qbq-table-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .qbq-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .qbq-table th {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    padding: 10px 16px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .qbq-table th:first-child {
+    text-align: left;
+    width: 200px;
+  }
+
+  .qbq-table th.total-col {
+    color: var(--carolina);
+  }
+
+  .qbq-table td {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    padding: 10px 16px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .qbq-table td:first-child {
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .qbq-table td.total-col {
+    color: #fff;
+    font-weight: 700;
+    font-size: 17px;
+  }
+
+  .qbq-table tr.winner td:first-child {
+    color: #fff;
+  }
+
+  /* ===== MAIN ARTICLE BODY ===== */
+  .article-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 40px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 56px;
+  }
+
+  .article-body {}
+
+  .article-body .drop-cap::first-letter {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    float: left;
+    line-height: 0.8;
+    margin: 4px 12px 0 0;
+    color: var(--navy);
+  }
+
+  .article-body p {
+    font-family: 'Source Serif 4', serif;
+    font-size: 17px;
+    color: var(--text-dark);
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+
+  .article-body h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--navy);
+    margin: 36px 0 16px;
+    padding-top: 20px;
+    border-top: 2px solid var(--border);
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    margin: 36px 0;
+    padding: 28px 32px;
+    border-left: 4px solid var(--carolina);
+    background: var(--carolina-wash);
+  }
+
+  .pull-quote p {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--navy);
+    line-height: 1.5;
+    margin-bottom: 8px !important;
+  }
+
+  .pull-quote .pq-attr {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 13px;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+  }
+
+  /* Stat highlight inline */
+  .stat-inline {
+    display: inline;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 18px;
+  }
+
+  /* Three Stars */
+  .three-stars {
+    margin: 36px 0;
+    background: var(--navy);
+    padding: 28px;
+  }
+
+  .three-stars h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--carolina);
+    margin-bottom: 20px;
+  }
+
+  .star-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(123, 175, 212, 0.1);
+  }
+
+  .star-row:last-child { border-bottom: none; }
+
+  .star-number {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--carolina);
+    width: 36px;
+    text-align: center;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .star-info .star-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .star-info .star-team {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .star-stat {
+    margin-left: auto;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--carolina);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* Tags at bottom */
+  .article-tags {
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 2px solid var(--border);
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .article-tags .tag {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border: 1px solid var(--border);
+    color: var(--text-mid);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .article-tags .tag:hover {
+    background: var(--navy);
+    color: var(--carolina);
+    border-color: var(--navy);
+  }
+
+  /* ===== SIDEBAR ===== */
+  .article-sidebar {}
+
+  .sidebar-block {
+    margin-bottom: 32px;
+  }
+
+  .sb-header {
+    background: var(--navy);
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sb-header .source {
+    font-size: 9px;
+    color: var(--carolina);
+    letter-spacing: 1px;
+  }
+
+  /* Box Score */
+  .box-score-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+
+  .box-score-table thead th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: 8px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .box-score-table thead th:first-child {
+    text-align: left;
+    padding-left: 12px;
+  }
+
+  .box-score-table tbody td {
+    padding: 7px 8px;
+    text-align: center;
+    border-bottom: 1px solid #f0ede5;
+    font-weight: 500;
+    color: var(--text-mid);
+    font-size: 13px;
+  }
+
+  .box-score-table tbody td:first-child {
+    text-align: left;
+    padding-left: 12px;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 12px;
+  }
+
+  .box-score-table tbody tr:hover {
+    background: var(--off-white);
+  }
+
+  .box-score-table .team-divider td {
+    background: var(--carolina-wash);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy);
+    padding: 6px 12px;
+    text-align: left;
+  }
+
+  /* Game Info sidebar block */
+  .game-info-list {
+    padding: 0;
+  }
+
+  .game-info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-bottom: 1px solid #f0ede5;
+    font-size: 13px;
+  }
+
+  .game-info-item .label {
+    color: var(--text-light);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .game-info-item .value {
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  /* Related Articles */
+  .related-item {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f0ede5;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .related-item:hover { background: var(--off-white); }
+
+  .related-item .ri-tag {
+    font-family: 'Oswald', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--carolina);
+    margin-bottom: 4px;
+  }
+
+  .related-item .ri-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .related-item .ri-meta {
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    padding: 40px;
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  footer .footer-logo {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  footer .footer-tag {
+    font-size: 10px;
+    color: var(--carolina);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  footer .copyright {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-logo">
+    <svg class="nav-logo-svg" width="44" height="44" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="98" fill="#0B1D3A" stroke="#7BAFD4" stroke-width="4"/><g transform="translate(100,100) rotate(-35) translate(-100,-100)"><rect x="92" y="45" width="16" height="130" rx="3" fill="#7BAFD4"/><path d="M76 52 L76 18 Q76 2 92 2 L108 2 Q124 2 124 18 L124 52 Z" fill="#7BAFD4"/><path d="M82 48 L82 20 Q82 8 92 8 L108 8 Q118 8 118 20 L118 48 Z" fill="#0B1D3A"/><path d="M88 12 L88 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M94 10 L94 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M100 8 L100 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M106 10 L106 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M112 12 L112 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M82 18 L118 18" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 28 L118 28" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 38 L118 38" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/></g><g transform="translate(100,100) rotate(35) translate(-100,-100)"><rect x="92" y="45" width="16" height="130" rx="3" fill="#7BAFD4"/><path d="M76 52 L76 18 Q76 2 92 2 L108 2 Q124 2 124 18 L124 52 Z" fill="#7BAFD4"/><path d="M82 48 L82 20 Q82 8 92 8 L108 8 Q118 8 118 20 L118 48 Z" fill="#0B1D3A"/><path d="M88 12 L88 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M94 10 L94 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M100 8 L100 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M106 10 L106 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M112 12 L112 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M82 18 L118 18" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 28 L118 28" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 38 L118 38" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/></g><circle cx="100" cy="82" r="12" fill="#7BAFD4"/><circle cx="100" cy="82" r="10" fill="#0B1D3A"/><circle cx="100" cy="82" r="8" fill="none" stroke="#7BAFD4" stroke-width="1.5"/><line x1="92" y1="82" x2="108" y2="82" stroke="#7BAFD4" stroke-width="0.8" opacity="0.5"/><line x1="100" y1="74" x2="100" y2="90" stroke="#7BAFD4" stroke-width="0.8" opacity="0.5"/></svg>
+    <div class="nav-logo-text">
+      <span class="name">Tar Heel Lax Network</span>
+      <span class="tagline">NC High School Lacrosse</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#" class="active">Game Reviews</a></li>
+    <li><a href="#">Standings</a></li>
+    <li><a href="#">Scores</a></li>
+    <li><a href="#">Rankings</a></li>
+    <li><a href="#">Blog</a></li>
+  </ul>
+</nav>
+
+<!-- Article Hero -->
+<div class="article-hero">
+  <div class="hero-field-lines"></div>
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="#">Home</a><span class="sep">/</span>
+      <a href="#">Game Reviews</a><span class="sep">/</span>
+      Cardinal Gibbons vs. Broughton
+    </div>
+    <div class="article-tag">Game Review</div>
+    <h1>Crusaders' ride <span class="hl">suffocates</span> Broughton in 4A East opener</h1>
+    <p class="article-subtitle">Cardinal Gibbons put on a masterclass in transition offense and defensive pressure, cruising to a 14–6 win that wasn't as close as the final score suggests.</p>
+    <div class="article-meta-row">
+      <span>By <span class="author">THL Staff</span></span>
+      <span>March 14, 2026</span>
+      <span>8 min read</span>
+    </div>
+  </div>
+</div>
+
+<!-- Scorebox -->
+<div class="scorebox-wrapper">
+  <div class="scorebox">
+    <div class="scorebox-team away">
+      <div class="team-info">
+        <div class="team-name">Cardinal Gibbons</div>
+        <div class="team-record">6-0 (1-0 Conf)</div>
+      </div>
+      <div class="team-logo-placeholder team-cg">CG</div>
+    </div>
+    <div class="scorebox-center">
+      <div class="scorebox-scores">
+        <span class="scorebox-score">14</span>
+        <span class="scorebox-vs">—</span>
+        <span class="scorebox-score loser">6</span>
+      </div>
+      <div class="scorebox-final">Final</div>
+    </div>
+    <div class="scorebox-team home">
+      <div class="team-logo-placeholder team-br">BR</div>
+      <div class="team-info">
+        <div class="team-name">Broughton</div>
+        <div class="team-record">3-3 (0-1 Conf)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quarter by Quarter -->
+  <div class="qbq-bar">
+    <div class="qbq-table-wrap">
+      <table class="qbq-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>1st</th>
+            <th>2nd</th>
+            <th>3rd</th>
+            <th>4th</th>
+            <th class="total-col">Final</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="winner">
+            <td>Cardinal Gibbons</td>
+            <td>4</td>
+            <td>5</td>
+            <td>3</td>
+            <td>2</td>
+            <td class="total-col">14</td>
+          </tr>
+          <tr>
+            <td>Broughton</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td class="total-col">6</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Article Body + Sidebar -->
+<div class="article-layout">
+  <article class="article-body">
+    <p class="drop-cap">From the opening whistle, Cardinal Gibbons made their intentions clear. The Crusaders won the first faceoff, pushed in transition, and buried one within the first 45 seconds. It was a sign of things to come for a Broughton squad that spent most of the night chasing.</p>
+
+    <p>The story of this game was Gibbons' ride. Every time Broughton tried to clear, they ran into a wall of pressure at midfield. The Crusaders forced <span class="stat-inline">8 turnovers</span> off their ride alone in the first half, converting five of those into goals. Broughton's clearing percentage sat at a brutal 42% through three quarters before the Crusaders eased off in the fourth with the game well in hand.</p>
+
+    <h2>First half: transition clinic</h2>
+
+    <p>Gibbons scored four of their first-half goals in transition, and it was their middies who were making it happen. The wing play on faceoffs was crisp — winning the clamp and immediately pushing numbers the other way before Broughton's defense could get set.</p>
+
+    <p>The second quarter was the dagger. Five goals in the frame, including three in a two-minute stretch that turned a 5-2 lead into an 8-3 laugher. By halftime, Gibbons led 9-3 and the outcome was essentially decided.</p>
+
+    <div class="pull-quote">
+      <p>"We talked all week about making them uncomfortable in their clearing game. The guys executed the ride exactly how we drew it up."</p>
+      <span class="pq-attr">— Gibbons Head Coach, postgame</span>
+    </div>
+
+    <h2>Second half: managing the clock</h2>
+
+    <p>To their credit, Broughton came out with more energy in the third quarter and won three of the four faceoffs in the frame. But Gibbons' defense was stifling in the half-field, limiting the Capitals to just one goal on seven shots in the third.</p>
+
+    <p>The Crusaders milked clock in the fourth, content to swing the ball and burn time rather than push the pace. The two late Broughton goals came against reserves with the game already decided, which makes the 14-6 final look more competitive than the game actually felt.</p>
+
+    <h2>What this means</h2>
+
+    <p>Cardinal Gibbons is the real deal. They're 6-0 now and their schedule has included some legit tests — this was just the most dominant performance yet. The ride is elite, the faceoff game is a weapon, and they have depth at every position. They'll be the team to beat in 4A East.</p>
+
+    <p>For Broughton, it's back to the drawing board on the clear. They have athletes and they can score in the half-field, but you can't turn it over eight times in a half against a team this good and expect to hang around. The good news is it's early March and there's time to fix it.</p>
+
+    <!-- Three Stars -->
+    <div class="three-stars">
+      <h3>Three stars of the game</h3>
+      <div class="star-row">
+        <div class="star-number">1</div>
+        <div class="star-info">
+          <div class="star-name">Jake Morrison</div>
+          <div class="star-team">Cardinal Gibbons · Attack</div>
+        </div>
+        <div class="star-stat">4G, 2A</div>
+      </div>
+      <div class="star-row">
+        <div class="star-number">2</div>
+        <div class="star-info">
+          <div class="star-name">Drew Patterson</div>
+          <div class="star-team">Cardinal Gibbons · Midfield</div>
+        </div>
+        <div class="star-stat">2G, 3A, 4 GBs</div>
+      </div>
+      <div class="star-row">
+        <div class="star-number">3</div>
+        <div class="star-info">
+          <div class="star-name">Caleb Wright</div>
+          <div class="star-team">Broughton · Attack</div>
+        </div>
+        <div class="star-stat">3G, 1A</div>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="article-tags">
+      <a href="#" class="tag">Cardinal Gibbons</a>
+      <a href="#" class="tag">Broughton</a>
+      <a href="#" class="tag">4A East</a>
+      <a href="#" class="tag">Game Review</a>
+      <a href="#" class="tag">Triangle</a>
+    </div>
+  </article>
+
+  <!-- Sidebar -->
+  <aside class="article-sidebar">
+    <!-- Game Info -->
+    <div class="sidebar-block">
+      <div class="sb-header"><span>Game Info</span></div>
+      <div class="game-info-list">
+        <div class="game-info-item">
+          <span class="label">Date</span>
+          <span class="value">March 14, 2026</span>
+        </div>
+        <div class="game-info-item">
+          <span class="label">Venue</span>
+          <span class="value">Gibbons Stadium</span>
+        </div>
+        <div class="game-info-item">
+          <span class="label">Conference</span>
+          <span class="value">4A East</span>
+        </div>
+        <div class="game-info-item">
+          <span class="label">Weather</span>
+          <span class="value">62°F, Clear</span>
+        </div>
+        <div class="game-info-item">
+          <span class="label">Attendance</span>
+          <span class="value">~350</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Box Score -->
+    <div class="sidebar-block">
+      <div class="sb-header"><span>Scoring Leaders</span></div>
+      <table class="box-score-table">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>G</th>
+            <th>A</th>
+            <th>Pts</th>
+            <th>GB</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="team-divider"><td colspan="5">Cardinal Gibbons</td></tr>
+          <tr><td>J. Morrison</td><td>4</td><td>2</td><td>6</td><td>2</td></tr>
+          <tr><td>D. Patterson</td><td>2</td><td>3</td><td>5</td><td>4</td></tr>
+          <tr><td>R. Chen</td><td>3</td><td>0</td><td>3</td><td>1</td></tr>
+          <tr><td>M. Davis</td><td>2</td><td>1</td><td>3</td><td>3</td></tr>
+          <tr><td>T. Williams</td><td>1</td><td>2</td><td>3</td><td>0</td></tr>
+          <tr><td>K. O'Brien</td><td>1</td><td>1</td><td>2</td><td>2</td></tr>
+          <tr><td>L. Hart</td><td>1</td><td>0</td><td>1</td><td>6</td></tr>
+          <tr class="team-divider"><td colspan="5">Broughton</td></tr>
+          <tr><td>C. Wright</td><td>3</td><td>1</td><td>4</td><td>3</td></tr>
+          <tr><td>A. Johnson</td><td>2</td><td>0</td><td>2</td><td>1</td></tr>
+          <tr><td>S. Miller</td><td>1</td><td>1</td><td>2</td><td>2</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Team Stats -->
+    <div class="sidebar-block">
+      <div class="sb-header"><span>Team Stats</span></div>
+      <div class="game-info-list">
+        <div class="game-info-item">
+          <span class="value">14</span>
+          <span class="label">Goals</span>
+          <span class="value">6</span>
+        </div>
+        <div class="game-info-item">
+          <span class="value">32</span>
+          <span class="label">Shots</span>
+          <span class="value">21</span>
+        </div>
+        <div class="game-info-item">
+          <span class="value">44%</span>
+          <span class="label">Shot %</span>
+          <span class="value">29%</span>
+        </div>
+        <div class="game-info-item">
+          <span class="value">14/18</span>
+          <span class="label">Faceoffs</span>
+          <span class="value">4/18</span>
+        </div>
+        <div class="game-info-item">
+          <span class="value">28</span>
+          <span class="label">Ground balls</span>
+          <span class="value">16</span>
+        </div>
+        <div class="game-info-item">
+          <span class="value">85%</span>
+          <span class="label">Clear %</span>
+          <span class="value">52%</span>
+        </div>
+        <div class="game-info-item">
+          <span class="value">8</span>
+          <span class="label">Turnovers</span>
+          <span class="value">14</span>
+        </div>
+        <div class="game-info-item">
+          <span class="value">12 (8)</span>
+          <span class="label">Saves (SA)</span>
+          <span class="value">15 (10)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="sidebar-block">
+      <div class="sb-header"><span>Related</span></div>
+      <div class="related-item">
+        <div class="ri-tag">Rankings</div>
+        <div class="ri-title">Week 3 statewide power rankings</div>
+        <div class="ri-meta">March 12, 2026</div>
+      </div>
+      <div class="related-item">
+        <div class="ri-tag">Game Review</div>
+        <div class="ri-title">Charlotte Catholic edges Providence Day in OT</div>
+        <div class="ri-meta">March 13, 2026</div>
+      </div>
+      <div class="related-item">
+        <div class="ri-tag">Feature</div>
+        <div class="ri-title">The rise of lacrosse in the 910</div>
+        <div class="ri-meta">March 10, 2026</div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">Tar Heel Lax Network</div>
+  <div class="footer-tag">NC High School Boys Lacrosse</div>
+  <div class="copyright">© 2026 Tar Heel Lax Network. Not affiliated with the NCHSAA or MaxPreps.</div>
+</footer>
+
+</body>
+</html>

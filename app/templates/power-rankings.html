@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Rankings — Tar Heel Lax Network</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1D3A;
+    --navy-mid: #152C54;
+    --navy-light: #1E3A6E;
+    --carolina: #7BAFD4;
+    --carolina-light: #A8CCE4;
+    --carolina-pale: #D6E8F3;
+    --carolina-wash: #EDF4F9;
+    --white: #FAFAF8;
+    --off-white: #F5F3EE;
+    --text-dark: #1A1A1A;
+    --text-mid: #4A4A4A;
+    --text-light: #7A7A7A;
+    --red-accent: #B83232;
+    --border: #E5E2DA;
+    --win-green: #2D8A4E;
+    --loss-red: #B83232;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text-dark);
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    background: var(--navy);
+    border-bottom: 3px solid var(--carolina);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+  }
+
+  .nav-logo-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--carolina);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--navy);
+  }
+
+  .nav-logo-text .name {
+    font-family: 'Jost', 'Futura', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .nav-logo-text .tagline {
+    font-size: 10px;
+    color: var(--carolina);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 22px 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: var(--carolina);
+    border-bottom-color: var(--carolina);
+  }
+
+  /* ===== PAGE HERO ===== */
+  .page-hero {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 70%, #1A4A6E 100%);
+    padding: 48px 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 500px;
+    height: 500px;
+    border: 1.5px solid rgba(123, 175, 212, 0.05);
+    border-radius: 50%;
+  }
+
+  .hero-field-lines {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.03;
+    background: repeating-linear-gradient(90deg, transparent, transparent 140px, rgba(255,255,255,0.5) 140px, rgba(255,255,255,0.5) 141px);
+  }
+
+  .page-hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .page-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  .page-hero h1 .hl { color: var(--carolina); }
+
+  .page-hero .page-desc {
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 28px;
+  }
+
+  /* Week tabs */
+  .week-tabs {
+    display: flex;
+    gap: 0;
+  }
+
+  .week-tab {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    padding: 12px 24px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .week-tab:hover { color: rgba(255,255,255,0.7); }
+  .week-tab.active {
+    color: var(--carolina);
+    border-bottom-color: var(--carolina);
+  }
+
+  /* ===== CONTENT ===== */
+  .content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 36px 40px 60px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 48px;
+  }
+
+  /* ===== RANKINGS INTRO ===== */
+  .rankings-intro {
+    margin-bottom: 32px;
+  }
+
+  .rankings-intro .week-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .rankings-intro .week-label .week-num {
+    color: var(--carolina);
+  }
+
+  .rankings-intro .date-line {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 14px;
+  }
+
+  .rankings-intro .blurb {
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.6;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--navy);
+  }
+
+  /* ===== CLASSIFICATION TABS ===== */
+  .class-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+
+  .class-tab {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border: 1px solid var(--border);
+    background: none;
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  .class-tab:hover {
+    border-color: var(--navy);
+    color: var(--navy);
+  }
+
+  .class-tab.active {
+    background: var(--navy);
+    color: var(--carolina);
+    border-color: var(--navy);
+  }
+
+  /* ===== RANKINGS TABLE ===== */
+  .rankings-table-wrap {
+    margin-bottom: 36px;
+  }
+
+  .rankings-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--navy);
+    padding: 12px 20px;
+  }
+
+  .rankings-table-header h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .rankings-table-header .powered-by {
+    font-family: 'Oswald', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--carolina);
+  }
+
+  .rankings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: none;
+  }
+
+  .rankings-table thead th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: 12px 14px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--off-white);
+  }
+
+  .rankings-table thead th:first-child {
+    text-align: center;
+    width: 56px;
+  }
+
+  .rankings-table thead th:nth-child(2) {
+    text-align: left;
+  }
+
+  .rankings-table tbody td {
+    padding: 0;
+    text-align: center;
+    border-bottom: 1px solid #f0ede5;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-mid);
+    vertical-align: middle;
+    height: 64px;
+  }
+
+  .rankings-table tbody td:first-child {
+    text-align: center;
+  }
+
+  .rankings-table tbody td:nth-child(2) {
+    text-align: left;
+    padding: 0 14px;
+  }
+
+  .rankings-table tbody tr:hover {
+    background: var(--carolina-wash);
+  }
+
+  /* Rank number cell */
+  .rank-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+  }
+
+  .rank-num {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--navy);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rank-num.top3 {
+    background: var(--navy);
+    color: var(--carolina);
+    border-radius: 4px;
+  }
+
+  /* Team cell */
+  .team-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .team-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .team-details .team-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+
+  .team-details .team-conf {
+    font-size: 11px;
+    color: var(--text-light);
+    letter-spacing: 0.3px;
+  }
+
+  /* Class pill */
+  .class-pill {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  .c8a { background: #0B1D3A; color: #7BAFD4; }
+  .c7a { background: #1B5E33; color: #C0DD97; }
+  .c6a { background: #5C2D91; color: #D6C4ED; }
+  .c5a { background: #854F0B; color: #FAC775; }
+  .c4a { background: #185FA5; color: #B5D4F4; }
+  .c3a { background: #8B0000; color: #F7C1C1; }
+
+  /* Record column */
+  .record-col {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--navy) !important;
+  }
+
+  /* Movement arrow */
+  .movement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .move-up {
+    color: var(--win-green);
+    font-weight: 700;
+  }
+
+  .move-down {
+    color: var(--loss-red);
+    font-weight: 700;
+  }
+
+  .move-same {
+    color: var(--text-light);
+  }
+
+  .move-arrow {
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .move-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .move-new {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: var(--carolina);
+    color: var(--navy);
+    padding: 2px 8px;
+    font-weight: 600;
+    border-radius: 2px;
+  }
+
+  /* Last week column */
+  .lw-col {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    color: var(--text-light) !important;
+  }
+
+  /* Streak column */
+  .streak-w {
+    color: var(--win-green);
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+  }
+
+  .streak-l {
+    color: var(--loss-red);
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar-block {
+    margin-bottom: 32px;
+  }
+
+  .sb-header {
+    background: var(--navy);
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 16px;
+  }
+
+  /* Biggest movers */
+  .mover-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-bottom: 1px solid #f0ede5;
+  }
+
+  .mover-item:last-child { border-bottom: none; }
+
+  .mover-arrow-big {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .mover-arrow-big.up {
+    background: #EAF3DE;
+  }
+
+  .mover-arrow-big.down {
+    background: #FCEBEB;
+  }
+
+  .mover-arrow-big .arrow-icon {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .mover-arrow-big.up .arrow-icon { color: var(--win-green); }
+  .mover-arrow-big.down .arrow-icon { color: var(--loss-red); }
+
+  .mover-info .mover-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+
+  .mover-info .mover-detail {
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  .mover-change {
+    margin-left: auto;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .mover-change.up { color: var(--win-green); }
+  .mover-change.down { color: var(--loss-red); }
+
+  /* Dropped out / New entries */
+  .dropped-list {
+    padding: 14px 16px;
+  }
+
+  .dropped-list .dropped-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+
+  .dropped-team {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 13px;
+  }
+
+  .dropped-team .dt-name {
+    font-weight: 600;
+    color: var(--text-mid);
+  }
+
+  .dropped-team .dt-prev {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    color: var(--text-light);
+  }
+
+  /* Methodology note */
+  .methodology {
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    padding: 20px;
+  }
+
+  .methodology h4 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .methodology p {
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  /* Badge colors */
+  .bg-cg { background: #8B0000; }
+  .bg-gh { background: #006B3F; }
+  .bg-af { background: #1C3F6E; }
+  .bg-lr { background: #5C2D91; }
+  .bg-mc { background: #CC5500; }
+  .bg-br { background: #4B0082; }
+  .bg-en { background: #B8860B; }
+  .bg-mk { background: #333; }
+  .bg-cc { background: #0055A4; }
+  .bg-pd { background: #8B4513; }
+  .bg-ak { background: #2E5090; }
+  .bg-mp { background: #006400; }
+  .bg-mr { background: #8B0000; }
+  .bg-ln { background: #003366; }
+  .bg-sm { background: #CC0000; }
+  .bg-hp { background: #228B22; }
+  .bg-ad { background: #B22222; }
+  .bg-cr { background: #2E8B57; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    padding: 40px;
+    text-align: center;
+  }
+
+  footer .footer-logo {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  footer .footer-tag {
+    font-size: 10px;
+    color: var(--carolina);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  footer .copyright {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-logo">
+    <svg class="nav-logo-svg" width="44" height="44" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="98" fill="#0B1D3A" stroke="#7BAFD4" stroke-width="4"/><g transform="translate(100,100) rotate(-35) translate(-100,-100)"><rect x="92" y="45" width="16" height="130" rx="3" fill="#7BAFD4"/><path d="M76 52 L76 18 Q76 2 92 2 L108 2 Q124 2 124 18 L124 52 Z" fill="#7BAFD4"/><path d="M82 48 L82 20 Q82 8 92 8 L108 8 Q118 8 118 20 L118 48 Z" fill="#0B1D3A"/><path d="M88 12 L88 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M94 10 L94 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M100 8 L100 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M106 10 L106 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M112 12 L112 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M82 18 L118 18" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 28 L118 28" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 38 L118 38" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/></g><g transform="translate(100,100) rotate(35) translate(-100,-100)"><rect x="92" y="45" width="16" height="130" rx="3" fill="#7BAFD4"/><path d="M76 52 L76 18 Q76 2 92 2 L108 2 Q124 2 124 18 L124 52 Z" fill="#7BAFD4"/><path d="M82 48 L82 20 Q82 8 92 8 L108 8 Q118 8 118 20 L118 48 Z" fill="#0B1D3A"/><path d="M88 12 L88 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M94 10 L94 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M100 8 L100 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M106 10 L106 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M112 12 L112 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M82 18 L118 18" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 28 L118 28" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 38 L118 38" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/></g><circle cx="100" cy="82" r="12" fill="#7BAFD4"/><circle cx="100" cy="82" r="10" fill="#0B1D3A"/><circle cx="100" cy="82" r="8" fill="none" stroke="#7BAFD4" stroke-width="1.5"/><line x1="92" y1="82" x2="108" y2="82" stroke="#7BAFD4" stroke-width="0.8" opacity="0.5"/><line x1="100" y1="74" x2="100" y2="90" stroke="#7BAFD4" stroke-width="0.8" opacity="0.5"/></svg>
+    <div class="nav-logo-text">
+      <span class="name">Tar Heel Lax Network</span>
+      <span class="tagline">NC High School Lacrosse</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Game Reviews</a></li>
+    <li><a href="#">Standings</a></li>
+    <li><a href="#">Scores</a></li>
+    <li><a href="#" class="active">Rankings</a></li>
+    <li><a href="#">Blog</a></li>
+  </ul>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="hero-field-lines"></div>
+  <div class="page-hero-inner">
+    <h1>THLN <span class="hl">Power Rankings</span></h1>
+    <p class="page-desc">Our weekly rankings of the top teams in NC high school boys lacrosse — across all classifications.</p>
+    <div class="week-tabs">
+      <button class="week-tab active">Week 3</button>
+      <button class="week-tab">Week 2</button>
+      <button class="week-tab">Week 1</button>
+      <button class="week-tab">Preseason</button>
+    </div>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="content-area">
+  <main>
+
+    <!-- Intro -->
+    <div class="rankings-intro">
+      <div class="week-label">Week <span class="week-num">3</span> Power Rankings</div>
+      <div class="date-line">Published March 15, 2026 · Updated after all games through March 14</div>
+      <p class="blurb">Cardinal Gibbons holds the top spot for the third straight week after steamrolling Broughton. Athens Drive makes a big jump after going 2-0 this week against conference opponents. Marvin Ridge drops out after dropping two straight.</p>
+    </div>
+
+    <!-- Classification filter -->
+    <div class="class-tabs">
+      <button class="class-tab active">Overall</button>
+      <button class="class-tab">8A</button>
+      <button class="class-tab">7A</button>
+      <button class="class-tab">6A</button>
+      <button class="class-tab">5A</button>
+      <button class="class-tab">4A & Below</button>
+    </div>
+
+    <!-- Rankings Table -->
+    <div class="rankings-table-wrap">
+      <div class="rankings-table-header">
+        <h3>THLN Power Rankings — Week 3</h3>
+        <span class="powered-by">Tar Heel Lax Network</span>
+      </div>
+      <table class="rankings-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Team</th>
+            <th>Class</th>
+            <th>Record</th>
+            <th>Last Wk</th>
+            <th>Streak</th>
+            <th>Trend</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num top3">1</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-cg">CG</div>
+                <div class="team-details">
+                  <div class="team-name">Cardinal Gibbons</div>
+                  <div class="team-conf">WLC-4 · Raleigh</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c7a">7A</span></td>
+            <td class="record-col">6-0</td>
+            <td class="lw-col">1</td>
+            <td><span class="streak-w">W6</span></td>
+            <td><div class="movement move-same"><span class="move-arrow">—</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num top3">2</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-ad">AD</div>
+                <div class="team-details">
+                  <div class="team-name">Athens Drive</div>
+                  <div class="team-conf">WLC-3 · Raleigh</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td class="record-col">6-0</td>
+            <td class="lw-col">5</td>
+            <td><span class="streak-w">W6</span></td>
+            <td><div class="movement move-up"><span class="move-arrow">&#9650;</span><span class="move-num">3</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num top3">3</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-mp">MP</div>
+                <div class="team-details">
+                  <div class="team-name">Myers Park</div>
+                  <div class="team-conf">LC-19 · Charlotte</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td class="record-col">5-1</td>
+            <td class="lw-col">4</td>
+            <td><span class="streak-w">W4</span></td>
+            <td><div class="movement move-up"><span class="move-arrow">&#9650;</span><span class="move-num">1</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num">4</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-gh">GH</div>
+                <div class="team-details">
+                  <div class="team-name">Green Hope</div>
+                  <div class="team-conf">WLC-5 · Cary</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c7a">7A</span></td>
+            <td class="record-col">5-1</td>
+            <td class="lw-col">2</td>
+            <td><span class="streak-w">W3</span></td>
+            <td><div class="movement move-down"><span class="move-arrow">&#9660;</span><span class="move-num">2</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num">5</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-cc">CC</div>
+                <div class="team-details">
+                  <div class="team-name">Charlotte Catholic</div>
+                  <div class="team-conf">LC-15 · Charlotte</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c6a">6A</span></td>
+            <td class="record-col">5-1</td>
+            <td class="lw-col">6</td>
+            <td><span class="streak-w">W2</span></td>
+            <td><div class="movement move-up"><span class="move-arrow">&#9650;</span><span class="move-num">1</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num">6</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-af">AF</div>
+                <div class="team-details">
+                  <div class="team-name">Apex Friendship</div>
+                  <div class="team-conf">WLC-6 · Apex</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td class="record-col">4-1</td>
+            <td class="lw-col">3</td>
+            <td><span class="streak-w">W2</span></td>
+            <td><div class="movement move-down"><span class="move-arrow">&#9660;</span><span class="move-num">3</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num">7</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-ln">LN</div>
+                <div class="team-details">
+                  <div class="team-name">Lake Norman</div>
+                  <div class="team-conf">LC-21 · Mooresville</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td class="record-col">4-2</td>
+            <td class="lw-col">7</td>
+            <td><span class="streak-w">W2</span></td>
+            <td><div class="movement move-same"><span class="move-arrow">—</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num">8</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-cr">CR</div>
+                <div class="team-details">
+                  <div class="team-name">Croatan</div>
+                  <div class="team-conf">WLC-7 · Newport</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c5a">5A</span></td>
+            <td class="record-col">5-0</td>
+            <td class="lw-col">9</td>
+            <td><span class="streak-w">W5</span></td>
+            <td><div class="movement move-up"><span class="move-arrow">&#9650;</span><span class="move-num">1</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num">9</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-pd">PD</div>
+                <div class="team-details">
+                  <div class="team-name">Providence Day</div>
+                  <div class="team-conf">LC-15 · Charlotte</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c3a">3A</span></td>
+            <td class="record-col">4-2</td>
+            <td class="lw-col">8</td>
+            <td><span class="streak-l">L1</span></td>
+            <td><div class="movement move-down"><span class="move-arrow">&#9660;</span><span class="move-num">1</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num">10</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-mc">MC</div>
+                <div class="team-details">
+                  <div class="team-name">Middle Creek</div>
+                  <div class="team-conf">WLC-4 · Apex</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c6a">6A</span></td>
+            <td class="record-col">4-2</td>
+            <td class="lw-col">NR</td>
+            <td><span class="streak-w">W1</span></td>
+            <td><div class="movement"><span class="move-new">NEW</span></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Also receiving votes / honorable mentions -->
+    <div class="rankings-table-wrap">
+      <div class="rankings-table-header">
+        <h3>Also in the conversation</h3>
+      </div>
+      <table class="rankings-table">
+        <thead>
+          <tr>
+            <th style="width:56px"></th>
+            <th>Team</th>
+            <th>Class</th>
+            <th>Record</th>
+            <th>Last Wk</th>
+            <th>Streak</th>
+            <th>Trend</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num" style="font-size:16px; color:var(--text-light);">11</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-lr">LR</div>
+                <div class="team-details">
+                  <div class="team-name">Leesville Road</div>
+                  <div class="team-conf">WLC-3 · Raleigh</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td class="record-col">3-3</td>
+            <td class="lw-col">10</td>
+            <td><span class="streak-l">L2</span></td>
+            <td><div class="movement move-down"><span class="move-arrow">&#9660;</span><span class="move-num">1</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="rank-cell"><div class="rank-num" style="font-size:16px; color:var(--text-light);">12</div></div></td>
+            <td>
+              <div class="team-cell">
+                <div class="team-badge bg-sm">SM</div>
+                <div class="team-details">
+                  <div class="team-name">South Mecklenburg</div>
+                  <div class="team-conf">LC-19 · Charlotte</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="class-pill c8a">8A</span></td>
+            <td class="record-col">4-2</td>
+            <td class="lw-col">NR</td>
+            <td><span class="streak-w">W1</span></td>
+            <td><div class="movement"><span class="move-new">NEW</span></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- Sidebar -->
+  <aside>
+    <!-- Biggest Movers -->
+    <div class="sidebar-block">
+      <div class="sb-header">Biggest Movers</div>
+      <div class="mover-item">
+        <div class="mover-arrow-big up"><span class="arrow-icon">&#9650;</span></div>
+        <div class="mover-info">
+          <div class="mover-name">Athens Drive</div>
+          <div class="mover-detail">Beat Enloe & Leesville Road this week</div>
+        </div>
+        <div class="mover-change up">+3</div>
+      </div>
+      <div class="mover-item">
+        <div class="mover-arrow-big up"><span class="arrow-icon">&#9650;</span></div>
+        <div class="mover-info">
+          <div class="mover-name">Middle Creek</div>
+          <div class="mover-detail">Enters rankings after 2-0 week</div>
+        </div>
+        <div class="mover-change up">NEW</div>
+      </div>
+      <div class="mover-item">
+        <div class="mover-arrow-big down"><span class="arrow-icon">&#9660;</span></div>
+        <div class="mover-info">
+          <div class="mover-name">Apex Friendship</div>
+          <div class="mover-detail">Upset loss to Middle Creek</div>
+        </div>
+        <div class="mover-change down">-3</div>
+      </div>
+      <div class="mover-item">
+        <div class="mover-arrow-big down"><span class="arrow-icon">&#9660;</span></div>
+        <div class="mover-info">
+          <div class="mover-name">Green Hope</div>
+          <div class="mover-detail">Dropped non-conf game to Athens Drive</div>
+        </div>
+        <div class="mover-change down">-2</div>
+      </div>
+    </div>
+
+    <!-- Dropped Out -->
+    <div class="sidebar-block">
+      <div class="sb-header">Dropped Out</div>
+      <div class="dropped-list">
+        <div class="dropped-team">
+          <span class="dt-name">Marvin Ridge</span>
+          <span class="dt-prev">Was #10 · Now 3-3</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Methodology -->
+    <div class="sidebar-block">
+      <div class="methodology">
+        <h4>How we rank</h4>
+        <p>THLN Power Rankings are subjective and based on the eye test, strength of schedule, quality wins, and recent performance. These are not algorithmic — they reflect what we see on the field. We watch as many games as we can and factor in matchup context that numbers alone can't capture.</p>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">Tar Heel Lax Network</div>
+  <div class="footer-tag">NC High School Boys Lacrosse</div>
+  <div class="copyright">© 2026 Tar Heel Lax Network. Not affiliated with the NCHSAA or MaxPreps.</div>
+</footer>
+
+<script>
+  document.querySelectorAll('.week-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.week-tab').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+  document.querySelectorAll('.class-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.class-tab').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

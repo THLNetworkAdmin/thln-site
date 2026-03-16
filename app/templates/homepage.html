@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tar Heel Lax Network — NC High School Lacrosse</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1D3A;
+    --navy-mid: #152C54;
+    --navy-light: #1E3A6E;
+    --carolina: #7BAFD4;
+    --carolina-light: #A8CCE4;
+    --carolina-pale: #D6E8F3;
+    --carolina-wash: #EDF4F9;
+    --chalk: #F0EDE5;
+    --white: #FAFAF8;
+    --off-white: #F5F3EE;
+    --text-dark: #1A1A1A;
+    --text-mid: #4A4A4A;
+    --text-light: #7A7A7A;
+    --red-accent: #B83232;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ===== TOP BAR ===== */
+  .top-bar {
+    background: var(--navy);
+    color: var(--carolina-pale);
+    font-size: 12px;
+    padding: 6px 0;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    background: var(--navy);
+    border-bottom: 3px solid var(--carolina);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+  }
+
+  .nav-logo-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--carolina);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--navy);
+  }
+
+  .nav-logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-logo-text .name {
+    font-family: 'Jost', 'Futura', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .nav-logo-text .tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: var(--carolina);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+    height: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 22px 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s, background 0.2s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: var(--carolina);
+    border-bottom-color: var(--carolina);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #1A4A6E 100%);
+    padding: 80px 60px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 500px;
+    height: 500px;
+    border: 2px solid rgba(123, 175, 212, 0.08);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(123, 175, 212, 0.05);
+    border-radius: 50%;
+  }
+
+  /* Field lines pattern */
+  .hero-field-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.04;
+    background:
+      repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(255,255,255,0.5) 120px, rgba(255,255,255,0.5) 121px);
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .hero-left {}
+
+  .hero-label {
+    display: inline-block;
+    background: var(--carolina);
+    color: var(--navy);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    color: #fff;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 span {
+    color: var(--carolina);
+  }
+
+  .hero-desc {
+    font-family: 'Source Serif 4', serif;
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    max-width: 540px;
+    margin-bottom: 28px;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 24px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+  }
+
+  .hero-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hero-meta .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--carolina);
+    border-radius: 50%;
+  }
+
+  /* Featured article card on right */
+  .hero-featured {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(123, 175, 212, 0.15);
+    backdrop-filter: blur(4px);
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-featured-img {
+    height: 200px;
+    background: linear-gradient(180deg, var(--carolina), var(--carolina-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-featured-img::after {
+    content: '🥍';
+    font-size: 72px;
+    opacity: 0.2;
+    position: absolute;
+  }
+
+  .hero-featured-img .overlay-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.12);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+
+  .hero-featured-body {
+    padding: 24px;
+  }
+
+  .hero-featured-body .tag {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--carolina);
+    margin-bottom: 10px;
+  }
+
+  .hero-featured-body h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .hero-featured-body p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
+
+  /* ===== SCORES TICKER ===== */
+  .scores-bar {
+    background: var(--navy-mid);
+    border-bottom: 1px solid rgba(123, 175, 212, 0.2);
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    overflow-x: auto;
+  }
+
+  .scores-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--carolina);
+    white-space: nowrap;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(123, 175, 212, 0.3);
+    padding-right: 20px;
+  }
+
+  .score-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 8px 16px;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .score-card .teams {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .score-card .team-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+  }
+
+  .score-card .team-row.winner {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .score-card .team-row .score {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 20px;
+    text-align: right;
+  }
+
+  .score-card .status {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--carolina);
+    font-weight: 600;
+  }
+
+  .score-card .status.live {
+    color: var(--red-accent);
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  /* ===== MAIN CONTENT ===== */
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 40px;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 48px;
+  }
+
+  /* ===== ARTICLES ===== */
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    border-bottom: 2px solid var(--navy);
+    padding-bottom: 12px;
+  }
+
+  .section-header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--navy);
+  }
+
+  .section-header a {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--carolina);
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .article-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px;
+    padding: 24px 0;
+    border-bottom: 1px solid #e5e2da;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .article-card:hover {
+    background: var(--off-white);
+    margin: 0 -16px;
+    padding: 24px 16px;
+  }
+
+  .article-thumb {
+    width: 180px;
+    height: 120px;
+    background: var(--off-white);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e2da;
+  }
+
+  .article-thumb .thumb-inner {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: rgba(11, 29, 58, 0.08);
+    text-transform: uppercase;
+  }
+
+  .article-info .tag {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .tag-review {
+    background: #EAF3DE;
+    color: var(--carolina);
+  }
+
+  .tag-feature {
+    background: #FAEEDA;
+    color: #854F0B;
+  }
+
+  .tag-rankings {
+    background: #E6F1FB;
+    color: #185FA5;
+  }
+
+  .tag-opinion {
+    background: #FBEAF0;
+    color: #72243E;
+  }
+
+  .article-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .article-info p {
+    font-family: 'Source Serif 4', serif;
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .article-info .meta {
+    font-size: 12px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar {}
+
+  .sidebar-block {
+    margin-bottom: 36px;
+  }
+
+  .sidebar-block .sb-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--navy);
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 16px;
+  }
+
+  .sidebar-block .sb-header .source {
+    font-size: 9px;
+    color: var(--carolina);
+    letter-spacing: 1px;
+  }
+
+  /* Standings Table */
+  .standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  .standings-table thead th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e2da;
+  }
+
+  .standings-table thead th:not(:first-child) {
+    text-align: center;
+  }
+
+  .standings-table tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0ede5;
+    font-weight: 500;
+  }
+
+  .standings-table tbody td:not(:first-child) {
+    text-align: center;
+    color: var(--text-mid);
+  }
+
+  .standings-table tbody tr:hover {
+    background: var(--off-white);
+  }
+
+  .standings-table .rank {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: var(--navy);
+    width: 28px;
+  }
+
+  .standings-table .team-name {
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  /* Upcoming Games */
+  .upcoming-game {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0ede5;
+  }
+
+  .upcoming-game:hover {
+    background: var(--off-white);
+  }
+
+  .upcoming-game .matchup {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .upcoming-game .matchup .vs-text {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--navy);
+  }
+
+  .upcoming-game .matchup .vs-sub {
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  .upcoming-game .game-date {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    text-align: right;
+  }
+
+  /* About block */
+  .about-block {
+    background: var(--off-white);
+    border: 1px solid #e5e2da;
+    padding: 24px;
+  }
+
+  .about-block h4 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .about-block p {
+    font-family: 'Source Serif 4', serif;
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .about-block .social-links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-btn {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--carolina);
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+
+  .social-btn:hover {
+    background: var(--navy-light);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    padding: 40px;
+    text-align: center;
+  }
+
+  footer .footer-logo {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  footer .footer-tag {
+    font-size: 11px;
+    color: var(--carolina);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  footer .footer-links a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: 'Oswald', sans-serif;
+    transition: color 0.2s;
+  }
+
+  footer .footer-links a:hover {
+    color: var(--carolina);
+  }
+
+  footer .copyright {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  Your source for North Carolina high school boys lacrosse coverage
+</div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-logo">
+    <svg class="nav-logo-svg" width="44" height="44" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="100" r="98" fill="#0B1D3A" stroke="#7BAFD4" stroke-width="4"/><g transform="translate(100,100) rotate(-35) translate(-100,-100)"><rect x="92" y="45" width="16" height="130" rx="3" fill="#7BAFD4"/><path d="M76 52 L76 18 Q76 2 92 2 L108 2 Q124 2 124 18 L124 52 Z" fill="#7BAFD4"/><path d="M82 48 L82 20 Q82 8 92 8 L108 8 Q118 8 118 20 L118 48 Z" fill="#0B1D3A"/><path d="M88 12 L88 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M94 10 L94 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M100 8 L100 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M106 10 L106 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M112 12 L112 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M82 18 L118 18" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 28 L118 28" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 38 L118 38" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/></g><g transform="translate(100,100) rotate(35) translate(-100,-100)"><rect x="92" y="45" width="16" height="130" rx="3" fill="#7BAFD4"/><path d="M76 52 L76 18 Q76 2 92 2 L108 2 Q124 2 124 18 L124 52 Z" fill="#7BAFD4"/><path d="M82 48 L82 20 Q82 8 92 8 L108 8 Q118 8 118 20 L118 48 Z" fill="#0B1D3A"/><path d="M88 12 L88 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M94 10 L94 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M100 8 L100 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M106 10 L106 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M112 12 L112 46" stroke="#7BAFD4" stroke-width="1" opacity="0.4"/><path d="M82 18 L118 18" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 28 L118 28" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/><path d="M82 38 L118 38" stroke="#7BAFD4" stroke-width="0.8" opacity="0.35"/></g><circle cx="100" cy="82" r="12" fill="#7BAFD4"/><circle cx="100" cy="82" r="10" fill="#0B1D3A"/><circle cx="100" cy="82" r="8" fill="none" stroke="#7BAFD4" stroke-width="1.5"/><line x1="92" y1="82" x2="108" y2="82" stroke="#7BAFD4" stroke-width="0.8" opacity="0.5"/><line x1="100" y1="74" x2="100" y2="90" stroke="#7BAFD4" stroke-width="0.8" opacity="0.5"/></svg>
+    <div class="nav-logo-text">
+      <span class="name">Tar Heel Lax Network</span>
+      <span class="tagline">NC High School Lacrosse</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Game Reviews</a></li>
+    <li><a href="#">Standings</a></li>
+    <li><a href="#">Scores</a></li>
+    <li><a href="#">Rankings</a></li>
+    <li><a href="#">Blog</a></li>
+  </ul>
+</nav>
+
+<!-- Scores Ticker -->
+<div class="scores-bar">
+  <div class="scores-label">Recent Scores</div>
+  <div class="score-card">
+    <div class="teams">
+      <div class="team-row winner"><span>Cardinal Gibbons</span><span class="score">14</span></div>
+      <div class="team-row"><span>Broughton</span><span class="score">6</span></div>
+    </div>
+    <div class="status">Final</div>
+  </div>
+  <div class="score-card">
+    <div class="teams">
+      <div class="team-row winner"><span>Charlotte Catholic</span><span class="score">11</span></div>
+      <div class="team-row"><span>Providence Day</span><span class="score">9</span></div>
+    </div>
+    <div class="status">Final</div>
+  </div>
+  <div class="score-card">
+    <div class="teams">
+      <div class="team-row"><span>Ardrey Kell</span><span class="score">7</span></div>
+      <div class="team-row winner"><span>Myers Park</span><span class="score">10</span></div>
+    </div>
+    <div class="status">Final</div>
+  </div>
+  <div class="score-card">
+    <div class="teams">
+      <div class="team-row"><span>Lake Norman</span><span class="score">5</span></div>
+      <div class="team-row"><span>Marvin Ridge</span><span class="score">3</span></div>
+    </div>
+    <div class="status live">● 3rd Q</div>
+  </div>
+  <div class="score-card">
+    <div class="teams">
+      <div class="team-row"><span>Green Hope</span><span class="score">—</span></div>
+      <div class="team-row"><span>Apex Friendship</span><span class="score">—</span></div>
+    </div>
+    <div class="status">Tue 7pm</div>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-field-lines"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-label">Featured Article</div>
+      <h1>Cardinal Gibbons <span>dominates</span> in 4A East opener</h1>
+      <p class="hero-desc">
+        The Crusaders put on a clinic with a suffocating ride and elite ball movement, dismantling Broughton 14–6 in a game that wasn't as close as the final score suggests.
+      </p>
+      <div class="hero-meta">
+        <span><span class="dot"></span> Game Review</span>
+        <span>March 14, 2026</span>
+        <span>8 min read</span>
+      </div>
+    </div>
+    <div class="hero-featured">
+      <div class="hero-featured-img">
+        <div class="overlay-text">LAX</div>
+      </div>
+      <div class="hero-featured-body">
+        <div class="tag">Up Next</div>
+        <h3>Early-season power rankings: Who's for real in the Triangle?</h3>
+        <p>Breaking down the top 10 teams in the Triangle after two weeks of play.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<div class="main-content">
+  <!-- Articles Column -->
+  <main>
+    <div class="section-header">
+      <h2>Latest Articles</h2>
+      <a href="#">View All →</a>
+    </div>
+
+    <article class="article-card">
+      <div class="article-thumb"><div class="thumb-inner">GR</div></div>
+      <div class="article-info">
+        <span class="tag tag-review">Game Review</span>
+        <h3>Charlotte Catholic edges Providence Day in overtime thriller</h3>
+        <p>An instant classic in the SPC as the Cougars rally from two down in the fourth to steal one in OT.</p>
+        <span class="meta">March 13, 2026 · 6 min read</span>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <div class="article-thumb"><div class="thumb-inner">RK</div></div>
+      <div class="article-info">
+        <span class="tag tag-rankings">Rankings</span>
+        <h3>Week 3 statewide power rankings</h3>
+        <p>New No. 1 after last week's upsets? We break down movement across all four classifications.</p>
+        <span class="meta">March 12, 2026 · 10 min read</span>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <div class="article-thumb"><div class="thumb-inner">FT</div></div>
+      <div class="article-info">
+        <span class="tag tag-feature">Feature</span>
+        <h3>The rise of lacrosse in the 910: Fayetteville's growing scene</h3>
+        <p>How programs in the Sandhills are building from the ground up and competing with the big-city schools.</p>
+        <span class="meta">March 10, 2026 · 12 min read</span>
+      </div>
+    </article>
+
+    <article class="article-card">
+      <div class="article-thumb"><div class="thumb-inner">OP</div></div>
+      <div class="article-info">
+        <span class="tag tag-opinion">Opinion</span>
+        <h3>Why the NCHSAA needs to add a 5th classification for lacrosse</h3>
+        <p>The gap between the haves and have-nots is growing. A fifth class would level the playing field.</p>
+        <span class="meta">March 8, 2026 · 7 min read</span>
+      </div>
+    </article>
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!-- Standings -->
+    <div class="sidebar-block">
+      <div class="sb-header">
+        <span>4A Standings</span>
+        <span class="source">via MaxPreps</span>
+      </div>
+      <table class="standings-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Team</th>
+            <th>W</th>
+            <th>L</th>
+            <th>Pct</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="rank">1</td><td class="team-name">Cardinal Gibbons</td><td>6</td><td>0</td><td>.1000</td></tr>
+          <tr><td class="rank">2</td><td class="team-name">Green Hope</td><td>5</td><td>1</td><td>.833</td></tr>
+          <tr><td class="rank">3</td><td class="team-name">Apex Friendship</td><td>4</td><td>1</td><td>.800</td></tr>
+          <tr><td class="rank">4</td><td class="team-name">Leesville Road</td><td>4</td><td>2</td><td>.667</td></tr>
+          <tr><td class="rank">5</td><td class="team-name">Middle Creek</td><td>3</td><td>2</td><td>.600</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Upcoming Games -->
+    <div class="sidebar-block">
+      <div class="sb-header">
+        <span>Upcoming Games</span>
+        <span class="source">This Week</span>
+      </div>
+      <div class="upcoming-game">
+        <div class="matchup">
+          <span class="vs-text">Green Hope vs. Apex Friendship</span>
+          <span class="vs-sub">4A East Conference</span>
+        </div>
+        <div class="game-date">Tue<br>7:00 PM</div>
+      </div>
+      <div class="upcoming-game">
+        <div class="matchup">
+          <span class="vs-text">Myers Park vs. Ardrey Kell</span>
+          <span class="vs-sub">4A West Conference</span>
+        </div>
+        <div class="game-date">Wed<br>6:30 PM</div>
+      </div>
+      <div class="upcoming-game">
+        <div class="matchup">
+          <span class="vs-text">Charlotte Catholic vs. Charlotte Latin</span>
+          <span class="vs-sub">SPC Rivalry</span>
+        </div>
+        <div class="game-date">Fri<br>7:00 PM</div>
+      </div>
+      <div class="upcoming-game">
+        <div class="matchup">
+          <span class="vs-text">Cardinal Gibbons vs. Enloe</span>
+          <span class="vs-sub">4A East Conference</span>
+        </div>
+        <div class="game-date">Sat<br>1:00 PM</div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="sidebar-block">
+      <div class="about-block">
+        <h4>About Tar Heel Lax Network</h4>
+        <p>
+          Your home for North Carolina high school boys lacrosse. Game reviews, scores, standings, power rankings, and everything in between — from the Triangle to the Queen City and beyond.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-btn">Twitter/X</a>
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">Subscribe</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">Tar Heel Lax Network</div>
+  <div class="footer-tag">NC High School Boys Lacrosse</div>
+  <ul class="footer-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Game Reviews</a></li>
+    <li><a href="#">Standings</a></li>
+    <li><a href="#">Rankings</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="copyright">© 2026 Tar Heel Lax Network. Not affiliated with the NCHSAA or MaxPreps.</div>
+</footer>
+
+</body>
+</html>
