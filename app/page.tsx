@@ -1,41 +1,67 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import scoresData from "../data/scores.json";
 import "./home.css";
+
+function ScoresTicker() {
+  const finishedGames = scoresData.games.filter((g) => g.status === "final");
+  const [offset, setOffset] = useState(0);
+  const visibleCount = 4;
+
+  useEffect(() => {
+    if (finishedGames.length <= visibleCount) return;
+    const interval = setInterval(() => {
+      setOffset((prev) => (prev + 1) % finishedGames.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [finishedGames.length]);
+
+  const getVisibleGames = () => {
+    const games = [];
+    for (let i = 0; i < Math.min(visibleCount, finishedGames.length); i++) {
+      const idx = (offset + i) % finishedGames.length;
+      games.push(finishedGames[idx]);
+    }
+    return games;
+  };
+
+  return (
+    <div className="scores-bar">
+      <div className="scores-label">Recent Scores</div>
+      <div className="ticker-track">
+        {getVisibleGames().map((game, i) => {
+          const homeWon = game.winner === game.homeTeam;
+          const awayWon = game.winner === game.awayTeam;
+          return (
+            <div className="score-chip" key={`${game.date}-${game.homeTeam}-${i}`}>
+              <div className="chip-teams">
+                <div className={`chip-team ${awayWon ? "winner" : ""}`}>
+                  <span>{game.awayTeam}</span>
+                  <span className="chip-score">{game.awayScore}</span>
+                </div>
+                <div className={`chip-team ${homeWon ? "winner" : ""}`}>
+                  <span>@ {game.homeTeam}</span>
+                  <span className="chip-score">{game.homeScore}</span>
+                </div>
+              </div>
+              <div className="chip-meta">
+                <div className="chip-status">Final</div>
+                <div className="chip-date">{game.dateDisplay}</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
     <>
-      {/* Scores Ticker */}
-      <div className="scores-bar">
-        <div className="scores-label">Recent Scores</div>
-        <div className="score-chip">
-          <div className="chip-teams">
-            <div className="chip-team winner"><span>Cardinal Gibbons</span><span className="chip-score">14</span></div>
-            <div className="chip-team"><span>Broughton</span><span className="chip-score">6</span></div>
-          </div>
-          <div className="chip-status">Final</div>
-        </div>
-        <div className="score-chip">
-          <div className="chip-teams">
-            <div className="chip-team winner"><span>Charlotte Catholic</span><span className="chip-score">11</span></div>
-            <div className="chip-team"><span>Providence Day</span><span className="chip-score">9</span></div>
-          </div>
-          <div className="chip-status">Final</div>
-        </div>
-        <div className="score-chip">
-          <div className="chip-teams">
-            <div className="chip-team winner"><span>Myers Park</span><span className="chip-score">10</span></div>
-            <div className="chip-team"><span>Ardrey Kell</span><span className="chip-score">7</span></div>
-          </div>
-          <div className="chip-status">Final</div>
-        </div>
-        <div className="score-chip">
-          <div className="chip-teams">
-            <div className="chip-team"><span>Green Hope</span><span className="chip-score">—</span></div>
-            <div className="chip-team"><span>Apex Friendship</span><span className="chip-score">—</span></div>
-          </div>
-          <div className="chip-status upcoming">Tue 7pm</div>
-        </div>
-      </div>
+      <ScoresTicker />
 
       {/* Hero */}
       <section className="hero">
@@ -45,7 +71,7 @@ export default function Home() {
             <div className="hero-label">Featured Article</div>
             <h1>Cardinal Gibbons <span className="hl">dominates</span> in conference opener</h1>
             <p className="hero-desc">
-              The Crusaders put on a clinic with a suffocating ride and elite ball movement, dismantling Broughton 14–6 in a game that wasn&apos;t as close as the final score suggests.
+              The Crusaders put on a clinic with a suffocating ride and elite ball movement, dismantling Green Level 14–5 in a game that wasn&apos;t as close as the final score suggests.
             </p>
             <div className="hero-meta">
               <span><span className="dot"></span> Game Review</span>
@@ -78,9 +104,9 @@ export default function Home() {
             <div className="article-thumb"><div className="thumb-inner">GR</div></div>
             <div className="article-info">
               <span className="article-tag tag-review">Game Review</span>
-              <h3>Charlotte Catholic edges Providence Day in overtime thriller</h3>
-              <p>An instant classic in the SPC as the Cougars rally from two down in the fourth to steal one in OT.</p>
-              <span className="meta">March 13, 2026 · 6 min read</span>
+              <h3>Topsail takes down Middle Creek on the road</h3>
+              <p>The Pirates continue their unbeaten run with a gritty 7-5 road win.</p>
+              <span className="meta">March 14, 2026 · 6 min read</span>
             </div>
           </article>
 
@@ -119,21 +145,28 @@ export default function Home() {
         <aside className="sidebar">
           <div className="sidebar-block">
             <div className="sb-header">
-              <span>WLC-4 Standings</span>
-              <span className="source">via THLN</span>
+              <span>Recent Scores</span>
+              <span className="source">Mar 14</span>
             </div>
-            <table className="standings-mini">
-              <thead>
-                <tr><th></th><th>Team</th><th>W</th><th>L</th><th>Pct</th></tr>
-              </thead>
-              <tbody>
-                <tr><td className="rank">1</td><td className="team-name">Cardinal Gibbons</td><td>6</td><td>0</td><td>1.000</td></tr>
-                <tr><td className="rank">2</td><td className="team-name">Sanderson</td><td>5</td><td>1</td><td>.833</td></tr>
-                <tr><td className="rank">3</td><td className="team-name">Middle Creek</td><td>4</td><td>2</td><td>.667</td></tr>
-                <tr><td className="rank">4</td><td className="team-name">Cary</td><td>3</td><td>2</td><td>.600</td></tr>
-                <tr><td className="rank">5</td><td className="team-name">Holly Springs</td><td>2</td><td>3</td><td>.400</td></tr>
-              </tbody>
-            </table>
+            {scoresData.games
+              .filter((g) => g.status === "final")
+              .slice(0, 5)
+              .map((game, i) => {
+                const homeWon = game.winner === game.homeTeam;
+                const awayWon = game.winner === game.awayTeam;
+                return (
+                  <div className="sidebar-score" key={i}>
+                    <div className={`sidebar-team ${awayWon ? "winner" : ""}`}>
+                      <span>{game.awayTeam}</span>
+                      <span className="sidebar-pts">{game.awayScore}</span>
+                    </div>
+                    <div className={`sidebar-team ${homeWon ? "winner" : ""}`}>
+                      <span>@ {game.homeTeam}</span>
+                      <span className="sidebar-pts">{game.homeScore}</span>
+                    </div>
+                  </div>
+                );
+              })}
           </div>
 
           <div className="sidebar-block">

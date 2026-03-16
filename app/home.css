@@ -5,8 +5,8 @@
   padding: 14px 40px;
   display: flex;
   align-items: center;
-  gap: 28px;
-  overflow-x: auto;
+  gap: 20px;
+  overflow: hidden;
 }
 
 .scores-label {
@@ -22,16 +22,29 @@
   padding-right: 20px;
 }
 
+.ticker-track {
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+  flex: 1;
+}
+
 .score-chip {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.06);
   padding: 8px 16px;
   border-radius: 4px;
   white-space: nowrap;
   flex-shrink: 0;
+  animation: chipFadeIn 0.4s ease;
+}
+
+@keyframes chipFadeIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .chip-teams { display: flex; flex-direction: column; gap: 2px; }
@@ -41,7 +54,7 @@
   align-items: center;
   gap: 10px;
   font-size: 13px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.5);
   font-weight: 500;
 }
 
@@ -55,12 +68,26 @@
   text-align: right;
 }
 
+.chip-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
 .chip-status {
+  font-family: 'Oswald', sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--carolina);
   font-weight: 600;
+}
+
+.chip-date {
+  font-size: 9px;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.5px;
 }
 
 .chip-status.upcoming { color: rgba(255,255,255,0.4); }
@@ -253,22 +280,32 @@
 }
 
 /* ===== SIDEBAR ===== */
-.standings-mini { width: 100%; border-collapse: collapse; font-size: 13px; }
-.standings-mini thead th {
+.sidebar-score {
+  padding: 10px 16px;
+  border-bottom: 1px solid #f0ede5;
+}
+
+.sidebar-team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-light);
+  padding: 2px 0;
+}
+
+.sidebar-team.winner {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.sidebar-pts {
   font-family: 'Oswald', sans-serif;
-  font-weight: 500; font-size: 10px; letter-spacing: 1.5px;
-  text-transform: uppercase; color: var(--text-light);
-  padding: 10px 12px; text-align: left;
-  border-bottom: 1px solid #e5e2da;
+  font-weight: 600;
+  font-size: 16px;
+  min-width: 24px;
+  text-align: right;
 }
-.standings-mini thead th:not(:first-child):not(:nth-child(2)) { text-align: center; }
-.standings-mini tbody td {
-  padding: 10px 12px; border-bottom: 1px solid #f0ede5; font-weight: 500;
-}
-.standings-mini tbody td:not(:first-child):not(:nth-child(2)) { text-align: center; color: var(--text-mid); }
-.standings-mini tbody tr:hover { background: var(--off-white); }
-.standings-mini .rank { font-family: 'Oswald', sans-serif; font-weight: 600; color: var(--navy); width: 28px; }
-.standings-mini .team-name { font-weight: 600; color: var(--navy); }
 
 .about-block {
   background: var(--off-white);

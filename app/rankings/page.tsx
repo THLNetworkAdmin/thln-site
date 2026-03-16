@@ -19,7 +19,27 @@ function getTrend(rank: number, lastWeek: number | string) {
 }
 
 export default function Rankings() {
-  const { week, publishDate, intro, rankings, biggestMovers, droppedOut } = rankingsData;
+  const { week, publishDate, intro, rankings, biggestMovers, droppedOut, receivingConsideration, howWeRank } = rankingsData as {
+    week: number;
+    publishDate: string;
+    intro: string;
+    rankings: Array<{
+      rank: number;
+      team: string;
+      abbr: string;
+      badgeClass: string;
+      classification: string;
+      classClass: string;
+      record: string;
+      lastWeek: number | string;
+      streak: string;
+      streakType: string;
+    }>;
+    biggestMovers: Array<{ team: string; direction: string; change: string; reason: string }>;
+    droppedOut: Array<{ team: string; previousRank: number; record: string }>;
+    receivingConsideration?: string;
+    howWeRank?: string;
+  };
 
   return (
     <>
@@ -35,7 +55,7 @@ export default function Rankings() {
         <main>
           <div className="rankings-intro">
             <div className="week-label">Week <span className="week-num">{week}</span> Power Rankings</div>
-            <div className="date-line">Published {publishDate} · Updated after all games through March 14</div>
+            <div className="date-line">Published {publishDate}</div>
             <p className="blurb">{intro}</p>
           </div>
 
@@ -61,15 +81,13 @@ export default function Rankings() {
                   <tr key={team.rank}>
                     <td>
                       <div className="rank-cell">
-                        <div className={`rank-num ${team.rank <= 3 ? "top3" : ""}`}>{team.rank}</div>
-                      </div>
+<div className="rank-num">{team.rank}</div>                      </div>
                     </td>
                     <td>
                       <div className="team-cell">
                         <div className={`team-badge ${team.badgeClass}`}>{team.abbr}</div>
                         <div className="team-details">
                           <div className="team-name">{team.team}</div>
-                          <div className="team-conf">{team.conference} · {team.city}</div>
                         </div>
                       </div>
                     </td>
@@ -83,26 +101,38 @@ export default function Rankings() {
               </tbody>
             </table>
           </div>
+
+          {/* Receiving Consideration */}
+          {receivingConsideration && (
+            <div className="receiving-consideration">
+              <div className="rc-label">Receiving Consideration</div>
+              <p className="rc-teams">{receivingConsideration}</p>
+            </div>
+          )}
         </main>
 
         <aside>
-          <div className="sidebar-block">
-            <div className="sb-header">Biggest Movers</div>
-            {biggestMovers.map((mover, i) => (
-              <div className="mover-item" key={i}>
-                <div className={`mover-arrow-big ${mover.direction}`}>
-                  <span className="arrow-icon">{mover.direction === "up" ? "▲" : "▼"}</span>
+          {/* Biggest Movers - hidden when empty */}
+          {biggestMovers && biggestMovers.length > 0 && (
+            <div className="sidebar-block">
+              <div className="sb-header">Biggest Movers</div>
+              {biggestMovers.map((mover, i) => (
+                <div className="mover-item" key={i}>
+                  <div className={`mover-arrow-big ${mover.direction}`}>
+                    <span className="arrow-icon">{mover.direction === "up" ? "▲" : "▼"}</span>
+                  </div>
+                  <div className="mover-info">
+                    <div className="mover-name">{mover.team}</div>
+                    <div className="mover-detail">{mover.reason}</div>
+                  </div>
+                  <div className={`mover-change ${mover.direction}`}>{mover.change}</div>
                 </div>
-                <div className="mover-info">
-                  <div className="mover-name">{mover.team}</div>
-                  <div className="mover-detail">{mover.reason}</div>
-                </div>
-                <div className={`mover-change ${mover.direction}`}>{mover.change}</div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
 
-          {droppedOut.length > 0 && (
+          {/* Dropped Out - hidden when empty */}
+          {droppedOut && droppedOut.length > 0 && (
             <div className="sidebar-block">
               <div className="sb-header">Dropped Out</div>
               <div className="dropped-list">
@@ -116,10 +146,11 @@ export default function Rankings() {
             </div>
           )}
 
+          {/* How We Rank */}
           <div className="sidebar-block">
             <div className="methodology">
               <h4>How we rank</h4>
-              <p>THLN Power Rankings are subjective and based on the eye test, strength of schedule, quality wins, and recent performance. These are not algorithmic — they reflect what we see on the field.</p>
+              <p>{howWeRank || "THLN Power Rankings are subjective and based on the eye test, strength of schedule, quality wins, and recent performance. These are not algorithmic — they reflect what we see on the field."}</p>
             </div>
           </div>
         </aside>

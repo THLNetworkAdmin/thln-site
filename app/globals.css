@@ -309,6 +309,7 @@ footer .copyright {
 .c3a { background: #8B0000; color: #F7C1C1; }
 .c2a { background: #333; color: #ccc; }
 .c1a { background: #555; color: #ddd; }
+.cncisaa { background: #6B3A8A; color: #E0CCF0; }
 
 /* ===== STREAKS ===== */
 .streak-w { color: var(--win-green); font-weight: 600; font-family: 'Oswald', sans-serif; }
