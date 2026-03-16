@@ -192,6 +192,10 @@ export default function Home() {
           </div>
         </aside>
       </div>
+
+      <div style={{ textAlign: "center", padding: "16px 40px 0", fontSize: "11px", color: "var(--text-light)", letterSpacing: "0.5px" }}>
+        Last updated: {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" })}
+      </div>
     </>
   );
 }
