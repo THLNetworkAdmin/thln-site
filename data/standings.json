@@ -1,0 +1,30 @@
+{
+  "lastUpdated": "2026-03-15",
+  "conferences": [
+    {
+      "name": "WLC-3",
+      "mix": "8A / 7A mix",
+      "teams": [
+        { "rank": 1, "team": "Athens Drive", "abbr": "AD", "badgeClass": "bg-ad", "classification": "8A", "classClass": "c8a", "wins": 6, "losses": 0, "pct": "1.000", "gf": 72, "ga": 31, "conf": "2-0", "streak": "W6", "streakType": "w", "last5": ["w","w","w","w","w"] },
+        { "rank": 2, "team": "Broughton", "abbr": "BR", "badgeClass": "bg-br", "classification": "8A", "classClass": "c8a", "wins": 4, "losses": 2, "pct": ".667", "gf": 58, "ga": 42, "conf": "1-1", "streak": "L1", "streakType": "l", "last5": ["l","w","w","l","w"] },
+        { "rank": 3, "team": "Enloe", "abbr": "EN", "badgeClass": "bg-en", "classification": "8A", "classClass": "c8a", "wins": 3, "losses": 2, "pct": ".600", "gf": 41, "ga": 35, "conf": "1-1", "streak": "W1", "streakType": "w", "last5": ["w","l","w","l","w"] },
+        { "rank": 4, "team": "Leesville Road", "abbr": "LR", "badgeClass": "bg-lr", "classification": "8A", "classClass": "c8a", "wins": 3, "losses": 3, "pct": ".500", "gf": 48, "ga": 47, "conf": "1-1", "streak": "L2", "streakType": "l", "last5": ["l","l","w","w","w"] },
+        { "rank": 5, "team": "Corinth Holders", "abbr": "CH", "badgeClass": "bg-mk", "classification": "8A", "classClass": "c8a", "wins": 2, "losses": 3, "pct": ".400", "gf": 30, "ga": 38, "conf": "0-1", "streak": "L1", "streakType": "l", "last5": ["l","w","l","w","l"] },
+        { "rank": 6, "team": "Millbrook", "abbr": "MK", "badgeClass": "bg-mk", "classification": "8A", "classClass": "c8a", "wins": 2, "losses": 4, "pct": ".333", "gf": 34, "ga": 52, "conf": "0-2", "streak": "L3", "streakType": "l", "last5": ["l","l","l","w","w"] },
+        { "rank": 7, "team": "Rolesville", "abbr": "RL", "badgeClass": "bg-mk", "classification": "8A", "classClass": "c8a", "wins": 1, "losses": 4, "pct": ".200", "gf": 22, "ga": 48, "conf": "0-2", "streak": "L3", "streakType": "l", "last5": ["l","l","l","w","l"] },
+        { "rank": 8, "team": "Wakefield", "abbr": "WK", "badgeClass": "bg-mk", "classification": "8A", "classClass": "c8a", "wins": 1, "losses": 5, "pct": ".167", "gf": 18, "ga": 61, "conf": "0-2", "streak": "L4", "streakType": "l", "last5": ["l","l","l","l","w"] }
+      ]
+    },
+    {
+      "name": "WLC-4",
+      "mix": "7A / 6A mix",
+      "teams": [
+        { "rank": 1, "team": "Cardinal Gibbons", "abbr": "CG", "badgeClass": "bg-cg", "classification": "7A", "classClass": "c7a", "wins": 6, "losses": 0, "pct": "1.000", "gf": 84, "ga": 28, "conf": "1-0", "streak": "W6", "streakType": "w", "last5": ["w","w","w","w","w"] },
+        { "rank": 2, "team": "Sanderson", "abbr": "SD", "badgeClass": "bg-af", "classification": "7A", "classClass": "c7a", "wins": 5, "losses": 1, "pct": ".833", "gf": 62, "ga": 34, "conf": "1-0", "streak": "W3", "streakType": "w", "last5": ["w","w","w","l","w"] },
+        { "rank": 3, "team": "Middle Creek", "abbr": "MC", "badgeClass": "bg-mc", "classification": "6A", "classClass": "c6a", "wins": 4, "losses": 2, "pct": ".667", "gf": 51, "ga": 38, "conf": "1-1", "streak": "W1", "streakType": "w", "last5": ["w","l","w","w","l"] },
+        { "rank": 4, "team": "Cary", "abbr": "CY", "badgeClass": "bg-af", "classification": "7A", "classClass": "c7a", "wins": 3, "losses": 2, "pct": ".600", "gf": 40, "ga": 32, "conf": "0-1", "streak": "L1", "streakType": "l", "last5": ["l","w","w","l","w"] },
+        { "rank": 5, "team": "Holly Springs", "abbr": "HS", "badgeClass": "bg-gh", "classification": "7A", "classClass": "c7a", "wins": 2, "losses": 3, "pct": ".400", "gf": 28, "ga": 41, "conf": "0-1", "streak": "L2", "streakType": "l", "last5": ["l","l","w","w","l"] }
+      ]
+    }
+  ]
+}

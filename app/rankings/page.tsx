@@ -1,11 +1,26 @@
 import type { Metadata } from "next";
+import rankingsData from "../../data/power-rankings.json";
 import "./rankings.css";
 
 export const metadata: Metadata = {
   title: "Power Rankings",
 };
 
+function getTrend(rank: number, lastWeek: number | string) {
+  if (lastWeek === "NR") return <div className="movement"><span className="move-new">NEW</span></div>;
+  const lw = lastWeek as number;
+  if (rank < lw) {
+    return <div className="movement move-up"><span className="move-arrow">&#9650;</span><span className="move-num">{lw - rank}</span></div>;
+  }
+  if (rank > lw) {
+    return <div className="movement move-down"><span className="move-arrow">&#9660;</span><span className="move-num">{rank - lw}</span></div>;
+  }
+  return <div className="movement move-same"><span className="move-arrow">—</span></div>;
+}
+
 export default function Rankings() {
+  const { week, publishDate, intro, rankings, biggestMovers, droppedOut } = rankingsData;
+
   return (
     <>
       <div className="page-hero">
@@ -19,14 +34,14 @@ export default function Rankings() {
       <div className="rankings-layout">
         <main>
           <div className="rankings-intro">
-            <div className="week-label">Week <span className="week-num">3</span> Power Rankings</div>
-            <div className="date-line">Published March 15, 2026 · Updated after all games through March 14</div>
-            <p className="blurb">Cardinal Gibbons holds the top spot for the third straight week after steamrolling Broughton. Athens Drive makes a big jump after going 2-0 this week against conference opponents.</p>
+            <div className="week-label">Week <span className="week-num">{week}</span> Power Rankings</div>
+            <div className="date-line">Published {publishDate} · Updated after all games through March 14</div>
+            <p className="blurb">{intro}</p>
           </div>
 
           <div className="rankings-table-wrap">
             <div className="rankings-table-header">
-              <h3>THLN Power Rankings — Week 3</h3>
+              <h3>THLN Power Rankings — Week {week}</h3>
               <span className="powered-by">Tar Heel Lax Network</span>
             </div>
             <table className="rankings-table">
@@ -42,51 +57,29 @@ export default function Rankings() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td><div className="rank-cell"><div className="rank-num top3">1</div></div></td>
-                  <td><div className="team-cell"><div className="team-badge bg-cg">CG</div><div className="team-details"><div className="team-name">Cardinal Gibbons</div><div className="team-conf">WLC-4 · Raleigh</div></div></div></td>
-                  <td><span className="class-pill c7a">7A</span></td>
-                  <td className="record-col">6-0</td>
-                  <td className="lw-col">1</td>
-                  <td><span className="streak-w">W6</span></td>
-                  <td><div className="movement move-same"><span className="move-arrow">—</span></div></td>
-                </tr>
-                <tr>
-                  <td><div className="rank-cell"><div className="rank-num top3">2</div></div></td>
-                  <td><div className="team-cell"><div className="team-badge bg-ad">AD</div><div className="team-details"><div className="team-name">Athens Drive</div><div className="team-conf">WLC-3 · Raleigh</div></div></div></td>
-                  <td><span className="class-pill c8a">8A</span></td>
-                  <td className="record-col">6-0</td>
-                  <td className="lw-col">5</td>
-                  <td><span className="streak-w">W6</span></td>
-                  <td><div className="movement move-up"><span className="move-arrow">&#9650;</span><span className="move-num">3</span></div></td>
-                </tr>
-                <tr>
-                  <td><div className="rank-cell"><div className="rank-num top3">3</div></div></td>
-                  <td><div className="team-cell"><div className="team-badge bg-mp">MP</div><div className="team-details"><div className="team-name">Myers Park</div><div className="team-conf">LC-19 · Charlotte</div></div></div></td>
-                  <td><span className="class-pill c8a">8A</span></td>
-                  <td className="record-col">5-1</td>
-                  <td className="lw-col">4</td>
-                  <td><span className="streak-w">W4</span></td>
-                  <td><div className="movement move-up"><span className="move-arrow">&#9650;</span><span className="move-num">1</span></div></td>
-                </tr>
-                <tr>
-                  <td><div className="rank-cell"><div className="rank-num">4</div></div></td>
-                  <td><div className="team-cell"><div className="team-badge bg-gh">GH</div><div className="team-details"><div className="team-name">Green Hope</div><div className="team-conf">WLC-5 · Cary</div></div></div></td>
-                  <td><span className="class-pill c7a">7A</span></td>
-                  <td className="record-col">5-1</td>
-                  <td className="lw-col">2</td>
-                  <td><span className="streak-w">W3</span></td>
-                  <td><div className="movement move-down"><span className="move-arrow">&#9660;</span><span className="move-num">2</span></div></td>
-                </tr>
-                <tr>
-                  <td><div className="rank-cell"><div className="rank-num">5</div></div></td>
-                  <td><div className="team-cell"><div className="team-badge bg-cc">CC</div><div className="team-details"><div className="team-name">Charlotte Catholic</div><div className="team-conf">LC-15 · Charlotte</div></div></div></td>
-                  <td><span className="class-pill c6a">6A</span></td>
-                  <td className="record-col">5-1</td>
-                  <td className="lw-col">6</td>
-                  <td><span className="streak-w">W2</span></td>
-                  <td><div className="movement move-up"><span className="move-arrow">&#9650;</span><span className="move-num">1</span></div></td>
-                </tr>
+                {rankings.map((team) => (
+                  <tr key={team.rank}>
+                    <td>
+                      <div className="rank-cell">
+                        <div className={`rank-num ${team.rank <= 3 ? "top3" : ""}`}>{team.rank}</div>
+                      </div>
+                    </td>
+                    <td>
+                      <div className="team-cell">
+                        <div className={`team-badge ${team.badgeClass}`}>{team.abbr}</div>
+                        <div className="team-details">
+                          <div className="team-name">{team.team}</div>
+                          <div className="team-conf">{team.conference} · {team.city}</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span className={`class-pill ${team.classClass}`}>{team.classification}</span></td>
+                    <td className="record-col">{team.record}</td>
+                    <td className="lw-col">{team.lastWeek}</td>
+                    <td><span className={`streak-${team.streakType}`}>{team.streak}</span></td>
+                    <td>{getTrend(team.rank, team.lastWeek)}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -95,17 +88,33 @@ export default function Rankings() {
         <aside>
           <div className="sidebar-block">
             <div className="sb-header">Biggest Movers</div>
-            <div className="mover-item">
-              <div className="mover-arrow-big up"><span className="arrow-icon">&#9650;</span></div>
-              <div className="mover-info"><div className="mover-name">Athens Drive</div><div className="mover-detail">Beat Enloe & Leesville Road this week</div></div>
-              <div className="mover-change up">+3</div>
-            </div>
-            <div className="mover-item">
-              <div className="mover-arrow-big down"><span className="arrow-icon">&#9660;</span></div>
-              <div className="mover-info"><div className="mover-name">Green Hope</div><div className="mover-detail">Dropped non-conf game to Athens Drive</div></div>
-              <div className="mover-change down">-2</div>
-            </div>
+            {biggestMovers.map((mover, i) => (
+              <div className="mover-item" key={i}>
+                <div className={`mover-arrow-big ${mover.direction}`}>
+                  <span className="arrow-icon">{mover.direction === "up" ? "▲" : "▼"}</span>
+                </div>
+                <div className="mover-info">
+                  <div className="mover-name">{mover.team}</div>
+                  <div className="mover-detail">{mover.reason}</div>
+                </div>
+                <div className={`mover-change ${mover.direction}`}>{mover.change}</div>
+              </div>
+            ))}
           </div>
+
+          {droppedOut.length > 0 && (
+            <div className="sidebar-block">
+              <div className="sb-header">Dropped Out</div>
+              <div className="dropped-list">
+                {droppedOut.map((team, i) => (
+                  <div className="dropped-team" key={i}>
+                    <span className="dt-name">{team.team}</span>
+                    <span className="dt-prev">Was #{team.previousRank} · Now {team.record}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="sidebar-block">
             <div className="methodology">
