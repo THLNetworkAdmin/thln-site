@@ -81,8 +81,7 @@ export default function Rankings() {
                   <tr key={team.rank}>
                     <td>
                       <div className="rank-cell">
-                        <div className={`rank-num ${team.rank <= 3 ? "top3" : ""}`}>{team.rank}</div>
-                      </div>
+<div className="rank-num">{team.rank}</div>                      </div>
                     </td>
                     <td>
                       <div className="team-cell">
