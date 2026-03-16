@@ -106,25 +106,25 @@ export default function Home() {
         <div className="hero-field-lines"></div>
         <div className="hero-content">
           <div className="hero-left">
-            <div className="hero-label">Featured Article</div>
-            <h1>Cardinal Gibbons <span className="hl">dominates</span> in conference opener</h1>
+            <div className="hero-label">Power Rankings</div>
+            <h1>Week 4: Hough &amp; Topsail <span className="hl">lead the way</span></h1>
             <p className="hero-desc">
-              The Crusaders put on a clinic with a suffocating ride and elite ball movement, dismantling Green Level 14–5 in a game that wasn&apos;t as close as the final score suggests.
+              The Huskies claim the top spot after a dominant home win over Charlotte Catholic, while the unbeaten Topsail Pirates keep rolling with a statement win at Crosse Out Cancer 2026. Charlotte Country Day leads the NCISAA. Here&apos;s our full Week 4 breakdown.
             </p>
             <div className="hero-meta">
-              <span><span className="dot"></span> Game Review</span>
-              <span>March 14, 2026</span>
-              <span>8 min read</span>
+              <span><span className="dot"></span> Power Rankings</span>
+              <span>March 16, 2026</span>
+              <span>5 min read</span>
             </div>
           </div>
           <div className="hero-featured">
             <div className="hero-featured-img">
-              <div className="overlay-text">LAX</div>
+              <div className="overlay-text">WEEK 4</div>
             </div>
             <div className="hero-featured-body">
-              <div className="tag">Up Next</div>
-              <h3>Early-season power rankings: Who&apos;s for real in the Triangle?</h3>
-              <p>Breaking down the top 10 teams in the Triangle after two weeks of play.</p>
+              <div className="tag">Rankings</div>
+              <h3>THLN Week 4 Power Rankings are live</h3>
+              <p>New No. 1, a 7A sleeper, and an NCISAA shakeup. See who made the top 10.</p>
             </div>
           </div>
         </div>
@@ -134,49 +134,13 @@ export default function Home() {
       <div className="main-content">
         <main>
           <div className="section-header">
-            <h2>Latest Articles</h2>
-            <Link href="/game-reviews">View All →</Link>
+            <h2>Latest</h2>
+            <Link href="/rankings">View Rankings →</Link>
           </div>
 
-          <article className="article-card">
-            <div className="article-thumb"><div className="thumb-inner">GR</div></div>
-            <div className="article-info">
-              <span className="article-tag tag-review">Game Review</span>
-              <h3>Topsail takes down Middle Creek on the road</h3>
-              <p>The Pirates continue their unbeaten run with a gritty 7-5 road win.</p>
-              <span className="meta">March 14, 2026 · 6 min read</span>
-            </div>
-          </article>
-
-          <article className="article-card">
-            <div className="article-thumb"><div className="thumb-inner">RK</div></div>
-            <div className="article-info">
-              <span className="article-tag tag-rankings">Rankings</span>
-              <h3>Week 3 statewide power rankings</h3>
-              <p>New No. 1 after last week&apos;s upsets? We break down movement across all classifications.</p>
-              <span className="meta">March 12, 2026 · 10 min read</span>
-            </div>
-          </article>
-
-          <article className="article-card">
-            <div className="article-thumb"><div className="thumb-inner">FT</div></div>
-            <div className="article-info">
-              <span className="article-tag tag-feature">Feature</span>
-              <h3>The rise of lacrosse in the 910: Fayetteville&apos;s growing scene</h3>
-              <p>How programs in the Sandhills are building from the ground up and competing with the big-city schools.</p>
-              <span className="meta">March 10, 2026 · 12 min read</span>
-            </div>
-          </article>
-
-          <article className="article-card">
-            <div className="article-thumb"><div className="thumb-inner">OP</div></div>
-            <div className="article-info">
-              <span className="article-tag tag-opinion">Opinion</span>
-              <h3>Why the NCHSAA needs to add a 5th classification for lacrosse</h3>
-              <p>The gap between the haves and have-nots is growing. A fifth class would level the playing field.</p>
-              <span className="meta">March 8, 2026 · 7 min read</span>
-            </div>
-          </article>
+          <div className="no-articles">
+            <p className="no-articles-text">Articles and game reviews are coming soon. Stay tuned for in-depth coverage of NC high school lacrosse.</p>
+          </div>
         </main>
 
         {/* Sidebar */}

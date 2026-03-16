@@ -339,3 +339,17 @@
 }
 
 .social-btn:hover { background: var(--navy-light); }
+
+/* No articles placeholder */
+.no-articles {
+  padding: 48px 0;
+  text-align: center;
+}
+
+.no-articles-text {
+  font-family: 'Source Serif 4', serif;
+  font-size: 16px;
+  color: var(--text-light);
+  font-style: italic;
+  line-height: 1.6;
+}
