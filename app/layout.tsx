@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Tar Heel Lax Network",
+  title: {
+    default: "Tar Heel Lax Network",
+    template: "%s — Tar Heel Lax Network",
+  },
   description: "NC High School Boys Lacrosse — Scores, standings, power rankings, and game reviews.",
 };
 
@@ -27,10 +21,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

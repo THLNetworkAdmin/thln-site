@@ -1,26 +1,332 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy: #0B1D3A;
+  --navy-mid: #152C54;
+  --navy-light: #1E3A6E;
+  --carolina: #7BAFD4;
+  --carolina-light: #A8CCE4;
+  --carolina-pale: #D6E8F3;
+  --carolina-wash: #EDF4F9;
+  --chalk: #F0EDE5;
+  --white: #FAFAF8;
+  --off-white: #F5F3EE;
+  --text-dark: #1A1A1A;
+  --text-mid: #4A4A4A;
+  --text-light: #7A7A7A;
+  --red-accent: #B83232;
+  --border: #E5E2DA;
+  --win-green: #2D8A4E;
+  --loss-red: #B83232;
+  --turf: #2D8A4E;
+  --turf-dark: #1B5E33;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--text-dark);
+  overflow-x: hidden;
 }
+
+/* ===== NAV ===== */
+nav {
+  background: var(--navy);
+  border-bottom: 3px solid var(--carolina);
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  text-decoration: none;
+}
+
+.nav-logo-svg { width: 44px; height: 44px; flex-shrink: 0; }
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-logo-text .name {
+  font-family: 'Jost', 'Futura', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.nav-logo-text .tagline {
+  font-size: 10px;
+  color: var(--carolina);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0;
+  list-style: none;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 22px 20px;
+  color: #ccc;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--carolina);
+  border-bottom-color: var(--carolina);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.5);
+  padding: 40px;
+  text-align: center;
+}
+
+footer .footer-logo {
+  font-family: 'Jost', 'Futura', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+footer .footer-tag {
+  font-size: 10px;
+  color: var(--carolina);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+footer .footer-links a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: 'Oswald', sans-serif;
+  transition: color 0.2s;
+}
+
+footer .footer-links a:hover {
+  color: var(--carolina);
+}
+
+footer .copyright {
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ===== PAGE HERO (shared) ===== */
+.page-hero {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 70%, #1A4A6E 100%);
+  padding: 48px 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 500px;
+  height: 500px;
+  border: 1.5px solid rgba(123, 175, 212, 0.05);
+  border-radius: 50%;
+}
+
+.hero-field-lines {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0.03;
+  background: repeating-linear-gradient(90deg, transparent, transparent 140px, rgba(255,255,255,0.5) 140px, rgba(255,255,255,0.5) 141px);
+}
+
+.page-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.page-hero h1 .hl { color: var(--carolina); }
+
+.page-hero .page-desc {
+  font-family: 'Source Serif 4', serif;
+  font-size: 16px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 28px;
+}
+
+/* ===== SECTION HEADERS ===== */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  border-bottom: 2px solid var(--navy);
+  padding-bottom: 12px;
+}
+
+.section-header h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--navy);
+}
+
+.section-header a {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--carolina);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* ===== SIDEBAR BLOCKS ===== */
+.sidebar-block {
+  margin-bottom: 32px;
+}
+
+.sb-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--navy);
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 16px;
+}
+
+.sb-header .source {
+  font-size: 9px;
+  color: var(--carolina);
+  letter-spacing: 1px;
+}
+
+/* ===== TAGS ===== */
+.tag-review { background: #EAF3DE; color: var(--turf-dark); }
+.tag-feature { background: #FAEEDA; color: #854F0B; }
+.tag-rankings { background: #E6F1FB; color: #185FA5; }
+.tag-opinion { background: #FBEAF0; color: #72243E; }
+
+/* ===== BADGE COLORS ===== */
+.bg-cg { background: #8B0000; }
+.bg-gh { background: #006B3F; }
+.bg-af { background: #1C3F6E; }
+.bg-lr { background: #5C2D91; }
+.bg-mc { background: #CC5500; }
+.bg-br { background: #4B0082; }
+.bg-en { background: #B8860B; }
+.bg-mk { background: #333; }
+.bg-cc { background: #0055A4; }
+.bg-pd { background: #8B4513; }
+.bg-ak { background: #2E5090; }
+.bg-mp { background: #006400; }
+.bg-mr { background: #8B0000; }
+.bg-ln { background: #003366; }
+.bg-sm { background: #CC0000; }
+.bg-hp { background: #228B22; }
+.bg-ad { background: #B22222; }
+.bg-cr { background: #2E8B57; }
+
+/* ===== CLASSIFICATION PILLS ===== */
+.class-pill {
+  font-family: 'Oswald', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.c8a { background: #0B1D3A; color: #7BAFD4; }
+.c7a { background: #1B5E33; color: #C0DD97; }
+.c6a { background: #5C2D91; color: #D6C4ED; }
+.c5a { background: #854F0B; color: #FAC775; }
+.c4a { background: #185FA5; color: #B5D4F4; }
+.c3a { background: #8B0000; color: #F7C1C1; }
+.c2a { background: #333; color: #ccc; }
+.c1a { background: #555; color: #ddd; }
+
+/* ===== STREAKS ===== */
+.streak-w { color: var(--win-green); font-weight: 600; font-family: 'Oswald', sans-serif; }
+.streak-l { color: var(--loss-red); font-weight: 600; font-family: 'Oswald', sans-serif; }
+
+/* ===== LAST 5 DOTS ===== */
+.last5 { display: flex; gap: 3px; justify-content: center; }
+.last5 .l5-dot {
+  width: 18px; height: 18px; border-radius: 3px;
+  font-family: 'Oswald', sans-serif; font-size: 10px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center; color: #fff;
+}
+.l5-dot.w { background: var(--win-green); }
+.l5-dot.l { background: var(--loss-red); }
+
+/* ===== GOAL DIFF ===== */
+.gf-col, .ga-col { font-family: 'Oswald', sans-serif; font-size: 14px; color: var(--text-mid) !important; }
+.gd-col { font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 600; }
+.gd-pos { color: var(--win-green) !important; }
+.gd-neg { color: var(--loss-red) !important; }
+.gd-zero { color: var(--text-light) !important; }

@@ -1,0 +1,146 @@
+.rankings-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 40px 60px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+}
+
+.rankings-intro { margin-bottom: 32px; }
+
+.rankings-intro .week-label {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700; font-size: 24px;
+  text-transform: uppercase; letter-spacing: 1px;
+  color: var(--navy); margin-bottom: 4px;
+}
+
+.rankings-intro .week-label .week-num { color: var(--carolina); }
+.rankings-intro .date-line { font-size: 13px; color: var(--text-light); margin-bottom: 14px; }
+
+.rankings-intro .blurb {
+  font-family: 'Source Serif 4', serif;
+  font-size: 16px; color: var(--text-mid);
+  line-height: 1.6; padding-bottom: 20px;
+  border-bottom: 2px solid var(--navy);
+}
+
+.rankings-table-wrap { margin-bottom: 36px; }
+
+.rankings-table-header {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--navy); padding: 12px 20px;
+}
+
+.rankings-table-header h3 {
+  font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 15px;
+  letter-spacing: 2px; text-transform: uppercase; color: #fff;
+}
+
+.rankings-table-header .powered-by {
+  font-family: 'Oswald', sans-serif; font-size: 9px;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--carolina);
+}
+
+.rankings-table {
+  width: 100%; border-collapse: collapse;
+  background: #fff; border: 1px solid var(--border); border-top: none;
+}
+
+.rankings-table thead th {
+  font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 10px;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light);
+  padding: 12px 14px; text-align: center;
+  border-bottom: 1px solid var(--border); background: var(--off-white);
+}
+
+.rankings-table thead th:first-child { text-align: center; width: 56px; }
+.rankings-table thead th:nth-child(2) { text-align: left; }
+
+.rankings-table tbody td {
+  padding: 0; text-align: center;
+  border-bottom: 1px solid #f0ede5;
+  font-size: 14px; font-weight: 500; color: var(--text-mid);
+  vertical-align: middle; height: 64px;
+}
+
+.rankings-table tbody td:nth-child(2) { text-align: left; padding: 0 14px; }
+.rankings-table tbody tr:hover { background: var(--carolina-wash); }
+
+.rank-cell { display: flex; align-items: center; justify-content: center; height: 64px; }
+
+.rank-num {
+  font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 22px;
+  color: var(--navy); width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.rank-num.top3 { background: var(--navy); color: var(--carolina); border-radius: 4px; }
+
+.team-cell { display: flex; align-items: center; gap: 12px; }
+
+.team-badge {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 12px;
+  color: #fff; flex-shrink: 0;
+}
+
+.team-details .team-name {
+  font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 16px;
+  text-transform: uppercase; color: var(--navy); line-height: 1.1;
+}
+
+.team-details .team-conf { font-size: 11px; color: var(--text-light); }
+
+.record-col { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 15px; color: var(--navy) !important; }
+.lw-col { font-family: 'Oswald', sans-serif; font-size: 14px; color: var(--text-light) !important; }
+
+.movement { display: flex; align-items: center; justify-content: center; gap: 4px; }
+.move-up { color: var(--win-green); font-weight: 700; }
+.move-down { color: var(--loss-red); font-weight: 700; }
+.move-same { color: var(--text-light); }
+.move-arrow { font-size: 14px; line-height: 1; }
+.move-num { font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 600; }
+
+/* Sidebar */
+.mover-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px; border-bottom: 1px solid #f0ede5;
+}
+
+.mover-arrow-big {
+  width: 36px; height: 36px; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+.mover-arrow-big.up { background: #EAF3DE; }
+.mover-arrow-big.down { background: #FCEBEB; }
+.mover-arrow-big .arrow-icon { font-size: 18px; font-weight: 700; }
+.mover-arrow-big.up .arrow-icon { color: var(--win-green); }
+.mover-arrow-big.down .arrow-icon { color: var(--loss-red); }
+
+.mover-info .mover-name {
+  font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 14px;
+  text-transform: uppercase; color: var(--navy); line-height: 1.1;
+}
+
+.mover-info .mover-detail { font-size: 11px; color: var(--text-light); }
+.mover-change { margin-left: auto; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 16px; }
+.mover-change.up { color: var(--win-green); }
+.mover-change.down { color: var(--loss-red); }
+
+.methodology {
+  background: var(--off-white); border: 1px solid var(--border); padding: 20px;
+}
+
+.methodology h4 {
+  font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 14px;
+  text-transform: uppercase; letter-spacing: 1px; color: var(--navy); margin-bottom: 8px;
+}
+
+.methodology p {
+  font-family: 'Source Serif 4', serif; font-size: 13px;
+  color: var(--text-mid); line-height: 1.6;
+}
