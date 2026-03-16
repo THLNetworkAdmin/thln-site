@@ -13,10 +13,3 @@ export default function Home() {
     </div>
   );
 }
-```
-
-Save the file (**Command + S**), then push:
-```
-git add .
-git commit -m "Add coming soon page"
-git push
