@@ -11,6 +11,7 @@ export default function Nav() {
     { href: "/game-reviews", label: "Game Reviews" },
     { href: "/standings", label: "Standings" },
     { href: "/rankings", label: "Rankings" },
+    { href: "/teams", label: "Teams" },
   ];
 
   return (
