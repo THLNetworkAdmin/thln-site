@@ -63,12 +63,12 @@
       "homeTeam": "Lucy Beckham (SC)",
       "homeAbbr": "LB",
       "homeBadge": "bg-mc",
-      "homeScore": 9,
+      "homeScore": 11,
       "awayTeam": "Lake Norman",
       "awayAbbr": "LN",
       "awayBadge": "bg-ln",
-      "awayScore": 11,
-      "winner": "Lake Norman",
+      "awayScore": 9,
+      "winner": "Lucy Beckham (SC)",
       "status": "final"
     },
     {
