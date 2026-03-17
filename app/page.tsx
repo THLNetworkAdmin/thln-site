@@ -184,8 +184,7 @@ export default function Home() {
                 Your home for North Carolina high school boys lacrosse. Game reviews, scores, standings, power rankings, and everything in between — from the Triangle to the Queen City and beyond.
               </p>
               <div className="social-links">
-                <a href="#" className="social-btn">Twitter/X</a>
-                <a href="#" className="social-btn">Instagram</a>
+<a href="https://x.com/TarHeelLaxNet" target="_blank" rel="noopener noreferrer" className="social-btn">Twitter/X</a>                <a href="#" className="social-btn">Instagram</a>
                 <a href="#" className="social-btn">Subscribe</a>
               </div>
             </div>
