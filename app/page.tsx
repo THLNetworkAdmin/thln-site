@@ -118,7 +118,27 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-featured">
-            <div className="hero-featured-img">
+            <div className="hero-featured">
+            <div className="hero-featured-img" style={{ background: "#E8E6E1", padding: "0" }}>
+              <svg width="100%" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                <rect width="800" height="500" fill="#E8E6E1"/>
+                <line x1="0" y1="100" x2="800" y2="100" stroke="#0B1D3A" strokeWidth="0.5" opacity="0.04"/>
+                <line x1="0" y1="200" x2="800" y2="200" stroke="#0B1D3A" strokeWidth="0.5" opacity="0.04"/>
+                <line x1="0" y1="300" x2="800" y2="300" stroke="#0B1D3A" strokeWidth="0.5" opacity="0.04"/>
+                <line x1="0" y1="400" x2="800" y2="400" stroke="#0B1D3A" strokeWidth="0.5" opacity="0.04"/>
+                <line x1="200" y1="0" x2="200" y2="500" stroke="#0B1D3A" strokeWidth="0.5" opacity="0.04"/>
+                <line x1="400" y1="0" x2="400" y2="500" stroke="#0B1D3A" strokeWidth="0.5" opacity="0.04"/>
+                <line x1="600" y1="0" x2="600" y2="500" stroke="#0B1D3A" strokeWidth="0.5" opacity="0.04"/>
+                <circle cx="680" cy="80" r="300" fill="none" stroke="#0B1D3A" strokeWidth="1" opacity="0.04"/>
+                <circle cx="120" cy="420" r="250" fill="none" stroke="#0B1D3A" strokeWidth="1" opacity="0.03"/>
+                <rect x="0" y="0" width="800" height="6" fill="#0B1D3A"/>
+                <rect x="0" y="494" width="800" height="6" fill="#0B1D3A"/>
+                <text x="400" y="155" textAnchor="middle" fontFamily="Georgia, serif" fontSize="48" fill="#7BAFD4" fontWeight="700" letterSpacing="2">WEEK 4</text>
+                <line x1="250" y1="180" x2="550" y2="180" stroke="#0B1D3A" strokeWidth="0.5" opacity="0.15"/>
+                <text x="400" y="280" textAnchor="middle" fontFamily="Georgia, serif" fontSize="90" fill="#0B1D3A" fontWeight="700" letterSpacing="4">POWER</text>
+                <text x="400" y="380" textAnchor="middle" fontFamily="Georgia, serif" fontSize="90" fill="#7BAFD4" fontWeight="700" letterSpacing="4">RANKINGS</text>
+              </svg>
+            </div>
               <div className="overlay-text">WEEK 4</div>
             </div>
             <div className="hero-featured-body">
