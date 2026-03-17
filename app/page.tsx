@@ -143,7 +143,8 @@ export default function Home() {
               <h3>THLN Week 4 Power Rankings are live</h3>
               <p>New No. 1, a 7A sleeper, and an NCISAA shakeup. See who made the top 10.</p>
             </div>
-          </Link>
+          </Link></div>
+      </section>
 
       {/* Main Content */}
       <div className="main-content">
