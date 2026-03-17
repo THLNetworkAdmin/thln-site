@@ -117,8 +117,7 @@ export default function Home() {
               <span>5 min read</span>
             </div>
           </div>
-          <div className="hero-featured">
-            <div className="hero-featured">
+<Link href="/rankings" className="hero-featured" style={{ textDecoration: "none", color: "inherit" }}>
             <div className="hero-featured-img" style={{ background: "#E8E6E1", padding: "0" }}>
               <svg width="100%" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
                 <rect width="800" height="500" fill="#E8E6E1"/>
@@ -139,16 +138,12 @@ export default function Home() {
                 <text x="400" y="380" textAnchor="middle" fontFamily="Georgia, serif" fontSize="90" fill="#7BAFD4" fontWeight="700" letterSpacing="4">RANKINGS</text>
               </svg>
             </div>
-              <div className="overlay-text">WEEK 4</div>
-            </div>
             <div className="hero-featured-body">
               <div className="tag">Rankings</div>
               <h3>THLN Week 4 Power Rankings are live</h3>
               <p>New No. 1, a 7A sleeper, and an NCISAA shakeup. See who made the top 10.</p>
             </div>
-          </div>
-        </div>
-      </section>
+          </Link>
 
       {/* Main Content */}
       <div className="main-content">
