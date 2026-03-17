@@ -158,9 +158,17 @@ export default function Home() {
             <Link href="/rankings">View Rankings →</Link>
           </div>
 
-          <div className="no-articles">
-            <p className="no-articles-text">Articles and game reviews are coming soon. Stay tuned for in-depth coverage of NC high school lacrosse.</p>
-          </div>
+          <article className="article-card" onClick={() => window.location.href='/blog/games-of-the-week'} style={{cursor:'pointer'}}>
+            <div className="article-thumb"><div className="thumb-inner">GOTW</div></div>
+            <div className="article-info">
+              <span className="article-tag tag-feature">Games of the Week</span>
+              <h3>Week 4 Games of the Week: Hough hosts CSD, Middle Creek battles Green Level</h3>
+              <p>Our staff breaks down the top matchups across NC lacrosse this week — plus staff predictions for every game.</p>
+              <span className="meta">March 17, 2026 · 5 min read</span>
+            </div>
+          </article>
+```
+
         </main>
 
         {/* Sidebar */}

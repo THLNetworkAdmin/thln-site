@@ -1,0 +1,240 @@
+.blog-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 40px 60px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 48px;
+}
+
+.blog-body {}
+
+.blog-intro {
+  font-family: 'Source Serif 4', serif;
+  font-size: 17px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  font-style: italic;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--navy);
+  margin-bottom: 32px;
+}
+
+.blog-body h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--navy);
+  margin: 40px 0 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+
+.blog-body h2:first-of-type {
+  margin-top: 0;
+}
+
+.blog-body p {
+  font-family: 'Source Serif 4', serif;
+  font-size: 17px;
+  color: var(--text-dark);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+/* Game block */
+.game-block {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.game-block:last-of-type {
+  border-bottom: none;
+}
+
+.game-matchup {
+  background: var(--navy);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.game-team {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.game-rank {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  color: var(--carolina);
+  font-weight: 600;
+}
+
+.game-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.game-record {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+}
+
+.game-at {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.game-details {
+  margin-left: auto;
+}
+
+.game-date {
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  color: var(--carolina);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Staff Prediction */
+.staff-prediction {
+  background: var(--carolina-wash);
+  border-left: 4px solid var(--carolina);
+  padding: 16px 20px;
+  margin-top: 16px;
+}
+
+.prediction-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--navy);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.staff-prediction p {
+  font-size: 15px !important;
+  color: var(--navy) !important;
+  margin-bottom: 0 !important;
+  line-height: 1.6 !important;
+}
+
+/* Editor's note */
+.editors-note {
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+/* Blog closing */
+.blog-closing {
+  font-family: 'Source Serif 4', serif;
+  font-size: 17px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  font-style: italic;
+  padding-top: 24px;
+  border-top: 2px solid var(--navy);
+  margin-top: 40px;
+}
+
+.blog-closing a {
+  color: var(--carolina);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.blog-closing a:hover {
+  text-decoration: underline;
+}
+
+/* Tags */
+.blog-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.blog-tag {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border: 1px solid var(--border);
+  color: var(--text-mid);
+}
+
+/* Sidebar */
+.blog-sidebar {}
+
+.pick-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0ede5;
+  font-size: 13px;
+}
+
+.pick-teams {
+  color: var(--text-mid);
+}
+
+.pick-teams strong {
+  color: var(--navy);
+}
+
+.pick-day {
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--carolina);
+  font-weight: 600;
+}
+
+.pick-day.pick-no {
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.sidebar-about {
+  padding: 16px;
+}
+
+.sidebar-about p {
+  font-family: 'Source Serif 4', serif;
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.sidebar-about a {
+  color: var(--carolina);
+  text-decoration: none;
+  font-weight: 600;
+}
