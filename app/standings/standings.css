@@ -4,6 +4,68 @@
   padding: 36px 40px 60px;
 }
 
+/* League Toggle */
+.league-toggle {
+  display: flex;
+  gap: 0;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.league-btn {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border: none;
+  background: none;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.league-btn:not(:last-child) {
+  border-right: 1px solid var(--border);
+}
+
+.league-btn:hover {
+  background: var(--off-white);
+}
+
+.league-btn.active {
+  background: var(--navy);
+  color: var(--carolina);
+}
+
+.league-btn.active .league-sub {
+  color: rgba(123, 175, 212, 0.6);
+}
+
+.league-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.standings-summary {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
 .conf-block { margin-bottom: 36px; overflow-x: auto; }
 
 .conf-header {

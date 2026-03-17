@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import teamsData from "../../data/teams-map.json";
 import "./teams.css";
 
@@ -12,17 +12,16 @@ const CLASS_COLORS: Record<string, string> = {
   "4A": "#185FA5",
   "3A": "#8B0000",
   "2A": "#333333",
-  "NCISAA I": "#6B3A8A",
+  "Class I": "#6B3A8A",
+  "Class II": "#9B59B6",
 };
 
-const CLASSIFICATIONS = ["All", "8A", "7A", "6A", "5A", "4A", "3A", "2A"];
+const ALL_CLASSES = ["8A", "7A", "6A", "5A", "4A", "3A", "2A", "Class I", "Class II"];
+const NCHSAA_CLASSES = ["8A", "7A", "6A", "5A", "4A", "3A", "2A"];
+const NCISAA_CLASSES = ["Class I", "Class II"];
 
-// NC bounding box for coordinate mapping
 const NC_BOUNDS = {
-  minLat: 33.84,
-  maxLat: 36.59,
-  minLng: -84.32,
-  maxLng: -75.46,
+  minLat: 33.84, maxLat: 36.59, minLng: -84.32, maxLng: -75.46,
 };
 
 function latLngToXY(lat: number, lng: number, width: number, height: number) {
@@ -31,7 +30,6 @@ function latLngToXY(lat: number, lng: number, width: number, height: number) {
   return { x, y };
 }
 
-// Simplified NC outline path in lat/lng converted to SVG coords
 const NC_PATH = "M0.0,159.4 L2.4,158.3 L18.2,151.3 L28.4,124.5 L34.8,124.5 L51.4,118.7 L64.8,118.7 L84.5,102.4 L95.6,95.4 L106.7,93.1 L112.2,83.8 L121.7,73.3 L135.1,61.7 L150.9,59.3 L165.9,51.2 L180.9,53.5 L190.4,34.9 L204.6,29.1 L208.6,0.0 L235.4,1.2 L270.2,3.5 L299.4,5.8 L318.4,4.7 L339.7,4.7 L364.2,5.8 L380.0,5.8 L402.9,5.8 L423.5,5.8 L459.0,5.8 L498.5,5.8 L519.1,5.8 L546.7,5.8 L565.7,4.7 L584.7,4.7 L602.8,4.7 L618.6,4.7 L632.8,4.7 L644.7,4.7 L667.6,4.7 L677.1,25.6 L684.2,47.7 L693.7,67.5 L699.2,83.8 L695.3,98.9 L692.9,118.7 L692.9,138.5 L687.4,157.1 L681.0,164.1 L679.5,176.9 L673.9,190.8 L659.7,201.3 L651.0,208.3 L636.8,218.8 L624.2,222.3 L618.6,226.9 L606.8,232.7 L592.6,239.7 L577.5,250.2 L570.4,257.2 L552.3,261.8 L535.7,268.8 L524.6,275.8 L513.5,283.9 L504.9,294.4 L503.3,304.9 L497.0,314.2 L473.3,310.7 L455.9,317.7 L448.0,307.2 L414.8,266.5 L384.8,229.2 L367.4,208.3 L335.0,206.0 L316.0,207.1 L297.1,206.0 L279.7,206.0 L278.1,192.0 L274.9,185.0 L267.8,173.4 L259.1,176.9 L259.1,167.6 L233.1,166.4 L202.3,164.1 L180.1,162.9 L165.9,161.7 L152.5,159.4 L139.8,167.6 L121.7,175.7 L103.5,181.5 L95.6,185.0 L79.0,186.2 L55.3,186.2 L30.0,186.2 L24.5,186.2 L15.0,186.2 L0.0,186.2 L0.0,159.4 Z";
 
 interface Team {
@@ -47,18 +45,29 @@ interface Team {
 }
 
 export default function Teams() {
+  const [activeLeague, setActiveLeague] = useState<"All" | "NCHSAA" | "NCISAA">("All");
   const [activeClass, setActiveClass] = useState("All");
   const [hoveredTeam, setHoveredTeam] = useState<Team | null>(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const svgRef = useRef<SVGSVGElement>(null);
 
-  const teams = teamsData.teams as Team[];
+  const allTeams = teamsData.teams as Team[];
   const svgW = 700;
   const svgH = 320;
 
+  // Get which classifications are available based on league selection
+  const availableClasses = activeLeague === "All" ? ALL_CLASSES
+    : activeLeague === "NCHSAA" ? NCHSAA_CLASSES
+    : NCISAA_CLASSES;
+
+  // Filter teams by league
+  const leagueTeams = activeLeague === "All" ? allTeams
+    : allTeams.filter((t) => availableClasses.includes(t.classification));
+
+  // Then filter by classification
   const filteredTeams = activeClass === "All"
-    ? teams
-    : teams.filter((t) => t.classification === activeClass);
+    ? leagueTeams
+    : leagueTeams.filter((t) => t.classification === activeClass);
 
   const handleDotEnter = (team: Team, e: React.MouseEvent) => {
     setHoveredTeam(team);
@@ -75,8 +84,13 @@ export default function Teams() {
   };
 
   const classCount = (cls: string) => {
-    if (cls === "All") return teams.length;
-    return teams.filter((t) => t.classification === cls).length;
+    if (cls === "All") return leagueTeams.length;
+    return leagueTeams.filter((t) => t.classification === cls).length;
+  };
+
+  const handleLeagueSwitch = (league: "All" | "NCHSAA" | "NCISAA") => {
+    setActiveLeague(league);
+    setActiveClass("All");
   };
 
   return (
@@ -90,13 +104,42 @@ export default function Teams() {
       </div>
 
       <div className="teams-content">
+        {/* Level 1: League filter */}
+        <div className="league-toggle">
+          <button
+            className={`league-btn ${activeLeague === "All" ? "active" : ""}`}
+            onClick={() => handleLeagueSwitch("All")}
+          >
+            All <span className="league-sub">All Programs</span>
+          </button>
+          <button
+            className={`league-btn ${activeLeague === "NCHSAA" ? "active" : ""}`}
+            onClick={() => handleLeagueSwitch("NCHSAA")}
+          >
+            NCHSAA <span className="league-sub">Public · 2A–8A</span>
+          </button>
+          <button
+            className={`league-btn ${activeLeague === "NCISAA" ? "active" : ""}`}
+            onClick={() => handleLeagueSwitch("NCISAA")}
+          >
+            NCISAA <span className="league-sub">Private · Class I & II</span>
+          </button>
+        </div>
+
+        {/* Level 2: Classification filter */}
         <div className="teams-filters">
-          {CLASSIFICATIONS.map((cls) => (
+          <button
+            className={`teams-filter-btn ${activeClass === "All" ? "active" : ""}`}
+            onClick={() => setActiveClass("All")}
+          >
+            All Classifications <span className="filter-count">{classCount("All")}</span>
+          </button>
+          {availableClasses.map((cls) => (
             <button
               key={cls}
               className={`teams-filter-btn ${activeClass === cls ? "active" : ""}`}
               onClick={() => setActiveClass(cls)}
-              style={activeClass === cls && cls !== "All" ? { background: CLASS_COLORS[cls], borderColor: CLASS_COLORS[cls] } : {}}
+              style={activeClass === cls ? { background: CLASS_COLORS[cls], borderColor: CLASS_COLORS[cls] } : {}}
             >
               {cls} <span className="filter-count">{classCount(cls)}</span>
             </button>
@@ -105,10 +148,7 @@ export default function Teams() {
 
         <div className="map-container">
           {hoveredTeam && (
-            <div
-              className="map-tooltip"
-              style={{ left: tooltipPos.x, top: tooltipPos.y }}
-            >
+            <div className="map-tooltip" style={{ left: tooltipPos.x, top: tooltipPos.y }}>
               <div className="tt-name">{hoveredTeam.team}</div>
               <div className="tt-class">
                 <span className="tt-pill" style={{ background: CLASS_COLORS[hoveredTeam.classification] || "#333" }}>
@@ -119,41 +159,27 @@ export default function Teams() {
               <div className="tt-stats">
                 <div className="tt-record">{hoveredTeam.record}</div>
                 <div className="tt-detail">GF: {hoveredTeam.gf} · GA: {hoveredTeam.ga} · GD: {hoveredTeam.gf - hoveredTeam.ga > 0 ? "+" : ""}{hoveredTeam.gf - hoveredTeam.ga}</div>
-                {hoveredTeam.streak && hoveredTeam.streak !== "" && (
+                {hoveredTeam.streak && hoveredTeam.streak !== "" && hoveredTeam.streak !== "—" && (
                   <div className="tt-streak">{hoveredTeam.streak}</div>
                 )}
               </div>
             </div>
           )}
 
-          <svg
-            ref={svgRef}
-            width="100%"
-            viewBox={`0 0 ${svgW} ${svgH}`}
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {/* NC outline */}
-            <path
-              d={NC_PATH}
-              fill="var(--map-fill, #EDF4F9)"
-              stroke="var(--map-stroke, #B4B2A9)"
-              strokeWidth="1"
-            />
-
-            {/* All dots - dimmed if filtered */}
-            {teams.map((team, i) => {
+          <svg ref={svgRef} width="100%" viewBox={`0 0 ${svgW} ${svgH}`} xmlns="http://www.w3.org/2000/svg">
+            <path d={NC_PATH} fill="var(--map-fill, #EDF4F9)" stroke="var(--map-stroke, #B4B2A9)" strokeWidth="1"/>
+            {leagueTeams.map((team, i) => {
+              if (!team.lat || !team.lng) return null;
               const { x, y } = latLngToXY(team.lat, team.lng, svgW, svgH);
               const isActive = activeClass === "All" || team.classification === activeClass;
               const isHovered = hoveredTeam?.team === team.team;
               return (
                 <circle
                   key={`${team.team}-${i}`}
-                  cx={x}
-                  cy={y}
+                  cx={x} cy={y}
                   r={isHovered ? 7 : 4.5}
                   fill={CLASS_COLORS[team.classification] || "#333"}
-                  stroke="#fff"
-                  strokeWidth={isHovered ? 1.5 : 1}
+                  stroke="#fff" strokeWidth={isHovered ? 1.5 : 1}
                   opacity={isActive ? 1 : 0.1}
                   style={{ cursor: isActive ? "pointer" : "default", transition: "r 0.15s, opacity 0.2s" }}
                   onMouseEnter={(e) => isActive && handleDotEnter(team, e)}
@@ -164,19 +190,17 @@ export default function Teams() {
           </svg>
         </div>
 
-        {/* Legend */}
         <div className="map-legend">
-          {Object.entries(CLASS_COLORS).filter(([k]) => k !== "NCISAA I").map(([cls, color]) => (
+          {availableClasses.map((cls) => (
             <div className="legend-item" key={cls}>
-              <div className="legend-dot" style={{ background: color }}></div>
+              <div className="legend-dot" style={{ background: CLASS_COLORS[cls] }}></div>
               <span>{cls}</span>
             </div>
           ))}
         </div>
 
-        {/* Team count summary */}
         <div className="teams-summary">
-          Showing {filteredTeams.length} of {teams.length} programs across North Carolina
+          Showing {filteredTeams.length} of {allTeams.length} programs across North Carolina
         </div>
       </div>
     </>
