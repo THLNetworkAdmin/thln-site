@@ -159,7 +159,14 @@ export default function Home() {
           </div>
 
           <article className="article-card" onClick={() => window.location.href='/blog/games-of-the-week'} style={{cursor:'pointer'}}>
-            <div className="article-thumb"><div className="thumb-inner">GOTW</div></div>
+            <div className="article-thumb" style={{ background: "#0B1D3A", border: "none", overflow: "hidden" }}>
+              <svg width="100%" height="100%" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <rect width="800" height="500" fill="#0B1D3A"/>
+                <g transform="translate(50, 80) scale(1.0, 1.05)"><path d="M0.0,159.4 L2.4,158.3 L18.2,151.3 L28.4,124.5 L34.8,124.5 L51.4,118.7 L64.8,118.7 L84.5,102.4 L95.6,95.4 L106.7,93.1 L112.2,83.8 L121.7,73.3 L135.1,61.7 L150.9,59.3 L165.9,51.2 L180.9,53.5 L190.4,34.9 L204.6,29.1 L208.6,0.0 L235.4,1.2 L270.2,3.5 L299.4,5.8 L318.4,4.7 L339.7,4.7 L364.2,5.8 L380.0,5.8 L402.9,5.8 L423.5,5.8 L459.0,5.8 L498.5,5.8 L519.1,5.8 L546.7,5.8 L565.7,4.7 L584.7,4.7 L602.8,4.7 L618.6,4.7 L632.8,4.7 L644.7,4.7 L667.6,4.7 L677.1,25.6 L684.2,47.7 L693.7,67.5 L699.2,83.8 L695.3,98.9 L692.9,118.7 L692.9,138.5 L687.4,157.1 L681.0,164.1 L679.5,176.9 L673.9,190.8 L659.7,201.3 L651.0,208.3 L636.8,218.8 L624.2,222.3 L618.6,226.9 L606.8,232.7 L592.6,239.7 L577.5,250.2 L570.4,257.2 L552.3,261.8 L535.7,268.8 L524.6,275.8 L513.5,283.9 L504.9,294.4 L503.3,304.9 L497.0,314.2 L473.3,310.7 L455.9,317.7 L448.0,307.2 L414.8,266.5 L384.8,229.2 L367.4,208.3 L335.0,206.0 L316.0,207.1 L297.1,206.0 L279.7,206.0 L278.1,192.0 L274.9,185.0 L267.8,173.4 L259.1,176.9 L259.1,167.6 L233.1,166.4 L202.3,164.1 L180.1,162.9 L165.9,161.7 L152.5,159.4 L139.8,167.6 L121.7,175.7 L103.5,181.5 L95.6,185.0 L79.0,186.2 L55.3,186.2 L30.0,186.2 L24.5,186.2 L15.0,186.2 L0.0,186.2 L0.0,159.4 Z" fill="#7BAFD4" opacity="0.06" stroke="#7BAFD4" strokeWidth="1" strokeOpacity="0.08"/></g>
+                <text x="400" y="215" textAnchor="middle" fontFamily="Georgia, serif" fontSize="60" fill="#FFFFFF" fontWeight="700" letterSpacing="2">GOTW</text>
+                <text x="400" y="310" textAnchor="middle" fontFamily="Georgia, serif" fontSize="24" fill="#7BAFD4" fontWeight="700" letterSpacing="3">WEEK 4</text>
+              </svg>
+            </div>
             <div className="article-info">
               <span className="article-tag tag-feature">Games of the Week</span>
               <h3>Week 4 Games of the Week: Hough hosts CSD, Middle Creek battles Green Level</h3>
