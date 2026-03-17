@@ -174,7 +174,6 @@ export default function Home() {
               <span className="meta">March 17, 2026 · 5 min read</span>
             </div>
           </article>
-```
 
         </main>
 
