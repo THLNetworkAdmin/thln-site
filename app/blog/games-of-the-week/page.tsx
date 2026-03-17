@@ -27,7 +27,6 @@ export default function GamesOfTheWeek() {
           <text x="400" y="405" textAnchor="middle" fontFamily="Georgia, serif" fontSize="14" fill="#FFFFFF" letterSpacing="4" opacity="0.4">TAR HEEL LAX NETWORK</text>
         </svg>
       </div>
-
       <div className="blog-layout">
         <article className="blog-body">
           <p className="blog-intro">
