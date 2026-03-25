@@ -3,7 +3,7 @@
     {
       "team": "Wakefield",
       "abbr": "WAK",
-      "badgeClass": "bg-pd",
+      "badgeClass": "bg-af",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Raleigh",
@@ -18,13 +18,13 @@
       "streakType": "w",
       "lat": 35.7796,
       "lng": -78.6382,
-      "rank": 2,
-      "logo": "/images/teams/wakefield.png"
+      "logo": "/images/teams/wakefield.png",
+      "rank": 2
     },
     {
       "team": "Athens Drive",
       "abbr": "AD",
-      "badgeClass": "bg-pd",
+      "badgeClass": "bg-gh",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Raleigh",
@@ -39,13 +39,13 @@
       "streakType": "w",
       "lat": 35.7876,
       "lng": -78.6302,
-      "rank": 1,
-      "logo": "/images/teams/athens-drive.png"
+      "logo": "/images/teams/athens-drive.png",
+      "rank": 1
     },
     {
       "team": "Millbrook",
       "abbr": "MIL",
-      "badgeClass": "bg-mk",
+      "badgeClass": "bg-af",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Raleigh",
@@ -60,13 +60,13 @@
       "streakType": "w",
       "lat": 35.7716,
       "lng": -78.6302,
-      "rank": 3,
-      "logo": "/images/teams/millbrook.png"
+      "logo": "/images/teams/millbrook.png",
+      "rank": 3
     },
     {
       "team": "Hough",
       "abbr": "HOU",
-      "badgeClass": "bg-ln",
+      "badgeClass": "bg-af",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Cornelius",
@@ -81,13 +81,13 @@
       "streakType": "w",
       "lat": 35.4868,
       "lng": -80.8601,
-      "rank": 4,
-      "logo": "/images/teams/hough.webp"
+      "logo": "/images/teams/hough.webp",
+      "rank": 4
     },
     {
       "team": "Apex Friendship",
       "abbr": "AF",
-      "badgeClass": "bg-sm",
+      "badgeClass": "bg-ak",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Apex",
@@ -102,8 +102,8 @@
       "streakType": "w",
       "lat": 35.7327,
       "lng": -78.8503,
-      "rank": 5,
-      "logo": "/images/teams/apex-friendship.jpg"
+      "logo": "/images/teams/apex-friendship.jpg",
+      "rank": 5
     },
     {
       "team": "Ardrey Kell",
@@ -123,13 +123,13 @@
       "streakType": "w",
       "lat": 35.2271,
       "lng": -80.8431,
-      "rank": 6,
-      "logo": "/images/teams/ardrey-kell.png"
+      "logo": "/images/teams/ardrey-kell.png",
+      "rank": 6
     },
     {
       "team": "Hoggard",
       "abbr": "HOG",
-      "badgeClass": "bg-cr",
+      "badgeClass": "bg-mk",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Wilimington",
@@ -144,13 +144,13 @@
       "streakType": "w",
       "lat": 34.2257,
       "lng": -77.9447,
-      "rank": 7,
-      "logo": "/images/teams/hoggard.png"
+      "logo": "/images/teams/hoggard.png",
+      "rank": 7
     },
     {
       "team": "Pinecrest",
       "abbr": "PIN",
-      "badgeClass": "bg-mc",
+      "badgeClass": "bg-pd",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Southern Pines",
@@ -165,13 +165,13 @@
       "streakType": "w",
       "lat": 35.174,
       "lng": -79.3923,
-      "rank": 8,
-      "logo": "/images/teams/pinecrest.png"
+      "logo": "/images/teams/pinecrest.png",
+      "rank": 8
     },
     {
       "team": "Broughton",
       "abbr": "BRO",
-      "badgeClass": "bg-cg",
+      "badgeClass": "bg-ln",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Raleigh",
@@ -186,13 +186,13 @@
       "streakType": "w",
       "lat": 35.7876,
       "lng": -78.6462,
-      "rank": 9,
-      "logo": "/images/teams/broughton.png"
+      "logo": "/images/teams/broughton.png",
+      "rank": 9
     },
     {
       "team": "Laney",
       "abbr": "LAN",
-      "badgeClass": "bg-hp",
+      "badgeClass": "bg-lr",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Wilimington",
@@ -207,13 +207,13 @@
       "streakType": "l",
       "lat": 34.2337,
       "lng": -77.9367,
-      "rank": 10,
-      "logo": "/images/teams/laney.png"
+      "logo": "/images/teams/laney.png",
+      "rank": 10
     },
     {
       "team": "Green Level",
       "abbr": "GL",
-      "badgeClass": "bg-mr",
+      "badgeClass": "bg-gh",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Cary",
@@ -228,13 +228,13 @@
       "streakType": "l",
       "lat": 35.7915,
       "lng": -78.7811,
-      "rank": 11,
-      "logo": "/images/teams/green-level.png"
+      "logo": "/images/teams/green-level.png",
+      "rank": 11
     },
     {
       "team": "Corinth Holders",
       "abbr": "CH",
-      "badgeClass": "bg-pd",
+      "badgeClass": "bg-mr",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Wendell",
@@ -249,13 +249,13 @@
       "streakType": "l",
       "lat": 35.781,
       "lng": -78.3697,
-      "rank": 14,
-      "logo": "/images/teams/corinth-holders.png"
+      "logo": "/images/teams/corinth-holders.png",
+      "rank": 14
     },
     {
       "team": "Providence",
       "abbr": "PRO",
-      "badgeClass": "bg-mk",
+      "badgeClass": "bg-pd",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Charlotte",
@@ -270,13 +270,13 @@
       "streakType": "w",
       "lat": 35.2351,
       "lng": -80.8351,
-      "rank": 12,
-      "logo": "/images/teams/providence.png"
+      "logo": "/images/teams/providence.png",
+      "rank": 12
     },
     {
       "team": "Green Hope",
       "abbr": "GH",
-      "badgeClass": "bg-gh",
+      "badgeClass": "bg-cg",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Cary",
@@ -291,13 +291,13 @@
       "streakType": "w",
       "lat": 35.7995,
       "lng": -78.7731,
-      "rank": 13,
-      "logo": "/images/teams/green-hope.png"
+      "logo": "/images/teams/green-hope.png",
+      "rank": 13
     },
     {
       "team": "Apex",
       "abbr": "APE",
-      "badgeClass": "bg-mk",
+      "badgeClass": "bg-mp",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Apex",
@@ -312,13 +312,13 @@
       "streakType": "w",
       "lat": 35.7407,
       "lng": -78.8423,
-      "rank": 15,
-      "logo": "/images/teams/apex.png"
+      "logo": "/images/teams/apex.png",
+      "rank": 15
     },
     {
       "team": "Northwest Guilford",
       "abbr": "NG",
-      "badgeClass": "bg-mr",
+      "badgeClass": "bg-mp",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Greensboro",
@@ -333,13 +333,13 @@
       "streakType": "w",
       "lat": 36.0726,
       "lng": -79.792,
-      "rank": 16,
-      "logo": "/images/teams/northwest-guilford.png"
+      "logo": "/images/teams/northwest-guilford.png",
+      "rank": 16
     },
     {
       "team": "Leesville Road",
       "abbr": "LR",
-      "badgeClass": "bg-hp",
+      "badgeClass": "bg-cr",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Raleigh",
@@ -354,13 +354,13 @@
       "streakType": "l",
       "lat": 35.7716,
       "lng": -78.6462,
-      "rank": 17,
-      "logo": "/images/teams/leesville-road.png"
+      "logo": "/images/teams/leesville-road.png",
+      "rank": 17
     },
     {
       "team": "South Mecklenburg",
       "abbr": "SM",
-      "badgeClass": "bg-ak",
+      "badgeClass": "bg-cc",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Charlotte",
@@ -375,13 +375,13 @@
       "streakType": "l",
       "lat": 35.2191,
       "lng": -80.8351,
-      "rank": 19,
-      "logo": "/images/teams/south-mecklenburg.png"
+      "logo": "/images/teams/south-mecklenburg.png",
+      "rank": 19
     },
     {
       "team": "Willow Spring",
       "abbr": "WS",
-      "badgeClass": "bg-mc",
+      "badgeClass": "bg-sm",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Willow Spring",
@@ -396,13 +396,13 @@
       "streakType": "l",
       "lat": 35.5575,
       "lng": -78.6778,
-      "rank": 18,
-      "logo": "/images/teams/willow-spring.png"
+      "logo": "/images/teams/willow-spring.png",
+      "rank": 18
     },
     {
       "team": "Enloe",
       "abbr": "ENL",
-      "badgeClass": "bg-en",
+      "badgeClass": "bg-cr",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Raleigh",
@@ -417,13 +417,13 @@
       "streakType": "l",
       "lat": 35.7956,
       "lng": -78.6382,
-      "rank": 20,
-      "logo": "/images/teams/enloe.png"
+      "logo": "/images/teams/enloe.png",
+      "rank": 20
     },
     {
       "team": "Myers Park",
       "abbr": "MP",
-      "badgeClass": "bg-br",
+      "badgeClass": "bg-ln",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Charlotte",
@@ -438,13 +438,13 @@
       "streakType": "l",
       "lat": 35.2351,
       "lng": -80.8511,
-      "rank": 21,
-      "logo": "/images/teams/myers-park.png"
+      "logo": "/images/teams/myers-park.png",
+      "rank": 21
     },
     {
       "team": "West Forsyth",
       "abbr": "WF",
-      "badgeClass": "bg-mr",
+      "badgeClass": "bg-af",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Clemmons",
@@ -459,13 +459,13 @@
       "streakType": "l",
       "lat": 36.0218,
       "lng": -80.3821,
-      "rank": 22,
-      "logo": "/images/teams/west-forsyth.png"
+      "logo": "/images/teams/west-forsyth.png",
+      "rank": 22
     },
     {
       "team": "Jordan",
       "abbr": "JOR",
-      "badgeClass": "bg-cr",
+      "badgeClass": "bg-pd",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Durham",
@@ -480,13 +480,13 @@
       "streakType": "l",
       "lat": 35.994,
       "lng": -78.8986,
-      "rank": 23,
-      "logo": "/images/teams/jordan.png"
+      "logo": "/images/teams/jordan.png",
+      "rank": 23
     },
     {
       "team": "Rolesville",
       "abbr": "ROL",
-      "badgeClass": "bg-en",
+      "badgeClass": "bg-gh",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Raleigh",
@@ -501,13 +501,13 @@
       "streakType": "l",
       "lat": 35.7636,
       "lng": -78.6382,
-      "rank": 25,
-      "logo": "/images/teams/rolesville.png"
+      "logo": "/images/teams/rolesville.png",
+      "rank": 25
     },
     {
       "team": "Panther Creek",
       "abbr": "PC",
-      "badgeClass": "bg-ln",
+      "badgeClass": "bg-ak",
       "classification": "8A",
       "classClass": "c8a",
       "location": "Cary",
@@ -522,13 +522,13 @@
       "streakType": "l",
       "lat": 35.7835,
       "lng": -78.7731,
-      "rank": 24,
-      "logo": "/images/teams/panther-creek.png"
+      "logo": "/images/teams/panther-creek.png",
+      "rank": 24
     },
     {
       "team": "Davie County",
       "abbr": "DC",
-      "badgeClass": "bg-lr",
+      "badgeClass": "bg-cc",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Mocksville",
@@ -543,13 +543,13 @@
       "streakType": "w",
       "lat": 35.8946,
       "lng": -80.5614,
-      "rank": 1,
-      "logo": "/images/teams/davie-county.png"
+      "logo": "/images/teams/davie-county.png",
+      "rank": 1
     },
     {
       "team": "Topsail",
       "abbr": "TOP",
-      "badgeClass": "bg-ad",
+      "badgeClass": "bg-pd",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Hempstead",
@@ -564,8 +564,8 @@
       "streakType": "w",
       "lat": 34.371,
       "lng": -77.606,
-      "rank": 2,
-      "logo": null
+      "logo": null,
+      "rank": 2
     },
     {
       "team": "Holly Springs",
@@ -585,13 +585,13 @@
       "streakType": "l",
       "lat": 35.6513,
       "lng": -78.8336,
-      "rank": 3,
-      "logo": "/images/teams/holly-springs.png"
+      "logo": "/images/teams/holly-springs.png",
+      "rank": 3
     },
     {
       "team": "East Forsyth",
       "abbr": "EF",
-      "badgeClass": "bg-hp",
+      "badgeClass": "bg-mk",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Kernersville",
@@ -606,13 +606,13 @@
       "streakType": "w",
       "lat": 36.1196,
       "lng": -80.0737,
-      "rank": 4,
-      "logo": null
+      "logo": null,
+      "rank": 4
     },
     {
       "team": "Reagan",
       "abbr": "REA",
-      "badgeClass": "bg-mc",
+      "badgeClass": "bg-sm",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Pfafftown",
@@ -627,13 +627,13 @@
       "streakType": "w",
       "lat": 36.1621,
       "lng": -80.3737,
-      "rank": 5,
-      "logo": null
+      "logo": null,
+      "rank": 5
     },
     {
       "team": "Cardinal Gibbons",
       "abbr": "CG",
-      "badgeClass": "bg-lr",
+      "badgeClass": "bg-mc",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Raleigh",
@@ -648,13 +648,13 @@
       "streakType": "w",
       "lat": 35.7796,
       "lng": -78.6222,
-      "rank": 6,
-      "logo": null
+      "logo": null,
+      "rank": 6
     },
     {
       "team": "Marvin Ridge",
       "abbr": "MR",
-      "badgeClass": "bg-mr",
+      "badgeClass": "bg-sm",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Waxhaw",
@@ -669,13 +669,13 @@
       "streakType": "l",
       "lat": 34.9246,
       "lng": -80.7434,
-      "rank": 8,
-      "logo": null
+      "logo": null,
+      "rank": 8
     },
     {
       "team": "South Garner",
       "abbr": "SG",
-      "badgeClass": "bg-ak",
+      "badgeClass": "bg-ad",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Garner",
@@ -690,13 +690,13 @@
       "streakType": "w",
       "lat": 35.7113,
       "lng": -78.6142,
-      "rank": 7,
-      "logo": null
+      "logo": null,
+      "rank": 7
     },
     {
       "team": "Page",
       "abbr": "PAG",
-      "badgeClass": "bg-sm",
+      "badgeClass": "bg-ak",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Greensboro",
@@ -711,13 +711,13 @@
       "streakType": "w",
       "lat": 36.0806,
       "lng": -79.784,
-      "rank": 9,
-      "logo": null
+      "logo": null,
+      "rank": 9
     },
     {
       "team": "R.J. Reynolds",
       "abbr": "RR",
-      "badgeClass": "bg-mr",
+      "badgeClass": "bg-ad",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Winston-Salem",
@@ -732,13 +732,13 @@
       "streakType": "l",
       "lat": 36.0999,
       "lng": -80.2442,
-      "rank": 10,
-      "logo": null
+      "logo": null,
+      "rank": 10
     },
     {
       "team": "Southwest Guilford",
       "abbr": "SG",
-      "badgeClass": "bg-hp",
+      "badgeClass": "bg-sm",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Greensboro",
@@ -753,13 +753,13 @@
       "streakType": "l",
       "lat": 36.0646,
       "lng": -79.784,
-      "rank": 12,
-      "logo": null
+      "logo": null,
+      "rank": 12
     },
     {
       "team": "Cuthbertson",
       "abbr": "CUT",
-      "badgeClass": "bg-gh",
+      "badgeClass": "bg-mr",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Waxhaw",
@@ -774,13 +774,13 @@
       "streakType": "w",
       "lat": 34.9326,
       "lng": -80.7354,
-      "rank": 11,
-      "logo": null
+      "logo": null,
+      "rank": 11
     },
     {
       "team": "Lake Norman",
       "abbr": "LN",
-      "badgeClass": "bg-cc",
+      "badgeClass": "bg-pd",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Mooresville",
@@ -795,13 +795,13 @@
       "streakType": "w",
       "lat": 35.5849,
       "lng": -80.8101,
-      "rank": 13,
-      "logo": null
+      "logo": null,
+      "rank": 13
     },
     {
       "team": "Ashley",
       "abbr": "ASH",
-      "badgeClass": "bg-mp",
+      "badgeClass": "bg-ak",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Wilmington",
@@ -816,13 +816,13 @@
       "streakType": "w",
       "lat": 34.2257,
       "lng": -77.9447,
-      "rank": 14,
-      "logo": null
+      "logo": null,
+      "rank": 14
     },
     {
       "team": "Sanderson",
       "abbr": "SAN",
-      "badgeClass": "bg-ak",
+      "badgeClass": "bg-af",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Raleigh",
@@ -837,13 +837,13 @@
       "streakType": "l",
       "lat": 35.7796,
       "lng": -78.6542,
-      "rank": 15,
-      "logo": null
+      "logo": null,
+      "rank": 15
     },
     {
       "team": "Grimsley",
       "abbr": "GRI",
-      "badgeClass": "bg-en",
+      "badgeClass": "bg-pd",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Greensboro",
@@ -858,13 +858,13 @@
       "streakType": "w",
       "lat": 36.0806,
       "lng": -79.8,
-      "rank": 17,
-      "logo": null
+      "logo": null,
+      "rank": 17
     },
     {
       "team": "Garner",
       "abbr": "GAR",
-      "badgeClass": "bg-cg",
+      "badgeClass": "bg-af",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Garner",
@@ -879,13 +879,13 @@
       "streakType": "w",
       "lat": 35.7193,
       "lng": -78.6062,
-      "rank": 16,
-      "logo": null
+      "logo": null,
+      "rank": 16
     },
     {
       "team": "Chapel Hill",
       "abbr": "CH",
-      "badgeClass": "bg-cc",
+      "badgeClass": "bg-af",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Chapel Hill",
@@ -900,13 +900,13 @@
       "streakType": "w",
       "lat": 35.9132,
       "lng": -79.0558,
-      "rank": 18,
-      "logo": null
+      "logo": null,
+      "rank": 18
     },
     {
       "team": "Porter Ridge",
       "abbr": "PR",
-      "badgeClass": "bg-pd",
+      "badgeClass": "bg-lr",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Indian Trail",
@@ -921,13 +921,13 @@
       "streakType": "l",
       "lat": 35.0768,
       "lng": -80.6692,
-      "rank": 19,
-      "logo": null
+      "logo": null,
+      "rank": 19
     },
     {
       "team": "Riverside-Durham",
       "abbr": "RD",
-      "badgeClass": "bg-cr",
+      "badgeClass": "bg-mc",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Durham",
@@ -942,13 +942,13 @@
       "streakType": "l",
       "lat": 36.002,
       "lng": -78.8906,
-      "rank": 20,
-      "logo": null
+      "logo": null,
+      "rank": 20
     },
     {
       "team": "Weddington",
       "abbr": "WED",
-      "badgeClass": "bg-br",
+      "badgeClass": "bg-mc",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Weddington",
@@ -963,13 +963,13 @@
       "streakType": "l",
       "lat": 35.0224,
       "lng": -80.7618,
-      "rank": 21,
-      "logo": null
+      "logo": null,
+      "rank": 21
     },
     {
       "team": "Mooresville",
       "abbr": "MOO",
-      "badgeClass": "bg-cr",
+      "badgeClass": "bg-lr",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Mooresville",
@@ -984,8 +984,8 @@
       "streakType": "w",
       "lat": 35.5929,
       "lng": -80.8021,
-      "rank": 23,
-      "logo": null
+      "logo": null,
+      "rank": 23
     },
     {
       "team": "Clayton",
@@ -1005,13 +1005,13 @@
       "streakType": "w",
       "lat": 35.6507,
       "lng": -78.4564,
-      "rank": 22,
-      "logo": null
+      "logo": null,
+      "rank": 22
     },
     {
       "team": "Ballantyne Ridge",
       "abbr": "BR",
-      "badgeClass": "bg-sm",
+      "badgeClass": "bg-lr",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Charlotte",
@@ -1026,13 +1026,13 @@
       "streakType": "l",
       "lat": 35.2191,
       "lng": -80.8511,
-      "rank": 24,
-      "logo": null
+      "logo": null,
+      "rank": 24
     },
     {
       "team": "Heritage",
       "abbr": "HER",
-      "badgeClass": "bg-cg",
+      "badgeClass": "bg-sm",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Wake Forest",
@@ -1047,13 +1047,13 @@
       "streakType": "w",
       "lat": 35.9799,
       "lng": -78.5097,
-      "rank": 25,
-      "logo": null
+      "logo": null,
+      "rank": 25
     },
     {
       "team": "New Bern",
       "abbr": "NB",
-      "badgeClass": "bg-en",
+      "badgeClass": "bg-br",
       "classification": "7A",
       "classClass": "c7a",
       "location": "New Bern",
@@ -1068,13 +1068,13 @@
       "streakType": "l",
       "lat": 35.1085,
       "lng": -77.0441,
-      "rank": 26,
-      "logo": null
+      "logo": null,
+      "rank": 26
     },
     {
       "team": "Wake Forest",
       "abbr": "WF",
-      "badgeClass": "bg-af",
+      "badgeClass": "bg-lr",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Wake Forest",
@@ -1089,13 +1089,13 @@
       "streakType": "l",
       "lat": 35.9879,
       "lng": -78.5017,
-      "rank": 28,
-      "logo": null
+      "logo": null,
+      "rank": 28
     },
     {
       "team": "Jack Britt",
       "abbr": "JB",
-      "badgeClass": "bg-cr",
+      "badgeClass": "bg-gh",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Fayetteville",
@@ -1110,13 +1110,13 @@
       "streakType": "l",
       "lat": 35.0527,
       "lng": -78.8784,
-      "rank": 27,
-      "logo": null
+      "logo": null,
+      "rank": 27
     },
     {
       "team": "North Brunswick",
       "abbr": "NB",
-      "badgeClass": "bg-cg",
+      "badgeClass": "bg-cc",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Leland",
@@ -1131,13 +1131,13 @@
       "streakType": "l",
       "lat": 34.2568,
       "lng": -78.0153,
-      "rank": 29,
-      "logo": null
+      "logo": null,
+      "rank": 29
     },
     {
       "team": "Fuquay-Varina",
       "abbr": "FV",
-      "badgeClass": "bg-gh",
+      "badgeClass": "bg-mc",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Fuquay-Varina",
@@ -1152,13 +1152,13 @@
       "streakType": "w",
       "lat": 35.5844,
       "lng": -78.8,
-      "rank": 30,
-      "logo": null
+      "logo": null,
+      "rank": 30
     },
     {
       "team": "South Iredell",
       "abbr": "SI",
-      "badgeClass": "bg-mc",
+      "badgeClass": "bg-ad",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Statesville",
@@ -1173,13 +1173,13 @@
       "streakType": "l",
       "lat": 35.7826,
       "lng": -80.8873,
-      "rank": 31,
-      "logo": null
+      "logo": null,
+      "rank": 31
     },
     {
       "team": "Cary",
       "abbr": "CAR",
-      "badgeClass": "bg-cr",
+      "badgeClass": "bg-mc",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Cary",
@@ -1194,13 +1194,13 @@
       "streakType": "l",
       "lat": 35.7995,
       "lng": -78.7891,
-      "rank": 33,
-      "logo": null
+      "logo": null,
+      "rank": 33
     },
     {
       "team": "New Hanover",
       "abbr": "NH",
-      "badgeClass": "bg-br",
+      "badgeClass": "bg-lr",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Wilmington",
@@ -1215,13 +1215,13 @@
       "streakType": "l",
       "lat": 34.2337,
       "lng": -77.9367,
-      "rank": 32,
-      "logo": null
+      "logo": null,
+      "rank": 32
     },
     {
       "team": "Cape Fear",
       "abbr": "CF",
-      "badgeClass": "bg-mc",
+      "badgeClass": "bg-sm",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Fayetteville",
@@ -1236,13 +1236,13 @@
       "streakType": "l",
       "lat": 35.0607,
       "lng": -78.8704,
-      "rank": 34,
-      "logo": null
+      "logo": null,
+      "rank": 34
     },
     {
       "team": "Butler",
       "abbr": "BUT",
-      "badgeClass": "bg-ak",
+      "badgeClass": "bg-ln",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Matthews",
@@ -1257,13 +1257,13 @@
       "streakType": "l",
       "lat": 35.1168,
       "lng": -80.7237,
-      "rank": 36,
-      "logo": null
+      "logo": null,
+      "rank": 36
     },
     {
       "team": "Cleveland",
       "abbr": "CLE",
-      "badgeClass": "bg-sm",
+      "badgeClass": "bg-ln",
       "classification": "7A",
       "classClass": "c7a",
       "location": "Cleveland",
@@ -1278,34 +1278,34 @@
       "streakType": "l",
       "lat": 35.7346,
       "lng": -80.6676,
-      "rank": 35,
-      "logo": null
+      "logo": null,
+      "rank": 35
     },
     {
       "team": "Union Pines",
       "abbr": "UP",
-      "badgeClass": "bg-gh",
+      "badgeClass": "bg-ad",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Cameron",
-      "wins": 8,
-      "losses": 1,
-      "record": "8-1",
-      "pct": ".889",
-      "gf": 127,
-      "ga": 61,
-      "gd": 66,
-      "streak": "L1",
-      "streakType": "l",
+      "wins": 9,
+      "losses": 0,
+      "record": "9-0",
+      "pct": "1.000",
+      "gf": 139,
+      "ga": 49,
+      "gd": 90,
+      "streak": "W9",
+      "streakType": "w",
       "lat": 35.3266,
       "lng": -79.2534,
-      "rank": 2,
-      "logo": "/images/teams/union-pines.png"
+      "logo": "/images/teams/union-pines.png",
+      "rank": 1
     },
     {
       "team": "Middle Creek",
       "abbr": "MC",
-      "badgeClass": "bg-cr",
+      "badgeClass": "bg-mc",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Apex",
@@ -1320,13 +1320,13 @@
       "streakType": "w",
       "lat": 35.7247,
       "lng": -78.8423,
-      "rank": 1,
-      "logo": "/images/teams/middle-creek.png"
+      "logo": "/images/teams/middle-creek.png",
+      "rank": 2
     },
     {
       "team": "North Lincoln",
       "abbr": "NL",
-      "badgeClass": "bg-hp",
+      "badgeClass": "bg-mk",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Lincolnton",
@@ -1341,13 +1341,13 @@
       "streakType": "w",
       "lat": 35.4737,
       "lng": -81.2545,
-      "rank": 1,
-      "logo": null
+      "logo": null,
+      "rank": 1
     },
     {
       "team": "Jacksonville",
       "abbr": "JAC",
-      "badgeClass": "bg-mk",
+      "badgeClass": "bg-ak",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Jacksonville",
@@ -1362,13 +1362,13 @@
       "streakType": "w",
       "lat": 34.7541,
       "lng": -77.4302,
-      "rank": 3,
-      "logo": null
+      "logo": null,
+      "rank": 3
     },
     {
       "team": "Community School of Davidson",
       "abbr": "CS",
-      "badgeClass": "bg-mc",
+      "badgeClass": "bg-mp",
       "classification": "2A",
       "classClass": "c2a",
       "location": "Davidson",
@@ -1383,13 +1383,13 @@
       "streakType": "w",
       "lat": 35.4993,
       "lng": -80.8487,
-      "rank": 1,
-      "logo": "/images/teams/community-school-of-davidson.png"
+      "logo": "/images/teams/community-school-of-davidson.png",
+      "rank": 1
     },
     {
       "team": "Northside - Jacksonville",
       "abbr": "NJ",
-      "badgeClass": "bg-lr",
+      "badgeClass": "bg-ak",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Jacksonville",
@@ -1404,13 +1404,13 @@
       "streakType": "w",
       "lat": 34.7621,
       "lng": -77.4222,
-      "rank": 2,
-      "logo": null
+      "logo": null,
+      "rank": 2
     },
     {
       "team": "Swansboro",
       "abbr": "SWA",
-      "badgeClass": "bg-lr",
+      "badgeClass": "bg-ln",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Swansboro",
@@ -1425,13 +1425,13 @@
       "streakType": "w",
       "lat": 34.6874,
       "lng": -77.1191,
-      "rank": 4,
-      "logo": null
+      "logo": null,
+      "rank": 4
     },
     {
       "team": "Terry Sanford",
       "abbr": "TS",
-      "badgeClass": "bg-ad",
+      "badgeClass": "bg-mp",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Fayetteville",
@@ -1446,13 +1446,13 @@
       "streakType": "w",
       "lat": 35.0447,
       "lng": -78.8704,
-      "rank": 5,
-      "logo": null
+      "logo": null,
+      "rank": 5
     },
     {
       "team": "Northern Guilford",
       "abbr": "NG",
-      "badgeClass": "bg-en",
+      "badgeClass": "bg-ak",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Greensboro",
@@ -1467,13 +1467,13 @@
       "streakType": "w",
       "lat": 36.0646,
       "lng": -79.8,
-      "rank": 6,
-      "logo": null
+      "logo": null,
+      "rank": 6
     },
     {
       "team": "West Carteret",
       "abbr": "WC",
-      "badgeClass": "bg-hp",
+      "badgeClass": "bg-ad",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Morehead City",
@@ -1488,8 +1488,8 @@
       "streakType": "w",
       "lat": 34.723,
       "lng": -76.726,
-      "rank": 3,
-      "logo": null
+      "logo": null,
+      "rank": 3
     },
     {
       "team": "Southeast Alamance",
@@ -1509,13 +1509,13 @@
       "streakType": "w",
       "lat": 36.0918,
       "lng": -79.3644,
-      "rank": 5,
-      "logo": null
+      "logo": null,
+      "rank": 5
     },
     {
       "team": "Charlotte Catholic",
       "abbr": "CC",
-      "badgeClass": "bg-mr",
+      "badgeClass": "bg-pd",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Charlotte",
@@ -1530,13 +1530,13 @@
       "streakType": "w",
       "lat": 35.2431,
       "lng": -80.8431,
-      "rank": 8,
-      "logo": null
+      "logo": null,
+      "rank": 8
     },
     {
       "team": "J.H. Rose",
       "abbr": "JR",
-      "badgeClass": "bg-pd",
+      "badgeClass": "bg-br",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Greenville",
@@ -1551,13 +1551,13 @@
       "streakType": "w",
       "lat": 35.6127,
       "lng": -77.3664,
-      "rank": 9,
-      "logo": null
+      "logo": null,
+      "rank": 9
     },
     {
       "team": "Orange",
       "abbr": "ORA",
-      "badgeClass": "bg-mr",
+      "badgeClass": "bg-br",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Hillsborough",
@@ -1572,8 +1572,8 @@
       "streakType": "w",
       "lat": 36.0754,
       "lng": -79.0999,
-      "rank": 4,
-      "logo": null
+      "logo": null,
+      "rank": 4
     },
     {
       "team": "Felton Grove",
@@ -1593,13 +1593,13 @@
       "streakType": "w",
       "lat": 35.7407,
       "lng": -78.8583,
-      "rank": 7,
-      "logo": null
+      "logo": null,
+      "rank": 7
     },
     {
       "team": "Northwood",
       "abbr": "NOR",
-      "badgeClass": "bg-lr",
+      "badgeClass": "bg-pd",
       "classification": "3A",
       "classClass": "c3a",
       "location": "Pittsboro",
@@ -1614,8 +1614,8 @@
       "streakType": "w",
       "lat": 35.7202,
       "lng": -79.1773,
-      "rank": 1,
-      "logo": null
+      "logo": null,
+      "rank": 1
     },
     {
       "team": "Cornerstone Charter Academy",
@@ -1635,13 +1635,13 @@
       "streakType": "w",
       "lat": 36.0886,
       "lng": -79.792,
-      "rank": 2,
-      "logo": null
+      "logo": null,
+      "rank": 2
     },
     {
       "team": "Bishop McGuinness",
       "abbr": "BM",
-      "badgeClass": "bg-cr",
+      "badgeClass": "bg-ak",
       "classification": "2A",
       "classClass": "c2a",
       "location": "Kernersville",
@@ -1656,8 +1656,8 @@
       "streakType": "w",
       "lat": 36.1276,
       "lng": -80.0657,
-      "rank": 3,
-      "logo": null
+      "logo": null,
+      "rank": 3
     },
     {
       "team": "East Chapel Hill",
@@ -1677,13 +1677,13 @@
       "streakType": "l",
       "lat": 35.9212,
       "lng": -79.0478,
-      "rank": 10,
-      "logo": null
+      "logo": null,
+      "rank": 10
     },
     {
       "team": "Seaforth",
       "abbr": "SEA",
-      "badgeClass": "bg-gh",
+      "badgeClass": "bg-cr",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Pittsboro",
@@ -1698,13 +1698,13 @@
       "streakType": "w",
       "lat": 35.7282,
       "lng": -79.1693,
-      "rank": 6,
-      "logo": null
+      "logo": null,
+      "rank": 6
     },
     {
       "team": "Carrboro",
       "abbr": "CAR",
-      "badgeClass": "bg-br",
+      "badgeClass": "bg-gh",
       "classification": "4A",
       "classClass": "c4a",
       "location": "Carrboro",
@@ -1719,13 +1719,13 @@
       "streakType": "l",
       "lat": 35.9101,
       "lng": -79.0753,
-      "rank": 1,
-      "logo": null
+      "logo": null,
+      "rank": 1
     },
     {
       "team": "Watauga",
       "abbr": "WAT",
-      "badgeClass": "bg-sm",
+      "badgeClass": "bg-br",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Boone",
@@ -1740,13 +1740,13 @@
       "streakType": "l",
       "lat": 36.2168,
       "lng": -81.6746,
-      "rank": 11,
-      "logo": null
+      "logo": null,
+      "rank": 11
     },
     {
       "team": "Southern Alamance",
       "abbr": "SA",
-      "badgeClass": "bg-cg",
+      "badgeClass": "bg-af",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Graham",
@@ -1761,13 +1761,13 @@
       "streakType": "w",
       "lat": 36.0687,
       "lng": -79.4006,
-      "rank": 12,
-      "logo": null
+      "logo": null,
+      "rank": 12
     },
     {
       "team": "St. Stephens",
       "abbr": "SS",
-      "badgeClass": "bg-af",
+      "badgeClass": "bg-cc",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Hickory",
@@ -1782,13 +1782,13 @@
       "streakType": "l",
       "lat": 35.733,
       "lng": -81.3412,
-      "rank": 13,
-      "logo": null
+      "logo": null,
+      "rank": 13
     },
     {
       "team": "First Flight",
       "abbr": "FF",
-      "badgeClass": "bg-ln",
+      "badgeClass": "bg-pd",
       "classification": "4A",
       "classClass": "c4a",
       "location": "Kill Devil Hills",
@@ -1803,13 +1803,13 @@
       "streakType": "l",
       "lat": 36.0307,
       "lng": -75.676,
-      "rank": 3,
-      "logo": null
+      "logo": null,
+      "rank": 3
     },
     {
       "team": "Southeast Guilford",
       "abbr": "SG",
-      "badgeClass": "bg-mr",
+      "badgeClass": "bg-af",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Greensboro",
@@ -1824,13 +1824,13 @@
       "streakType": "l",
       "lat": 36.0566,
       "lng": -79.792,
-      "rank": 15,
-      "logo": null
+      "logo": null,
+      "rank": 15
     },
     {
       "team": "Lincoln Charter",
       "abbr": "LC",
-      "badgeClass": "bg-sm",
+      "badgeClass": "bg-mc",
       "classification": "4A",
       "classClass": "c4a",
       "location": "Lincolnton",
@@ -1845,13 +1845,13 @@
       "streakType": "w",
       "lat": 35.4817,
       "lng": -81.2465,
-      "rank": 2,
-      "logo": null
+      "logo": null,
+      "rank": 2
     },
     {
       "team": "Christ the King",
       "abbr": "CT",
-      "badgeClass": "bg-af",
+      "badgeClass": "bg-hp",
       "classification": "2A",
       "classClass": "c2a",
       "location": "Huntersville",
@@ -1866,13 +1866,13 @@
       "streakType": "l",
       "lat": 35.4107,
       "lng": -80.8429,
-      "rank": 4,
-      "logo": null
+      "logo": null,
+      "rank": 4
     },
     {
       "team": "Williams",
       "abbr": "WIL",
-      "badgeClass": "bg-mp",
+      "badgeClass": "bg-hp",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Burlington",
@@ -1887,13 +1887,13 @@
       "streakType": "w",
       "lat": 36.0957,
       "lng": -79.4378,
-      "rank": 14,
-      "logo": null
+      "logo": null,
+      "rank": 14
     },
     {
       "team": "Pine Lake Prep",
       "abbr": "PL",
-      "badgeClass": "bg-ln",
+      "badgeClass": "bg-af",
       "classification": "3A",
       "classClass": "c3a",
       "location": "Mooresville",
@@ -1908,13 +1908,13 @@
       "streakType": "w",
       "lat": 35.5769,
       "lng": -80.8021,
-      "rank": 2,
-      "logo": null
+      "logo": null,
+      "rank": 2
     },
     {
       "team": "South Brunswick",
       "abbr": "SB",
-      "badgeClass": "bg-mk",
+      "badgeClass": "bg-mc",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Boiling Spring Lakes",
@@ -1929,13 +1929,13 @@
       "streakType": "l",
       "lat": 34.0321,
       "lng": -78.0678,
-      "rank": 7,
-      "logo": null
+      "logo": null,
+      "rank": 7
     },
     {
       "team": "Lake Norman Charter",
       "abbr": "LN",
-      "badgeClass": "bg-mk",
+      "badgeClass": "bg-lr",
       "classification": "4A",
       "classClass": "c4a",
       "location": "Huntersville",
@@ -1950,13 +1950,13 @@
       "streakType": "w",
       "lat": 35.4187,
       "lng": -80.8349,
-      "rank": 4,
-      "logo": null
+      "logo": null,
+      "rank": 4
     },
     {
       "team": "Asheville",
       "abbr": "ASH",
-      "badgeClass": "bg-mc",
+      "badgeClass": "bg-cr",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Asheville",
@@ -1971,13 +1971,13 @@
       "streakType": "l",
       "lat": 35.5951,
       "lng": -82.5515,
-      "rank": 16,
-      "logo": null
+      "logo": null,
+      "rank": 16
     },
     {
       "team": "T.C. Roberson",
       "abbr": "TR",
-      "badgeClass": "bg-sm",
+      "badgeClass": "bg-ak",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Asheville",
@@ -1992,13 +1992,13 @@
       "streakType": "w",
       "lat": 35.6031,
       "lng": -82.5435,
-      "rank": 17,
-      "logo": null
+      "logo": null,
+      "rank": 17
     },
     {
       "team": "Eastern Alamance",
       "abbr": "EA",
-      "badgeClass": "bg-hp",
+      "badgeClass": "bg-ln",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Mebane",
@@ -2013,13 +2013,13 @@
       "streakType": "l",
       "lat": 36.096,
       "lng": -79.2668,
-      "rank": 9,
-      "logo": null
+      "logo": null,
+      "rank": 9
     },
     {
       "team": "Voyager Academy",
       "abbr": "VA",
-      "badgeClass": "bg-cr",
+      "badgeClass": "bg-mc",
       "classification": "2A",
       "classClass": "c2a",
       "location": "Durham",
@@ -2034,13 +2034,13 @@
       "streakType": "l",
       "lat": 35.986,
       "lng": -78.8906,
-      "rank": 5,
-      "logo": null
+      "logo": null,
+      "rank": 5
     },
     {
       "team": "Croatan",
       "abbr": "CRO",
-      "badgeClass": "bg-mk",
+      "badgeClass": "bg-ak",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Newport",
@@ -2055,13 +2055,13 @@
       "streakType": "w",
       "lat": 34.7866,
       "lng": -76.859,
-      "rank": 8,
-      "logo": null
+      "logo": null,
+      "rank": 8
     },
     {
       "team": "West Brunswick",
       "abbr": "WB",
-      "badgeClass": "bg-pd",
+      "badgeClass": "bg-af",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Shallotte",
@@ -2076,13 +2076,13 @@
       "streakType": "w",
       "lat": 33.9735,
       "lng": -78.3856,
-      "rank": 18,
-      "logo": null
+      "logo": null,
+      "rank": 18
     },
     {
       "team": "Hunt",
       "abbr": "HUN",
-      "badgeClass": "bg-br",
+      "badgeClass": "bg-gh",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Wilson",
@@ -2097,13 +2097,13 @@
       "streakType": "l",
       "lat": 35.7212,
       "lng": -77.9155,
-      "rank": 11,
-      "logo": null
+      "logo": null,
+      "rank": 11
     },
     {
       "team": "Hickory",
       "abbr": "HIC",
-      "badgeClass": "bg-af",
+      "badgeClass": "bg-ad",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Hickory",
@@ -2118,13 +2118,13 @@
       "streakType": "l",
       "lat": 35.741,
       "lng": -81.3332,
-      "rank": 12,
-      "logo": null
+      "logo": null,
+      "rank": 12
     },
     {
       "team": "Havelock",
       "abbr": "HAV",
-      "badgeClass": "bg-cg",
+      "badgeClass": "bg-ad",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Havelock",
@@ -2139,13 +2139,13 @@
       "streakType": "l",
       "lat": 34.8791,
       "lng": -76.9014,
-      "rank": 10,
-      "logo": null
+      "logo": null,
+      "rank": 10
     },
     {
       "team": "Ragsdale",
       "abbr": "RAG",
-      "badgeClass": "bg-af",
+      "badgeClass": "bg-en",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Jamestown",
@@ -2160,13 +2160,13 @@
       "streakType": "w",
       "lat": 35.9935,
       "lng": -79.9353,
-      "rank": 20,
-      "logo": null
+      "logo": null,
+      "rank": 20
     },
     {
       "team": "Mount Tabor",
       "abbr": "MT",
-      "badgeClass": "bg-gh",
+      "badgeClass": "bg-mr",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Winston-Salem",
@@ -2181,13 +2181,13 @@
       "streakType": "w",
       "lat": 36.1079,
       "lng": -80.2362,
-      "rank": 19,
-      "logo": null
+      "logo": null,
+      "rank": 19
     },
     {
       "team": "West Stokes",
       "abbr": "WS",
-      "badgeClass": "bg-ln",
+      "badgeClass": "bg-cc",
       "classification": "4A",
       "classClass": "c4a",
       "location": "King",
@@ -2202,13 +2202,13 @@
       "streakType": "l",
       "lat": 36.2807,
       "lng": -80.3592,
-      "rank": 5,
-      "logo": null
+      "logo": null,
+      "rank": 5
     },
     {
       "team": "Cedar Ridge",
       "abbr": "CR",
-      "badgeClass": "bg-af",
+      "badgeClass": "bg-cg",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Hillsborough",
@@ -2223,13 +2223,13 @@
       "streakType": "l",
       "lat": 36.0834,
       "lng": -79.0919,
-      "rank": 13,
-      "logo": null
+      "logo": null,
+      "rank": 13
     },
     {
       "team": "Western Guilford",
       "abbr": "WG",
-      "badgeClass": "bg-mr",
+      "badgeClass": "bg-sm",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Greensboro",
@@ -2244,13 +2244,13 @@
       "streakType": "l",
       "lat": 36.0726,
       "lng": -79.776,
-      "rank": 21,
-      "logo": null
+      "logo": null,
+      "rank": 21
     },
     {
       "team": "Mountain Island Charter",
       "abbr": "MI",
-      "badgeClass": "bg-af",
+      "badgeClass": "bg-mr",
       "classification": "2A",
       "classClass": "c2a",
       "location": "Mt Holly",
@@ -2265,13 +2265,13 @@
       "streakType": "l",
       "lat": 35.2982,
       "lng": -81.0159,
-      "rank": 6,
-      "logo": null
+      "logo": null,
+      "rank": 6
     },
     {
       "team": "Roxboro Community",
       "abbr": "RC",
-      "badgeClass": "bg-gh",
+      "badgeClass": "bg-br",
       "classification": "2A",
       "classClass": "c2a",
       "location": "Roxboro",
@@ -2286,13 +2286,13 @@
       "streakType": "l",
       "lat": 36.3938,
       "lng": -78.9828,
-      "rank": 7,
-      "logo": null
+      "logo": null,
+      "rank": 7
     },
     {
       "team": "Gray's Creek",
       "abbr": "GC",
-      "badgeClass": "bg-lr",
+      "badgeClass": "bg-en",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Hope Mills",
@@ -2307,8 +2307,8 @@
       "streakType": "l",
       "lat": 34.9705,
       "lng": -78.9453,
-      "rank": 22,
-      "logo": null
+      "logo": null,
+      "rank": 22
     },
     {
       "team": "Patton",
@@ -2328,13 +2328,13 @@
       "streakType": "w",
       "lat": 35.7454,
       "lng": -81.6848,
-      "rank": 3,
-      "logo": null
+      "logo": null,
+      "rank": 3
     },
     {
       "team": "Western Alamance",
       "abbr": "WA",
-      "badgeClass": "bg-sm",
+      "badgeClass": "bg-ad",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Elon",
@@ -2349,13 +2349,13 @@
       "streakType": "l",
       "lat": 36.1032,
       "lng": -79.5068,
-      "rank": 14,
-      "logo": null
+      "logo": null,
+      "rank": 14
     },
     {
       "team": "Bradford Prep",
       "abbr": "BP",
-      "badgeClass": "bg-ln",
+      "badgeClass": "bg-hp",
       "classification": "2A",
       "classClass": "c2a",
       "location": "Charlotte",
@@ -2370,13 +2370,13 @@
       "streakType": "l",
       "lat": 35.2111,
       "lng": -80.8431,
-      "rank": 8,
-      "logo": null
+      "logo": null,
+      "rank": 8
     },
     {
       "team": "Wake Prep Academy",
       "abbr": "WP",
-      "badgeClass": "bg-af",
+      "badgeClass": "bg-hp",
       "classification": "3A",
       "classClass": "c3a",
       "location": "Wake Forest",
@@ -2391,13 +2391,13 @@
       "streakType": "l",
       "lat": 35.9719,
       "lng": -78.5017,
-      "rank": 4,
-      "logo": null
+      "logo": null,
+      "rank": 4
     },
     {
       "team": "North Davidson",
       "abbr": "ND",
-      "badgeClass": "bg-ak",
+      "badgeClass": "bg-cg",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Lexington",
@@ -2412,13 +2412,13 @@
       "streakType": "l",
       "lat": 35.824,
       "lng": -80.2534,
-      "rank": 15,
-      "logo": null
+      "logo": null,
+      "rank": 15
     },
     {
       "team": "Atkins",
       "abbr": "ATK",
-      "badgeClass": "bg-mp",
+      "badgeClass": "bg-en",
       "classification": "5A",
       "classClass": "c5a",
       "location": "Winston-Salem",
@@ -2433,13 +2433,13 @@
       "streakType": "l",
       "lat": 36.0919,
       "lng": -80.2362,
-      "rank": 16,
-      "logo": null
+      "logo": null,
+      "rank": 16
     },
     {
       "team": "Eastern Guilford",
       "abbr": "EG",
-      "badgeClass": "bg-lr",
+      "badgeClass": "bg-cg",
       "classification": "6A",
       "classClass": "c6a",
       "location": "Gibsonville",
@@ -2454,13 +2454,13 @@
       "streakType": "l",
       "lat": 36.1007,
       "lng": -79.5423,
-      "rank": 23,
-      "logo": null
+      "logo": null,
+      "rank": 23
     },
     {
       "team": "Cary Academy",
       "abbr": "CA",
-      "badgeClass": "bg-cg",
+      "badgeClass": "bg-br",
       "classification": "Class I",
       "classClass": "cncisaa1",
       "location": "Cary",
@@ -2475,13 +2475,13 @@
       "streakType": "w",
       "lat": 35.7835,
       "lng": -78.7891,
-      "rank": 1,
-      "logo": "/images/teams/cary-academy.png"
+      "logo": "/images/teams/cary-academy.png",
+      "rank": 1
     },
     {
       "team": "Charlotte Country Day",
       "abbr": "CC",
-      "badgeClass": "bg-mr",
+      "badgeClass": "bg-en",
       "classification": "Class I",
       "classClass": "cncisaa1",
       "location": "Charlotte",
@@ -2496,13 +2496,13 @@
       "streakType": "w",
       "lat": 35.2271,
       "lng": -80.8271,
-      "rank": 2,
-      "logo": null
+      "logo": null,
+      "rank": 2
     },
     {
       "team": "Providence Day",
       "abbr": "PD",
-      "badgeClass": "bg-hp",
+      "badgeClass": "bg-af",
       "classification": "Class I",
       "classClass": "cncisaa1",
       "location": "Charlotte",
@@ -2517,8 +2517,8 @@
       "streakType": "w",
       "lat": 35.2271,
       "lng": -80.8591,
-      "rank": 4,
-      "logo": null
+      "logo": null,
+      "rank": 4
     },
     {
       "team": "Charlotte Christian",
@@ -2538,13 +2538,13 @@
       "streakType": "w",
       "lat": 35.2431,
       "lng": -80.8271,
-      "rank": 3,
-      "logo": null
+      "logo": null,
+      "rank": 3
     },
     {
       "team": "Rabun Gap-Nacoochee",
       "abbr": "RG",
-      "badgeClass": "bg-ak",
+      "badgeClass": "bg-sm",
       "classification": "Class I",
       "classClass": "cncisaa1",
       "location": "Rabun Gap (GA)",
@@ -2559,13 +2559,13 @@
       "streakType": "l",
       "lat": 34.9596,
       "lng": -83.3957,
-      "rank": 5,
-      "logo": null
+      "logo": null,
+      "rank": 5
     },
     {
       "team": "Charlotte Latin",
       "abbr": "CL",
-      "badgeClass": "bg-pd",
+      "badgeClass": "bg-cr",
       "classification": "Class I",
       "classClass": "cncisaa1",
       "location": "Charlotte",
@@ -2580,13 +2580,13 @@
       "streakType": "w",
       "lat": 35.2111,
       "lng": -80.8271,
-      "rank": 6,
-      "logo": null
+      "logo": null,
+      "rank": 6
     },
     {
       "team": "Ravenscroft",
       "abbr": "RAV",
-      "badgeClass": "bg-cr",
+      "badgeClass": "bg-lr",
       "classification": "Class I",
       "classClass": "cncisaa1",
       "location": "Raleigh",
@@ -2601,13 +2601,13 @@
       "streakType": "l",
       "lat": 35.7956,
       "lng": -78.6222,
-      "rank": 7,
-      "logo": null
+      "logo": null,
+      "rank": 7
     },
     {
       "team": "Christ School",
       "abbr": "CS",
-      "badgeClass": "bg-mr",
+      "badgeClass": "bg-ak",
       "classification": "Class I",
       "classClass": "cncisaa1",
       "location": "Arden",
@@ -2622,13 +2622,13 @@
       "streakType": "l",
       "lat": 35.4701,
       "lng": -82.5171,
-      "rank": 8,
-      "logo": null
+      "logo": null,
+      "rank": 8
     },
     {
       "team": "North Raleigh Christian Academy",
       "abbr": "NR",
-      "badgeClass": "bg-pd",
+      "badgeClass": "bg-ln",
       "classification": "Class I",
       "classClass": "cncisaa1",
       "location": "Raleigh",
@@ -2643,13 +2643,13 @@
       "streakType": "l",
       "lat": 35.7636,
       "lng": -78.6222,
-      "rank": 9,
-      "logo": null
+      "logo": null,
+      "rank": 9
     },
     {
       "team": "Durham Academy",
       "abbr": "DA",
-      "badgeClass": "bg-sm",
+      "badgeClass": "bg-mp",
       "classification": "Class I",
       "classClass": "cncisaa1",
       "location": "Durham",
@@ -2664,13 +2664,13 @@
       "streakType": "l",
       "lat": 36.002,
       "lng": -78.9066,
-      "rank": 10,
-      "logo": null
+      "logo": null,
+      "rank": 10
     },
     {
       "team": "Cannon",
       "abbr": "CAN",
-      "badgeClass": "bg-cr",
+      "badgeClass": "bg-sm",
       "classification": "Class I",
       "classClass": "cncisaa1",
       "location": "Concord",
@@ -2685,13 +2685,13 @@
       "streakType": "l",
       "lat": 35.4088,
       "lng": -80.5795,
-      "rank": 11,
-      "logo": null
+      "logo": null,
+      "rank": 11
     },
     {
       "team": "Cape Fear Academy",
       "abbr": "CF",
-      "badgeClass": "bg-br",
+      "badgeClass": "bg-af",
       "classification": "Class II",
       "classClass": "cncisaa2",
       "location": "Wilmington",
@@ -2706,13 +2706,13 @@
       "streakType": "l",
       "lat": 34.2177,
       "lng": -77.9367,
-      "rank": 2,
-      "logo": null
+      "logo": null,
+      "rank": 2
     },
     {
       "team": "Greensboro Day School",
       "abbr": "GD",
-      "badgeClass": "bg-pd",
+      "badgeClass": "bg-cg",
       "classification": "Class II",
       "classClass": "cncisaa2",
       "location": "Greensboro",
@@ -2727,13 +2727,13 @@
       "streakType": "w",
       "lat": 36.0726,
       "lng": -79.808,
-      "rank": 1,
-      "logo": null
+      "logo": null,
+      "rank": 1
     },
     {
       "team": "Asheville School",
       "abbr": "AS",
-      "badgeClass": "bg-af",
+      "badgeClass": "bg-gh",
       "classification": "Class II",
       "classClass": "cncisaa2",
       "location": "Asheville",
@@ -2748,13 +2748,13 @@
       "streakType": "w",
       "lat": 35.5871,
       "lng": -82.5435,
-      "rank": 3,
-      "logo": null
+      "logo": null,
+      "rank": 3
     },
     {
       "team": "Southlake Christian Academy",
       "abbr": "SC",
-      "badgeClass": "bg-mk",
+      "badgeClass": "bg-lr",
       "classification": "Class II",
       "classClass": "cncisaa2",
       "location": "Huntersville",
@@ -2769,13 +2769,13 @@
       "streakType": "w",
       "lat": 35.4027,
       "lng": -80.8349,
-      "rank": 4,
-      "logo": null
+      "logo": null,
+      "rank": 4
     },
     {
       "team": "Forsyth Country Day",
       "abbr": "FC",
-      "badgeClass": "bg-lr",
+      "badgeClass": "bg-ad",
       "classification": "Class II",
       "classClass": "cncisaa2",
       "location": "Lewisville",
@@ -2790,13 +2790,13 @@
       "streakType": "l",
       "lat": 36.0968,
       "lng": -80.419,
-      "rank": 5,
-      "logo": null
+      "logo": null,
+      "rank": 5
     },
     {
       "team": "Cary Christian",
       "abbr": "CC",
-      "badgeClass": "bg-sm",
+      "badgeClass": "bg-hp",
       "classification": "Class II",
       "classClass": "cncisaa2",
       "location": "Cary",
@@ -2811,13 +2811,13 @@
       "streakType": "w",
       "lat": 35.8075,
       "lng": -78.7811,
-      "rank": 6,
-      "logo": null
+      "logo": null,
+      "rank": 6
     },
     {
       "team": "John Paul II Catholic",
       "abbr": "JP",
-      "badgeClass": "bg-gh",
+      "badgeClass": "bg-br",
       "classification": "Class II",
       "classClass": "cncisaa2",
       "location": "Southern Pines",
@@ -2832,13 +2832,13 @@
       "streakType": "w",
       "lat": 35.182,
       "lng": -79.3843,
-      "rank": 7,
-      "logo": null
+      "logo": null,
+      "rank": 7
     },
     {
       "team": "St. David's",
       "abbr": "SD",
-      "badgeClass": "bg-pd",
+      "badgeClass": "bg-en",
       "classification": "Class II",
       "classClass": "cncisaa2",
       "location": "Raleigh",
@@ -2853,8 +2853,8 @@
       "streakType": "l",
       "lat": 35.7956,
       "lng": -78.6542,
-      "rank": 8,
-      "logo": null
+      "logo": null,
+      "rank": 8
     }
   ]
 }
