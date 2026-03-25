@@ -22,7 +22,8 @@
           "streakType": "w",
           "lat": 35.7876,
           "lng": -78.6302,
-          "rank": 1
+          "rank": 1,
+          "logo": "/images/teams/athens-drive.png"
         },
         {
           "team": "Wakefield",
@@ -42,7 +43,8 @@
           "streakType": "w",
           "lat": 35.7796,
           "lng": -78.6382,
-          "rank": 2
+          "rank": 2,
+          "logo": "/images/teams/wakefield.png"
         },
         {
           "team": "Millbrook",
@@ -62,7 +64,8 @@
           "streakType": "w",
           "lat": 35.7716,
           "lng": -78.6302,
-          "rank": 3
+          "rank": 3,
+          "logo": null
         },
         {
           "team": "Hough",
@@ -82,7 +85,8 @@
           "streakType": "w",
           "lat": 35.4868,
           "lng": -80.8601,
-          "rank": 4
+          "rank": 4,
+          "logo": "/images/teams/hough.webp"
         },
         {
           "team": "Apex Friendship",
@@ -102,7 +106,8 @@
           "streakType": "w",
           "lat": 35.7327,
           "lng": -78.8503,
-          "rank": 5
+          "rank": 5,
+          "logo": null
         },
         {
           "team": "Ardrey Kell",
@@ -122,7 +127,8 @@
           "streakType": "w",
           "lat": 35.2271,
           "lng": -80.8431,
-          "rank": 6
+          "rank": 6,
+          "logo": null
         },
         {
           "team": "Hoggard",
@@ -142,7 +148,8 @@
           "streakType": "w",
           "lat": 34.2257,
           "lng": -77.9447,
-          "rank": 7
+          "rank": 7,
+          "logo": null
         },
         {
           "team": "Pinecrest",
@@ -162,7 +169,8 @@
           "streakType": "w",
           "lat": 35.174,
           "lng": -79.3923,
-          "rank": 8
+          "rank": 8,
+          "logo": null
         },
         {
           "team": "Broughton",
@@ -182,7 +190,8 @@
           "streakType": "w",
           "lat": 35.7876,
           "lng": -78.6462,
-          "rank": 9
+          "rank": 9,
+          "logo": null
         },
         {
           "team": "Laney",
@@ -202,7 +211,8 @@
           "streakType": "l",
           "lat": 34.2337,
           "lng": -77.9367,
-          "rank": 10
+          "rank": 10,
+          "logo": null
         },
         {
           "team": "Green Level",
@@ -222,7 +232,8 @@
           "streakType": "l",
           "lat": 35.7915,
           "lng": -78.7811,
-          "rank": 11
+          "rank": 11,
+          "logo": "/images/teams/green-level.png"
         },
         {
           "team": "Providence",
@@ -242,7 +253,8 @@
           "streakType": "w",
           "lat": 35.2351,
           "lng": -80.8351,
-          "rank": 12
+          "rank": 12,
+          "logo": null
         },
         {
           "team": "Green Hope",
@@ -262,7 +274,8 @@
           "streakType": "w",
           "lat": 35.7995,
           "lng": -78.7731,
-          "rank": 13
+          "rank": 13,
+          "logo": null
         },
         {
           "team": "Corinth Holders",
@@ -282,7 +295,8 @@
           "streakType": "l",
           "lat": 35.781,
           "lng": -78.3697,
-          "rank": 14
+          "rank": 14,
+          "logo": null
         },
         {
           "team": "Apex",
@@ -302,7 +316,8 @@
           "streakType": "w",
           "lat": 35.7407,
           "lng": -78.8423,
-          "rank": 15
+          "rank": 15,
+          "logo": null
         },
         {
           "team": "Northwest Guilford",
@@ -322,7 +337,8 @@
           "streakType": "w",
           "lat": 36.0726,
           "lng": -79.792,
-          "rank": 16
+          "rank": 16,
+          "logo": null
         },
         {
           "team": "Leesville Road",
@@ -342,7 +358,8 @@
           "streakType": "l",
           "lat": 35.7716,
           "lng": -78.6462,
-          "rank": 17
+          "rank": 17,
+          "logo": "/images/teams/leesville-road.png"
         },
         {
           "team": "Willow Spring",
@@ -362,7 +379,8 @@
           "streakType": "l",
           "lat": 35.5575,
           "lng": -78.6778,
-          "rank": 18
+          "rank": 18,
+          "logo": null
         },
         {
           "team": "South Mecklenburg",
@@ -382,7 +400,8 @@
           "streakType": "l",
           "lat": 35.2191,
           "lng": -80.8351,
-          "rank": 19
+          "rank": 19,
+          "logo": null
         },
         {
           "team": "Enloe",
@@ -402,7 +421,8 @@
           "streakType": "l",
           "lat": 35.7956,
           "lng": -78.6382,
-          "rank": 20
+          "rank": 20,
+          "logo": null
         },
         {
           "team": "Myers Park",
@@ -422,7 +442,8 @@
           "streakType": "l",
           "lat": 35.2351,
           "lng": -80.8511,
-          "rank": 21
+          "rank": 21,
+          "logo": null
         },
         {
           "team": "West Forsyth",
@@ -442,7 +463,8 @@
           "streakType": "l",
           "lat": 36.0218,
           "lng": -80.3821,
-          "rank": 22
+          "rank": 22,
+          "logo": null
         },
         {
           "team": "Jordan",
@@ -462,7 +484,8 @@
           "streakType": "l",
           "lat": 35.994,
           "lng": -78.8986,
-          "rank": 23
+          "rank": 23,
+          "logo": null
         },
         {
           "team": "Panther Creek",
@@ -482,7 +505,8 @@
           "streakType": "l",
           "lat": 35.7835,
           "lng": -78.7731,
-          "rank": 24
+          "rank": 24,
+          "logo": null
         },
         {
           "team": "Rolesville",
@@ -502,7 +526,8 @@
           "streakType": "l",
           "lat": 35.7636,
           "lng": -78.6382,
-          "rank": 25
+          "rank": 25,
+          "logo": null
         }
       ]
     },
@@ -527,7 +552,8 @@
           "streakType": "w",
           "lat": 35.8946,
           "lng": -80.5614,
-          "rank": 1
+          "rank": 1,
+          "logo": "/images/teams/davie-county.png"
         },
         {
           "team": "Topsail",
@@ -547,7 +573,8 @@
           "streakType": "w",
           "lat": 34.371,
           "lng": -77.606,
-          "rank": 2
+          "rank": 2,
+          "logo": null
         },
         {
           "team": "Holly Springs",
@@ -567,7 +594,8 @@
           "streakType": "l",
           "lat": 35.6513,
           "lng": -78.8336,
-          "rank": 3
+          "rank": 3,
+          "logo": "/images/teams/holly-springs.png"
         },
         {
           "team": "East Forsyth",
@@ -587,7 +615,8 @@
           "streakType": "w",
           "lat": 36.1196,
           "lng": -80.0737,
-          "rank": 4
+          "rank": 4,
+          "logo": null
         },
         {
           "team": "Reagan",
@@ -607,7 +636,8 @@
           "streakType": "w",
           "lat": 36.1621,
           "lng": -80.3737,
-          "rank": 5
+          "rank": 5,
+          "logo": null
         },
         {
           "team": "Cardinal Gibbons",
@@ -627,7 +657,8 @@
           "streakType": "w",
           "lat": 35.7796,
           "lng": -78.6222,
-          "rank": 6
+          "rank": 6,
+          "logo": null
         },
         {
           "team": "South Garner",
@@ -647,7 +678,8 @@
           "streakType": "w",
           "lat": 35.7113,
           "lng": -78.6142,
-          "rank": 7
+          "rank": 7,
+          "logo": null
         },
         {
           "team": "Marvin Ridge",
@@ -667,7 +699,8 @@
           "streakType": "l",
           "lat": 34.9246,
           "lng": -80.7434,
-          "rank": 8
+          "rank": 8,
+          "logo": null
         },
         {
           "team": "Page",
@@ -687,7 +720,8 @@
           "streakType": "w",
           "lat": 36.0806,
           "lng": -79.784,
-          "rank": 9
+          "rank": 9,
+          "logo": null
         },
         {
           "team": "R.J. Reynolds",
@@ -707,7 +741,8 @@
           "streakType": "l",
           "lat": 36.0999,
           "lng": -80.2442,
-          "rank": 10
+          "rank": 10,
+          "logo": null
         },
         {
           "team": "Cuthbertson",
@@ -727,7 +762,8 @@
           "streakType": "w",
           "lat": 34.9326,
           "lng": -80.7354,
-          "rank": 11
+          "rank": 11,
+          "logo": null
         },
         {
           "team": "Southwest Guilford",
@@ -747,7 +783,8 @@
           "streakType": "l",
           "lat": 36.0646,
           "lng": -79.784,
-          "rank": 12
+          "rank": 12,
+          "logo": null
         },
         {
           "team": "Lake Norman",
@@ -767,7 +804,8 @@
           "streakType": "w",
           "lat": 35.5849,
           "lng": -80.8101,
-          "rank": 13
+          "rank": 13,
+          "logo": null
         },
         {
           "team": "Ashley",
@@ -787,7 +825,8 @@
           "streakType": "w",
           "lat": 34.2257,
           "lng": -77.9447,
-          "rank": 14
+          "rank": 14,
+          "logo": null
         },
         {
           "team": "Sanderson",
@@ -807,7 +846,8 @@
           "streakType": "l",
           "lat": 35.7796,
           "lng": -78.6542,
-          "rank": 15
+          "rank": 15,
+          "logo": null
         },
         {
           "team": "Garner",
@@ -827,7 +867,8 @@
           "streakType": "w",
           "lat": 35.7193,
           "lng": -78.6062,
-          "rank": 16
+          "rank": 16,
+          "logo": null
         },
         {
           "team": "Grimsley",
@@ -847,7 +888,8 @@
           "streakType": "w",
           "lat": 36.0806,
           "lng": -79.8,
-          "rank": 17
+          "rank": 17,
+          "logo": null
         },
         {
           "team": "Chapel Hill",
@@ -867,7 +909,8 @@
           "streakType": "w",
           "lat": 35.9132,
           "lng": -79.0558,
-          "rank": 18
+          "rank": 18,
+          "logo": null
         },
         {
           "team": "Porter Ridge",
@@ -887,7 +930,8 @@
           "streakType": "l",
           "lat": 35.0768,
           "lng": -80.6692,
-          "rank": 19
+          "rank": 19,
+          "logo": null
         },
         {
           "team": "Riverside-Durham",
@@ -907,7 +951,8 @@
           "streakType": "l",
           "lat": 36.002,
           "lng": -78.8906,
-          "rank": 20
+          "rank": 20,
+          "logo": null
         },
         {
           "team": "Weddington",
@@ -927,7 +972,8 @@
           "streakType": "l",
           "lat": 35.0224,
           "lng": -80.7618,
-          "rank": 21
+          "rank": 21,
+          "logo": null
         },
         {
           "team": "Clayton",
@@ -947,7 +993,8 @@
           "streakType": "w",
           "lat": 35.6507,
           "lng": -78.4564,
-          "rank": 22
+          "rank": 22,
+          "logo": null
         },
         {
           "team": "Mooresville",
@@ -967,7 +1014,8 @@
           "streakType": "w",
           "lat": 35.5929,
           "lng": -80.8021,
-          "rank": 23
+          "rank": 23,
+          "logo": null
         },
         {
           "team": "Ballantyne Ridge",
@@ -987,7 +1035,8 @@
           "streakType": "l",
           "lat": 35.2191,
           "lng": -80.8511,
-          "rank": 24
+          "rank": 24,
+          "logo": null
         },
         {
           "team": "Heritage",
@@ -1007,7 +1056,8 @@
           "streakType": "w",
           "lat": 35.9799,
           "lng": -78.5097,
-          "rank": 25
+          "rank": 25,
+          "logo": null
         },
         {
           "team": "New Bern",
@@ -1027,7 +1077,8 @@
           "streakType": "l",
           "lat": 35.1085,
           "lng": -77.0441,
-          "rank": 26
+          "rank": 26,
+          "logo": null
         },
         {
           "team": "Jack Britt",
@@ -1047,7 +1098,8 @@
           "streakType": "l",
           "lat": 35.0527,
           "lng": -78.8784,
-          "rank": 27
+          "rank": 27,
+          "logo": null
         },
         {
           "team": "Wake Forest",
@@ -1067,7 +1119,8 @@
           "streakType": "l",
           "lat": 35.9879,
           "lng": -78.5017,
-          "rank": 28
+          "rank": 28,
+          "logo": null
         },
         {
           "team": "North Brunswick",
@@ -1087,7 +1140,8 @@
           "streakType": "l",
           "lat": 34.2568,
           "lng": -78.0153,
-          "rank": 29
+          "rank": 29,
+          "logo": null
         },
         {
           "team": "Fuquay-Varina",
@@ -1107,7 +1161,8 @@
           "streakType": "w",
           "lat": 35.5844,
           "lng": -78.8,
-          "rank": 30
+          "rank": 30,
+          "logo": null
         },
         {
           "team": "South Iredell",
@@ -1127,7 +1182,8 @@
           "streakType": "l",
           "lat": 35.7826,
           "lng": -80.8873,
-          "rank": 31
+          "rank": 31,
+          "logo": null
         },
         {
           "team": "New Hanover",
@@ -1147,7 +1203,8 @@
           "streakType": "l",
           "lat": 34.2337,
           "lng": -77.9367,
-          "rank": 32
+          "rank": 32,
+          "logo": null
         },
         {
           "team": "Cary",
@@ -1167,7 +1224,8 @@
           "streakType": "l",
           "lat": 35.7995,
           "lng": -78.7891,
-          "rank": 33
+          "rank": 33,
+          "logo": null
         },
         {
           "team": "Cape Fear",
@@ -1187,7 +1245,8 @@
           "streakType": "l",
           "lat": 35.0607,
           "lng": -78.8704,
-          "rank": 34
+          "rank": 34,
+          "logo": null
         },
         {
           "team": "Cleveland",
@@ -1207,7 +1266,8 @@
           "streakType": "l",
           "lat": 35.7346,
           "lng": -80.6676,
-          "rank": 35
+          "rank": 35,
+          "logo": null
         },
         {
           "team": "Butler",
@@ -1227,7 +1287,8 @@
           "streakType": "l",
           "lat": 35.1168,
           "lng": -80.7237,
-          "rank": 36
+          "rank": 36,
+          "logo": null
         }
       ]
     },
@@ -1252,7 +1313,8 @@
           "streakType": "w",
           "lat": 35.7247,
           "lng": -78.8423,
-          "rank": 1
+          "rank": 1,
+          "logo": "/images/teams/middle-creek.png"
         },
         {
           "team": "Union Pines",
@@ -1272,7 +1334,8 @@
           "streakType": "l",
           "lat": 35.3266,
           "lng": -79.2534,
-          "rank": 2
+          "rank": 2,
+          "logo": "/images/teams/union-pines.png"
         },
         {
           "team": "Jacksonville",
@@ -1292,7 +1355,8 @@
           "streakType": "w",
           "lat": 34.7541,
           "lng": -77.4302,
-          "rank": 3
+          "rank": 3,
+          "logo": null
         },
         {
           "team": "Swansboro",
@@ -1312,7 +1376,8 @@
           "streakType": "w",
           "lat": 34.6874,
           "lng": -77.1191,
-          "rank": 4
+          "rank": 4,
+          "logo": null
         },
         {
           "team": "Terry Sanford",
@@ -1332,7 +1397,8 @@
           "streakType": "w",
           "lat": 35.0447,
           "lng": -78.8704,
-          "rank": 5
+          "rank": 5,
+          "logo": null
         },
         {
           "team": "Northern Guilford",
@@ -1352,7 +1418,8 @@
           "streakType": "w",
           "lat": 36.0646,
           "lng": -79.8,
-          "rank": 6
+          "rank": 6,
+          "logo": null
         },
         {
           "team": "Felton Grove",
@@ -1372,7 +1439,8 @@
           "streakType": "w",
           "lat": 35.7407,
           "lng": -78.8583,
-          "rank": 7
+          "rank": 7,
+          "logo": null
         },
         {
           "team": "Charlotte Catholic",
@@ -1392,7 +1460,8 @@
           "streakType": "w",
           "lat": 35.2431,
           "lng": -80.8431,
-          "rank": 8
+          "rank": 8,
+          "logo": null
         },
         {
           "team": "J.H. Rose",
@@ -1412,7 +1481,8 @@
           "streakType": "w",
           "lat": 35.6127,
           "lng": -77.3664,
-          "rank": 9
+          "rank": 9,
+          "logo": null
         },
         {
           "team": "East Chapel Hill",
@@ -1432,7 +1502,8 @@
           "streakType": "l",
           "lat": 35.9212,
           "lng": -79.0478,
-          "rank": 10
+          "rank": 10,
+          "logo": null
         },
         {
           "team": "Watauga",
@@ -1452,7 +1523,8 @@
           "streakType": "l",
           "lat": 36.2168,
           "lng": -81.6746,
-          "rank": 11
+          "rank": 11,
+          "logo": null
         },
         {
           "team": "Southern Alamance",
@@ -1472,7 +1544,8 @@
           "streakType": "w",
           "lat": 36.0687,
           "lng": -79.4006,
-          "rank": 12
+          "rank": 12,
+          "logo": null
         },
         {
           "team": "St. Stephens",
@@ -1492,7 +1565,8 @@
           "streakType": "l",
           "lat": 35.733,
           "lng": -81.3412,
-          "rank": 13
+          "rank": 13,
+          "logo": null
         },
         {
           "team": "Williams",
@@ -1512,7 +1586,8 @@
           "streakType": "w",
           "lat": 36.0957,
           "lng": -79.4378,
-          "rank": 14
+          "rank": 14,
+          "logo": null
         },
         {
           "team": "Southeast Guilford",
@@ -1532,7 +1607,8 @@
           "streakType": "l",
           "lat": 36.0566,
           "lng": -79.792,
-          "rank": 15
+          "rank": 15,
+          "logo": null
         },
         {
           "team": "Asheville",
@@ -1552,7 +1628,8 @@
           "streakType": "l",
           "lat": 35.5951,
           "lng": -82.5515,
-          "rank": 16
+          "rank": 16,
+          "logo": null
         },
         {
           "team": "T.C. Roberson",
@@ -1572,7 +1649,8 @@
           "streakType": "w",
           "lat": 35.6031,
           "lng": -82.5435,
-          "rank": 17
+          "rank": 17,
+          "logo": null
         },
         {
           "team": "West Brunswick",
@@ -1592,7 +1670,8 @@
           "streakType": "w",
           "lat": 33.9735,
           "lng": -78.3856,
-          "rank": 18
+          "rank": 18,
+          "logo": null
         },
         {
           "team": "Mount Tabor",
@@ -1612,7 +1691,8 @@
           "streakType": "w",
           "lat": 36.1079,
           "lng": -80.2362,
-          "rank": 19
+          "rank": 19,
+          "logo": null
         },
         {
           "team": "Ragsdale",
@@ -1632,7 +1712,8 @@
           "streakType": "w",
           "lat": 35.9935,
           "lng": -79.9353,
-          "rank": 20
+          "rank": 20,
+          "logo": null
         },
         {
           "team": "Western Guilford",
@@ -1652,7 +1733,8 @@
           "streakType": "l",
           "lat": 36.0726,
           "lng": -79.776,
-          "rank": 21
+          "rank": 21,
+          "logo": null
         },
         {
           "team": "Gray's Creek",
@@ -1672,7 +1754,8 @@
           "streakType": "l",
           "lat": 34.9705,
           "lng": -78.9453,
-          "rank": 22
+          "rank": 22,
+          "logo": null
         },
         {
           "team": "Eastern Guilford",
@@ -1692,7 +1775,8 @@
           "streakType": "l",
           "lat": 36.1007,
           "lng": -79.5423,
-          "rank": 23
+          "rank": 23,
+          "logo": null
         }
       ]
     },
@@ -1717,7 +1801,8 @@
           "streakType": "w",
           "lat": 35.4737,
           "lng": -81.2545,
-          "rank": 1
+          "rank": 1,
+          "logo": null
         },
         {
           "team": "Northside - Jacksonville",
@@ -1737,7 +1822,8 @@
           "streakType": "w",
           "lat": 34.7621,
           "lng": -77.4222,
-          "rank": 2
+          "rank": 2,
+          "logo": null
         },
         {
           "team": "West Carteret",
@@ -1757,7 +1843,8 @@
           "streakType": "w",
           "lat": 34.723,
           "lng": -76.726,
-          "rank": 3
+          "rank": 3,
+          "logo": null
         },
         {
           "team": "Orange",
@@ -1777,7 +1864,8 @@
           "streakType": "w",
           "lat": 36.0754,
           "lng": -79.0999,
-          "rank": 4
+          "rank": 4,
+          "logo": null
         },
         {
           "team": "Southeast Alamance",
@@ -1797,7 +1885,8 @@
           "streakType": "w",
           "lat": 36.0918,
           "lng": -79.3644,
-          "rank": 5
+          "rank": 5,
+          "logo": null
         },
         {
           "team": "Seaforth",
@@ -1817,7 +1906,8 @@
           "streakType": "w",
           "lat": 35.7282,
           "lng": -79.1693,
-          "rank": 6
+          "rank": 6,
+          "logo": null
         },
         {
           "team": "South Brunswick",
@@ -1837,7 +1927,8 @@
           "streakType": "l",
           "lat": 34.0321,
           "lng": -78.0678,
-          "rank": 7
+          "rank": 7,
+          "logo": null
         },
         {
           "team": "Croatan",
@@ -1857,7 +1948,8 @@
           "streakType": "w",
           "lat": 34.7866,
           "lng": -76.859,
-          "rank": 8
+          "rank": 8,
+          "logo": null
         },
         {
           "team": "Eastern Alamance",
@@ -1877,7 +1969,8 @@
           "streakType": "l",
           "lat": 36.096,
           "lng": -79.2668,
-          "rank": 9
+          "rank": 9,
+          "logo": null
         },
         {
           "team": "Havelock",
@@ -1897,7 +1990,8 @@
           "streakType": "l",
           "lat": 34.8791,
           "lng": -76.9014,
-          "rank": 10
+          "rank": 10,
+          "logo": null
         },
         {
           "team": "Hunt",
@@ -1917,7 +2011,8 @@
           "streakType": "l",
           "lat": 35.7212,
           "lng": -77.9155,
-          "rank": 11
+          "rank": 11,
+          "logo": null
         },
         {
           "team": "Hickory",
@@ -1937,7 +2032,8 @@
           "streakType": "l",
           "lat": 35.741,
           "lng": -81.3332,
-          "rank": 12
+          "rank": 12,
+          "logo": null
         },
         {
           "team": "Cedar Ridge",
@@ -1957,7 +2053,8 @@
           "streakType": "l",
           "lat": 36.0834,
           "lng": -79.0919,
-          "rank": 13
+          "rank": 13,
+          "logo": null
         },
         {
           "team": "Western Alamance",
@@ -1977,7 +2074,8 @@
           "streakType": "l",
           "lat": 36.1032,
           "lng": -79.5068,
-          "rank": 14
+          "rank": 14,
+          "logo": null
         },
         {
           "team": "North Davidson",
@@ -1997,7 +2095,8 @@
           "streakType": "l",
           "lat": 35.824,
           "lng": -80.2534,
-          "rank": 15
+          "rank": 15,
+          "logo": null
         },
         {
           "team": "Atkins",
@@ -2017,7 +2116,8 @@
           "streakType": "l",
           "lat": 36.0919,
           "lng": -80.2362,
-          "rank": 16
+          "rank": 16,
+          "logo": null
         }
       ]
     },
@@ -2042,7 +2142,8 @@
           "streakType": "l",
           "lat": 35.9101,
           "lng": -79.0753,
-          "rank": 1
+          "rank": 1,
+          "logo": null
         },
         {
           "team": "Lincoln Charter",
@@ -2062,7 +2163,8 @@
           "streakType": "w",
           "lat": 35.4817,
           "lng": -81.2465,
-          "rank": 2
+          "rank": 2,
+          "logo": null
         },
         {
           "team": "First Flight",
@@ -2082,7 +2184,8 @@
           "streakType": "l",
           "lat": 36.0307,
           "lng": -75.676,
-          "rank": 3
+          "rank": 3,
+          "logo": null
         },
         {
           "team": "Lake Norman Charter",
@@ -2102,7 +2205,8 @@
           "streakType": "w",
           "lat": 35.4187,
           "lng": -80.8349,
-          "rank": 4
+          "rank": 4,
+          "logo": null
         },
         {
           "team": "West Stokes",
@@ -2122,7 +2226,8 @@
           "streakType": "l",
           "lat": 36.2807,
           "lng": -80.3592,
-          "rank": 5
+          "rank": 5,
+          "logo": null
         }
       ]
     },
@@ -2147,7 +2252,8 @@
           "streakType": "w",
           "lat": 35.7202,
           "lng": -79.1773,
-          "rank": 1
+          "rank": 1,
+          "logo": null
         },
         {
           "team": "Pine Lake Prep",
@@ -2167,7 +2273,8 @@
           "streakType": "w",
           "lat": 35.5769,
           "lng": -80.8021,
-          "rank": 2
+          "rank": 2,
+          "logo": null
         },
         {
           "team": "Patton",
@@ -2187,7 +2294,8 @@
           "streakType": "w",
           "lat": 35.7454,
           "lng": -81.6848,
-          "rank": 3
+          "rank": 3,
+          "logo": null
         },
         {
           "team": "Wake Prep Academy",
@@ -2207,7 +2315,8 @@
           "streakType": "l",
           "lat": 35.9719,
           "lng": -78.5017,
-          "rank": 4
+          "rank": 4,
+          "logo": null
         }
       ]
     },
@@ -2232,7 +2341,8 @@
           "streakType": "w",
           "lat": 35.4993,
           "lng": -80.8487,
-          "rank": 1
+          "rank": 1,
+          "logo": "/images/teams/community-school-of-davidson.png"
         },
         {
           "team": "Cornerstone Charter Academy",
@@ -2252,7 +2362,8 @@
           "streakType": "w",
           "lat": 36.0886,
           "lng": -79.792,
-          "rank": 2
+          "rank": 2,
+          "logo": null
         },
         {
           "team": "Bishop McGuinness",
@@ -2272,7 +2383,8 @@
           "streakType": "w",
           "lat": 36.1276,
           "lng": -80.0657,
-          "rank": 3
+          "rank": 3,
+          "logo": null
         },
         {
           "team": "Christ the King",
@@ -2292,7 +2404,8 @@
           "streakType": "l",
           "lat": 35.4107,
           "lng": -80.8429,
-          "rank": 4
+          "rank": 4,
+          "logo": null
         },
         {
           "team": "Voyager Academy",
@@ -2312,7 +2425,8 @@
           "streakType": "l",
           "lat": 35.986,
           "lng": -78.8906,
-          "rank": 5
+          "rank": 5,
+          "logo": null
         },
         {
           "team": "Mountain Island Charter",
@@ -2332,7 +2446,8 @@
           "streakType": "l",
           "lat": 35.2982,
           "lng": -81.0159,
-          "rank": 6
+          "rank": 6,
+          "logo": null
         },
         {
           "team": "Roxboro Community",
@@ -2352,7 +2467,8 @@
           "streakType": "l",
           "lat": 36.3938,
           "lng": -78.9828,
-          "rank": 7
+          "rank": 7,
+          "logo": null
         },
         {
           "team": "Bradford Prep",
@@ -2372,7 +2488,8 @@
           "streakType": "l",
           "lat": 35.2111,
           "lng": -80.8431,
-          "rank": 8
+          "rank": 8,
+          "logo": null
         }
       ]
     },
@@ -2397,7 +2514,8 @@
           "streakType": "w",
           "lat": 35.7835,
           "lng": -78.7891,
-          "rank": 1
+          "rank": 1,
+          "logo": "/images/teams/cary-academy.png"
         },
         {
           "team": "Charlotte Country Day",
@@ -2417,7 +2535,8 @@
           "streakType": "w",
           "lat": 35.2271,
           "lng": -80.8271,
-          "rank": 2
+          "rank": 2,
+          "logo": null
         },
         {
           "team": "Charlotte Christian",
@@ -2437,7 +2556,8 @@
           "streakType": "w",
           "lat": 35.2431,
           "lng": -80.8271,
-          "rank": 3
+          "rank": 3,
+          "logo": null
         },
         {
           "team": "Providence Day",
@@ -2457,7 +2577,8 @@
           "streakType": "w",
           "lat": 35.2271,
           "lng": -80.8591,
-          "rank": 4
+          "rank": 4,
+          "logo": null
         },
         {
           "team": "Rabun Gap-Nacoochee",
@@ -2477,7 +2598,8 @@
           "streakType": "l",
           "lat": 34.9596,
           "lng": -83.3957,
-          "rank": 5
+          "rank": 5,
+          "logo": null
         },
         {
           "team": "Charlotte Latin",
@@ -2497,7 +2619,8 @@
           "streakType": "w",
           "lat": 35.2111,
           "lng": -80.8271,
-          "rank": 6
+          "rank": 6,
+          "logo": null
         },
         {
           "team": "Ravenscroft",
@@ -2517,7 +2640,8 @@
           "streakType": "l",
           "lat": 35.7956,
           "lng": -78.6222,
-          "rank": 7
+          "rank": 7,
+          "logo": null
         },
         {
           "team": "Christ School",
@@ -2537,7 +2661,8 @@
           "streakType": "l",
           "lat": 35.4701,
           "lng": -82.5171,
-          "rank": 8
+          "rank": 8,
+          "logo": null
         },
         {
           "team": "North Raleigh Christian Academy",
@@ -2557,7 +2682,8 @@
           "streakType": "l",
           "lat": 35.7636,
           "lng": -78.6222,
-          "rank": 9
+          "rank": 9,
+          "logo": null
         },
         {
           "team": "Durham Academy",
@@ -2577,7 +2703,8 @@
           "streakType": "l",
           "lat": 36.002,
           "lng": -78.9066,
-          "rank": 10
+          "rank": 10,
+          "logo": null
         },
         {
           "team": "Cannon",
@@ -2597,7 +2724,8 @@
           "streakType": "l",
           "lat": 35.4088,
           "lng": -80.5795,
-          "rank": 11
+          "rank": 11,
+          "logo": null
         }
       ]
     },
@@ -2622,7 +2750,8 @@
           "streakType": "w",
           "lat": 36.0726,
           "lng": -79.808,
-          "rank": 1
+          "rank": 1,
+          "logo": null
         },
         {
           "team": "Cape Fear Academy",
@@ -2642,7 +2771,8 @@
           "streakType": "l",
           "lat": 34.2177,
           "lng": -77.9367,
-          "rank": 2
+          "rank": 2,
+          "logo": null
         },
         {
           "team": "Asheville School",
@@ -2662,7 +2792,8 @@
           "streakType": "w",
           "lat": 35.5871,
           "lng": -82.5435,
-          "rank": 3
+          "rank": 3,
+          "logo": null
         },
         {
           "team": "Southlake Christian Academy",
@@ -2682,7 +2813,8 @@
           "streakType": "w",
           "lat": 35.4027,
           "lng": -80.8349,
-          "rank": 4
+          "rank": 4,
+          "logo": null
         },
         {
           "team": "Forsyth Country Day",
@@ -2702,7 +2834,8 @@
           "streakType": "l",
           "lat": 36.0968,
           "lng": -80.419,
-          "rank": 5
+          "rank": 5,
+          "logo": null
         },
         {
           "team": "Cary Christian",
@@ -2722,7 +2855,8 @@
           "streakType": "w",
           "lat": 35.8075,
           "lng": -78.7811,
-          "rank": 6
+          "rank": 6,
+          "logo": null
         },
         {
           "team": "John Paul II Catholic",
@@ -2742,7 +2876,8 @@
           "streakType": "w",
           "lat": 35.182,
           "lng": -79.3843,
-          "rank": 7
+          "rank": 7,
+          "logo": null
         },
         {
           "team": "St. David's",
@@ -2762,7 +2897,8 @@
           "streakType": "l",
           "lat": 35.7956,
           "lng": -78.6542,
-          "rank": 8
+          "rank": 8,
+          "logo": null
         }
       ]
     }

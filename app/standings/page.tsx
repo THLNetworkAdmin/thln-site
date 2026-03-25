@@ -29,6 +29,7 @@ export default function Standings() {
         gd: number;
         streak: string;
         streakType: string;
+        logo?: string | null;
       }>;
     }>;
   };
@@ -97,7 +98,11 @@ export default function Standings() {
                       <td>{team.rank}</td>
                       <td>
                         <div className="team-cell">
-                          <div className={`st-badge ${team.badgeClass}`}>{team.abbr}</div>
+                          {team.logo ? (
+                            <img src={team.logo} alt={team.team} className="st-logo" />
+                          ) : (
+                            <div className={`st-badge ${team.badgeClass}`}>{team.abbr}</div>
+                          )}
                           <span className="st-name">{team.team}</span>
                         </div>
                       </td>
