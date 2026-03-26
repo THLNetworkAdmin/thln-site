@@ -2639,13 +2639,13 @@
       "homeTeam": "Charlotte Country Day",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 7,
       "awayTeam": "Christ School",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 5,
+      "winner": "Charlotte Country Day",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2653,13 +2653,13 @@
       "homeTeam": "Western Alamance",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 6,
       "awayTeam": "Voyager Academy",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 3,
+      "winner": "Western Alamance",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2681,13 +2681,13 @@
       "homeTeam": "Wakefield",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 17,
       "awayTeam": "Rolesville",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 4,
+      "winner": "Wakefield",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2695,13 +2695,13 @@
       "homeTeam": "Havelock",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 7,
       "awayTeam": "Northside-Jacksonville",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 21,
+      "winner": "Northside-Jacksonville",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2709,13 +2709,13 @@
       "homeTeam": "Green Hope",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 18,
       "awayTeam": "Ravenscroft",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 6,
+      "winner": "Green Hope",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2723,13 +2723,13 @@
       "homeTeam": "R.J. Reynolds",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 17,
       "awayTeam": "East Chapel Hill",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 7,
+      "winner": "R.J. Reynolds",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2737,13 +2737,13 @@
       "homeTeam": "Wake Prep Academy",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 13,
       "awayTeam": "Roxboro Community",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 6,
+      "winner": "Wake Prep Academy",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2751,13 +2751,13 @@
       "homeTeam": "Jack Britt",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 6,
       "awayTeam": "North Brunswick",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 5,
+      "winner": "Jack Britt",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2765,13 +2765,13 @@
       "homeTeam": "Broughton",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 10,
       "awayTeam": "Millbrook",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 13,
+      "winner": "Millbrook",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2779,13 +2779,13 @@
       "homeTeam": "Charlotte Latin",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 13,
       "awayTeam": "Myers Park",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 8,
+      "winner": "Charlotte Latin",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2793,13 +2793,13 @@
       "homeTeam": "Williams",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 6,
       "awayTeam": "Davie County",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 20,
+      "winner": "Davie County",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2807,13 +2807,13 @@
       "homeTeam": "Watauga",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 7,
       "awayTeam": "North Lincoln",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 20,
+      "winner": "North Lincoln",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2821,13 +2821,13 @@
       "homeTeam": "Athens Drive",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 14,
       "awayTeam": "Corinth Holders",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 4,
+      "winner": "Athens Drive",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2835,13 +2835,13 @@
       "homeTeam": "Leesville Road",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 8,
       "awayTeam": "Enloe",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 5,
+      "winner": "Leesville Road",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2849,13 +2849,13 @@
       "homeTeam": "Atkins",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 4,
       "awayTeam": "East Forsyth",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 17,
+      "winner": "East Forsyth",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2863,13 +2863,13 @@
       "homeTeam": "Cuthbertson",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 5,
       "awayTeam": "Community School of Davidson",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 15,
+      "winner": "Community School of Davidson",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2877,13 +2877,13 @@
       "homeTeam": "Providence",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 7,
       "awayTeam": "Ambassador Christian School",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 6,
+      "winner": "Providence",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2891,13 +2891,13 @@
       "homeTeam": "Marvin Ridge",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 5,
       "awayTeam": "Lake Norman",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 11,
+      "winner": "Lake Norman",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2905,13 +2905,13 @@
       "homeTeam": "Ardrey Kell",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 17,
       "awayTeam": "Nation Ford (SC)",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 7,
+      "winner": "Ardrey Kell",
+      "status": "final"
     },
     {
       "date": "2026-03-25",
@@ -2919,13 +2919,13 @@
       "homeTeam": "Charlotte Catholic",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 17,
       "awayTeam": "Providence Day",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 6,
+      "winner": "Charlotte Catholic",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
