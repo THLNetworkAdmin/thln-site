@@ -134,8 +134,8 @@ export default function Home() {
                 <rect x="0" y="494" width="800" height="6" fill="#0B1D3A"/>
                 <text x="400" y="155" textAnchor="middle" fontFamily="Georgia, serif" fontSize="48" fill="#7BAFD4" fontWeight="700" letterSpacing="2">HEROES BOWL</text>
                 <line x1="250" y1="180" x2="550" y2="180" stroke="#0B1D3A" strokeWidth="0.5" opacity="0.15"/>
-                <text x="400" y="280" textAnchor="middle" fontFamily="Georgia, serif" fontSize="90" fill="#0B1D3A" fontWeight="700" letterSpacing="4">POWER</text>
-                <text x="400" y="380" textAnchor="middle" fontFamily="Georgia, serif" fontSize="90" fill="#7BAFD4" fontWeight="700" letterSpacing="4">RANKINGS</text>
+                <text x="400" y="280" textAnchor="middle" fontFamily="Georgia, serif" fontSize="70" fill="#0B1D3A" fontWeight="700" letterSpacing="4">6TH ANNUAL</text>
+                <text x="400" y="380" textAnchor="middle" fontFamily="Georgia, serif" fontSize="70" fill="#7BAFD4" fontWeight="700" letterSpacing="4">HEROES BOWL</text>
               </svg>
             </div>
             <div className="hero-featured-body">
