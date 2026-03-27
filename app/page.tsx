@@ -154,6 +154,17 @@ export default function Home() {
             <Link href="/rankings">View Rankings →</Link>
           </div>
 
+          <article className="article-card" onClick={() => window.location.href='/blog/heroes-bowl-preview'} style={{cursor:'pointer'}}>
+            <div className="article-thumb" style={{ background: "#0B1D3A", border: "none", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <span style={{ fontFamily: "Georgia, serif", fontSize: "18px", color: "#7BAFD4", fontWeight: "700", textAlign: "center", lineHeight: "1.2" }}>HEROES<br/>BOWL</span>
+            </div>
+            <div className="article-info">
+              <span className="article-tag tag-feature">Preview</span>
+              <h3>6th Annual Heroes Bowl Preview: 8 games, 4 ranked matchups, 1 great cause</h3>
+              <p>Our full game-by-game breakdown of Saturday&apos;s Heroes Bowl in Charlotte — featuring #1 Hough vs #4 Cardinal Gibbons and more.</p>
+              <span className="meta">March 27, 2026 · 15 min read</span>
+            </div>
+          </article>
           <article className="article-card" onClick={() => window.location.href='/blog/games-of-the-week'} style={{cursor:'pointer'}}>
             <div className="article-thumb" style={{ background: "#0B1D3A", border: "none", overflow: "hidden" }}>
               <svg width="100%" height="100%" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
