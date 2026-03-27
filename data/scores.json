@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-25",
+  "lastUpdated": "2026-03-26",
   "games": [
     {
       "date": "2026-03-14",
@@ -2933,13 +2933,13 @@
       "homeTeam": "First Flight",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 13,
       "awayTeam": "Swansboro",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 8,
+      "winner": "First Flight",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -2947,13 +2947,13 @@
       "homeTeam": "Hickory",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 14,
       "awayTeam": "T.C. Roberson",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 3,
+      "winner": "Hickory",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -2961,13 +2961,13 @@
       "homeTeam": "Chapel Hill",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 9,
       "awayTeam": "Jordan",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 3,
+      "winner": "Chapel Hill",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -2975,13 +2975,13 @@
       "homeTeam": "Western Guilford",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 6,
       "awayTeam": "Ragsdale",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 3,
+      "winner": "Western Guilford",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -2989,13 +2989,13 @@
       "homeTeam": "Fuquay-Varina",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 2,
       "awayTeam": "Clayton",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 13,
+      "winner": "Clayton",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3017,13 +3017,13 @@
       "homeTeam": "Cardinal Gibbons",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 11,
       "awayTeam": "Holly Springs",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 3,
+      "winner": "Cardinal Gibbons",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3031,13 +3031,13 @@
       "homeTeam": "Cedar Ridge",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 2,
       "awayTeam": "Carrboro",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 13,
+      "winner": "Carrboro",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3059,13 +3059,13 @@
       "homeTeam": "Green Level",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 12,
       "awayTeam": "Apex",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 11,
+      "winner": "Green Level",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3101,13 +3101,13 @@
       "homeTeam": "Watauga",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 7,
       "awayTeam": "Lincoln Charter",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 11,
+      "winner": "Lincoln Charter",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3115,13 +3115,13 @@
       "homeTeam": "Cleveland",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 17,
       "awayTeam": "Hunt",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 2,
+      "winner": "Cleveland",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3129,13 +3129,13 @@
       "homeTeam": "Patton",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 1,
       "awayTeam": "North Lincoln",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 19,
+      "winner": "North Lincoln",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3143,13 +3143,13 @@
       "homeTeam": "Cannon",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 10,
       "awayTeam": "Lake Norman Charter",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 8,
+      "winner": "Cannon",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3157,13 +3157,13 @@
       "homeTeam": "Pinecrest",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 9,
       "awayTeam": "Union Pines",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 10,
+      "winner": "Union Pines",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3185,13 +3185,13 @@
       "homeTeam": "Northern Guilford",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 1,
       "awayTeam": "Grimsley",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 15,
+      "winner": "Grimsley",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3199,13 +3199,13 @@
       "homeTeam": "St. Stephens",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 12,
       "awayTeam": "Asheville",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 5,
+      "winner": "St. Stephens",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3213,13 +3213,13 @@
       "homeTeam": "Orange",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 13,
       "awayTeam": "Northwood",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 4,
+      "winner": "Orange",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3227,13 +3227,13 @@
       "homeTeam": "Croatan",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 13,
       "awayTeam": "Jacksonville",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 4,
+      "winner": "Croatan",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3241,13 +3241,13 @@
       "homeTeam": "Southwest Guilford",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 0,
       "awayTeam": "Page",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 20,
+      "winner": "Page",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3255,13 +3255,13 @@
       "homeTeam": "Mooresville",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 11,
       "awayTeam": "Providence",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 13,
+      "winner": "Providence",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3269,13 +3269,13 @@
       "homeTeam": "J.H. Rose",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 14,
       "awayTeam": "New Bern",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 12,
+      "winner": "J.H. Rose",
+      "status": "final"
     },
     {
       "date": "2026-03-26",
@@ -3283,13 +3283,13 @@
       "homeTeam": "South Brunswick",
       "homeAbbr": "",
       "homeBadge": "",
-      "homeScore": null,
+      "homeScore": 3,
       "awayTeam": "Laney",
       "awayAbbr": "",
       "awayBadge": "",
-      "awayScore": null,
-      "winner": null,
-      "status": "upcoming"
+      "awayScore": 18,
+      "winner": "Laney",
+      "status": "final"
     },
     {
       "date": "2026-03-27",
