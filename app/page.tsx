@@ -43,7 +43,7 @@ function ScoresTicker() {
   // Fallback: if no games match today's logic, show most recent finished games
   const finishedGames = recentGames.length > 0
     ? recentGames
-    : scoresData.games.filter((g) => g.status === "final");
+    : scoresData.games.filter((g) => g.status === "final").sort((a, b) => b.date.localeCompare(a.date)).filter((g, _, arr) => g.date === arr[0].date);
 
   const [offset, setOffset] = useState(0);
   const visibleCount = 4;
@@ -198,7 +198,7 @@ export default function Home() {
               );
               const gamesToShow = sidebarGames.length > 0
                 ? sidebarGames.slice(0, 5)
-                : scoresData.games.filter((g) => g.status === "final").slice(0, 5);
+                : scoresData.games.filter((g) => g.status === "final").sort((a, b) => b.date.localeCompare(a.date)).filter((g, _, arr) => g.date === arr[0].date).slice(0, 5);
               return gamesToShow.map((game, i) => {
                 const homeWon = game.winner === game.homeTeam;
                 const awayWon = game.winner === game.awayTeam;
